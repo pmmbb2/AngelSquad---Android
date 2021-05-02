@@ -1,0 +1,7260 @@
+[
+	{
+		"name": "heavenly_music-loop",
+		"object": {
+			"name": "heavenly_music-loop"
+		},
+		"description": "heavenly_music-loop.mp3",
+		"collection": "sounds",
+		"id": 151
+	},
+	{
+		"name": "bgm_3-loop",
+		"object": {
+			"name": "bgm_3-loop"
+		},
+		"description": "bgm_3-loop.mp3",
+		"collection": "sounds",
+		"id": 152
+	},
+	{
+		"name": "bgm_10-loop",
+		"object": {
+			"name": "bgm_10-loop"
+		},
+		"description": "bgm_10-loop.mp3",
+		"collection": "sounds",
+		"id": 153
+	},
+	{
+		"name": "bgm_1-loop",
+		"object": {
+			"name": "bgm_1-loop"
+		},
+		"description": "bgm_1-loop.mp3",
+		"collection": "sounds",
+		"id": 154
+	},
+	{
+		"name": "bgm_2-loop",
+		"object": {
+			"name": "bgm_2-loop"
+		},
+		"description": "bgm_2-loop.mp3",
+		"collection": "sounds",
+		"id": 155
+	},
+	{
+		"name": "bgm_4-loop",
+		"object": {
+			"name": "bgm_4-loop"
+		},
+		"description": "bgm_4-loop.mp3",
+		"collection": "sounds",
+		"id": 156
+	},
+	{
+		"name": "bgm_5-loop",
+		"object": {
+			"name": "bgm_5-loop"
+		},
+		"description": "bgm_5-loop.mp3",
+		"collection": "sounds",
+		"id": 157
+	},
+	{
+		"name": "bgm_8-loop",
+		"object": {
+			"name": "bgm_8-loop"
+		},
+		"description": "bgm_8-loop.mp3",
+		"collection": "sounds",
+		"id": 158
+	},
+	{
+		"name": "bgm_9-loop",
+		"object": {
+			"name": "bgm_9-loop"
+		},
+		"description": "bgm_9-loop.mp3",
+		"collection": "sounds",
+		"id": 159
+	},
+	{
+		"name": "bgm_6-loop",
+		"object": {
+			"name": "bgm_6-loop"
+		},
+		"description": "bgm_6-loop.mp3",
+		"collection": "sounds",
+		"id": 160
+	},
+	{
+		"name": "bgm_7-loop",
+		"object": {
+			"name": "bgm_7-loop"
+		},
+		"description": "bgm_7-loop.mp3",
+		"collection": "sounds",
+		"id": 161
+	},
+	{
+		"name": "myStage8.stg",
+		"object": {
+			"destination_dir": "game_assets/stages",
+			"name": "myStage8.stg",
+			"description": "stage 8",
+			"stage_entityCannons": [
+				{
+					"ID": "entity1587417116571",
+					"entityName": "ball.entity",
+					"iterations": 1,
+					"drawOnCanvas": "aboveGround",
+					"next": 0,
+					"start": 0,
+					"archiveIterations": 1,
+					"archiveStart": 0,
+					"x": 126,
+					"y": 503,
+					"dx": 0,
+					"dy": 0,
+					"path": "-1",
+					"pathEnd": "loop",
+					"states": [],
+					"firstStateAt": 0,
+					"energy": 20,
+					"strength": 1,
+					"resistance": 0
+				},
+				{
+					"ID": "entity1592597255696",
+					"entityName": "shark-in-water-right.ent",
+					"iterations": 1,
+					"drawOnCanvas": "aboveGround",
+					"next": 0,
+					"start": 40,
+					"archiveIterations": 1,
+					"archiveStart": 40,
+					"x": 147,
+					"y": 248,
+					"dx": 0,
+					"dy": 0,
+					"path": "-1",
+					"pathEnd": "reverseLoop",
+					"states": [
+						{
+							"next": "15",
+							"dy": "0",
+							"resistance": "50",
+							"collideWithPaddleBounce": "false",
+							"collidePaddleLoseEnergy": "false",
+							"path": "sharkPath.pth"
+						},
+						{
+							"next": "10",
+							"dy": "-5",
+							"dx": "0",
+							"strength": "5",
+							"resistance": "5",
+							"action": {
+								"name": "spawn",
+								"params": {
+									"name": "splash-140x250.ent"
+								}
+							},
+							"path": "-1"
+						},
+						{
+							"next": "10",
+							"dy": "5",
+							"dx": "0"
+						},
+						{
+							"next": "15",
+							"dx": "0",
+							"dy": "0",
+							"strength": "0",
+							"resistance": "50",
+							"action": {
+								"name": "spawn",
+								"params": {
+									"name": "splash-140x250.ent"
+								}
+							},
+							"path": "sharkPath.pth"
+						}
+					],
+					"firstStateAt": 40,
+					"energy": 100,
+					"strength": 0,
+					"resistance": 50
+				}
+			],
+			"spawnBalls": [
+				"ball.entity"
+			],
+			"maxCasualties": 2,
+			"objectives": [
+				{
+					"name": "targets",
+					"value": [
+						{
+							"name": "shark-in-water-right.ent",
+							"count": "1"
+						}
+					],
+					"description": "Kill / Remove targets",
+					"messageSuccess": "Objective complete",
+					"messageFailure": "Objective failed"
+				}
+			],
+			"BW_drawOnCanvas": "combo",
+			"stage_brickwall_name": "",
+			"BW_x": 54,
+			"BW_y": 92,
+			"BW_dx": 0,
+			"BW_dy": 0,
+			"BW_path": -1,
+			"BW_pathMode": "",
+			"stage_BW_pathEnd": "reverseLoop",
+			"BW_pathStep": 1,
+			"BW_pathIdx": 0,
+			"BW_states": [],
+			"BW_firstStateAt": "",
+			"scrollingScreens": [
+				[
+					{
+						"screensToScroll": "10",
+						"screensScrollSpeed": "2"
+					},
+					{
+						"spriteName": "clouds.BG.1.sprt",
+						"drawOnCanvas": "skyScrolling",
+						"loop": "5"
+					},
+					{
+						"spriteName": "clouds.BG.1.sprt",
+						"drawOnCanvas": "skyScrolling",
+						"loop": "5"
+					}
+				],
+				[
+					{
+						"screensToScroll": "1",
+						"screensScrollSpeed": "0"
+					},
+					{
+						"spriteName": "ocean-waves-360x650.sprt",
+						"drawOnCanvas": "groundScrolling",
+						"loop": "-1"
+					},
+					{
+						"spriteName": "ocean-waves-360x650.sprt",
+						"drawOnCanvas": "groundScrolling",
+						"loop": "0"
+					}
+				]
+			],
+			"music": "game_assets/sounds/bgm_3-loop.mp3"
+		},
+		"description": "stage 8",
+		"collection": "stages",
+		"id": 162
+	},
+	{
+		"name": "myStage3.stg",
+		"object": {
+			"destination_dir": "game_assets/stages",
+			"name": "myStage3.stg",
+			"description": "myStage3.stg",
+			"stage_entityCannons": [
+				{
+					"ID": "entity1583762377242",
+					"entityName": "redcarr",
+					"iterations": -1,
+					"drawOnCanvas": "aboveGround",
+					"next": 50,
+					"start": 0,
+					"archiveIterations": -1,
+					"archiveStart": 0,
+					"x": 360,
+					"y": 212,
+					"dx": -1,
+					"dy": 0,
+					"path": "-1",
+					"pathEnd": "reverseLoop",
+					"states": [
+						{
+							"next": "50",
+							"dx": "1"
+						},
+						{
+							"next": "0",
+							"action": {
+								"name": "spawn",
+								"params": {
+									"name": "flower2"
+								}
+							}
+						},
+						{
+							"next": "0",
+							"action": {
+								"name": "removeSelf",
+								"params": {
+									"name": ""
+								}
+							}
+						}
+					],
+					"firstStateAt": null,
+					"energy": 100,
+					"strength": 12,
+					"resistance": 2
+				},
+				{
+					"ID": "entity1583762647739",
+					"entityName": "runningeye.ent",
+					"iterations": -1,
+					"drawOnCanvas": "aboveGround",
+					"next": 70,
+					"start": 0,
+					"archiveIterations": -1,
+					"archiveStart": 0,
+					"x": -42,
+					"y": 377,
+					"dx": 0,
+					"dy": 0,
+					"path": "-1",
+					"pathEnd": "loop",
+					"states": [
+						{
+							"next": "40",
+							"path": "complexe.abs"
+						},
+						{
+							"next": "0",
+							"action": {
+								"name": "removeSelf",
+								"params": {
+									"name": ""
+								}
+							}
+						}
+					],
+					"firstStateAt": 0,
+					"energy": 20,
+					"strength": 3,
+					"resistance": 2
+				},
+				{
+					"ID": "entity1583762889378",
+					"entityName": "bow-arrow-powerup.ent",
+					"iterations": 5,
+					"drawOnCanvas": "sky",
+					"next": 0,
+					"start": 0,
+					"archiveIterations": 5,
+					"archiveStart": 0,
+					"x": 182,
+					"y": -53,
+					"dx": 0,
+					"dy": 1,
+					"path": "-1",
+					"pathEnd": "loop",
+					"states": [
+						{
+							"next": "0",
+							"action": {
+								"name": "removeSelf",
+								"params": {
+									"name": ""
+								}
+							}
+						}
+					],
+					"firstStateAt": 90,
+					"energy": 0,
+					"strength": 0,
+					"resistance": 0
+				},
+				{
+					"ID": "entity1583762435865",
+					"entityName": "starbucks2.ent",
+					"iterations": -1,
+					"drawOnCanvas": "aboveGround",
+					"next": 80,
+					"start": 0,
+					"archiveIterations": -1,
+					"archiveStart": 0,
+					"x": -309,
+					"y": 278,
+					"dx": 0,
+					"dy": 0,
+					"path": "-1",
+					"pathEnd": "reverseLoop",
+					"states": [
+						{
+							"next": "30",
+							"path": "-1",
+							"dx": "1",
+							"dy": "0"
+						},
+						{
+							"next": "20",
+							"dx": "0",
+							"dy": "1"
+						},
+						{
+							"next": "30",
+							"dx": "-1",
+							"dy": "0"
+						},
+						{
+							"next": "20",
+							"dx": "0",
+							"dy": "-1"
+						}
+					],
+					"firstStateAt": 0,
+					"energy": 50,
+					"strength": 4,
+					"resistance": 1
+				},
+				{
+					"ID": "entity1583855712527",
+					"entityName": "ball.entity",
+					"iterations": 1,
+					"drawOnCanvas": "aboveGround",
+					"next": 0,
+					"start": 0,
+					"archiveIterations": 1,
+					"archiveStart": 0,
+					"x": 165,
+					"y": 497,
+					"dx": 0,
+					"dy": 0,
+					"path": "-1",
+					"pathEnd": "loop",
+					"states": [],
+					"firstStateAt": 0,
+					"energy": 20,
+					"strength": 1,
+					"resistance": 2
+				}
+			],
+			"spawnBalls": [
+				"ball.entity"
+			],
+			"maxCasualties": "",
+			"objectives": [
+				{
+					"name": "destroyBW",
+					"value": "true",
+					"description": "Destroy all bricks",
+					"messageSuccess": "Objective complete",
+					"messageFailure": "Objective failed"
+				},
+				{
+					"name": "timer",
+					"value": "1200",
+					"description": "Time limit",
+					"messageSuccess": "Objective complete",
+					"messageFailure": "Objective failed"
+				},
+				{
+					"name": "minCombos",
+					"value": "30",
+					"description": "Minimum combos",
+					"messageSuccess": "Objective complete",
+					"messageFailure": "Objective failed"
+				}
+			],
+			"BW_drawOnCanvas": "aboveGround",
+			"stage_brickwall_name": "brickwalltestColors.brickwall",
+			"BW_x": 0,
+			"BW_y": 0,
+			"BW_dx": 0,
+			"BW_dy": 1,
+			"BW_path": -1,
+			"BW_pathMode": "relative",
+			"stage_BW_pathEnd": "loop",
+			"BW_pathStep": 1,
+			"BW_pathIdx": 0,
+			"BW_states": [
+				{
+					"next": "20",
+					"dy": "1"
+				},
+				{
+					"next": "20",
+					"dx": "-1"
+				},
+				{
+					"next": "0",
+					"dy": "-1"
+				},
+				{
+					"next": "20",
+					"dx": "1"
+				}
+			],
+			"BW_firstStateAt": 20,
+			"scrollingScreens": [
+				[
+					{
+						"screensToScroll": "10",
+						"screensScrollSpeed": "1"
+					},
+					{
+						"spriteName": "grass_river.BG.sprt",
+						"drawOnCanvas": "groundScrolling",
+						"loop": "-1"
+					},
+					{
+						"spriteName": "grass_river.BG.sprt",
+						"drawOnCanvas": "groundScrolling",
+						"loop": "-1"
+					}
+				]
+			],
+			"music": "game_assets/sounds/bgm_1-loop.mp3"
+		},
+		"description": "myStage3.stg",
+		"collection": "stages",
+		"id": 163
+	},
+	{
+		"name": "myFourthStage.stg",
+		"object": {
+			"destination_dir": "game_assets/stages",
+			"name": "myFourthStage.stg",
+			"description": "",
+			"stage_entityCannons": [
+				{
+					"ID": "entity1578915089500",
+					"entityName": "starbucks.ent",
+					"iterations": -1,
+					"drawOnCanvas": "sky",
+					"next": 70,
+					"start": 0,
+					"archiveIterations": -1,
+					"archiveStart": 0,
+					"x": -664,
+					"y": 83,
+					"dx": 1,
+					"dy": 1,
+					"path": "-1",
+					"pathEnd": "reverseLoop"
+				},
+				{
+					"ID": "entity1578914836851",
+					"entityName": "flower2",
+					"iterations": 1,
+					"drawOnCanvas": "aboveGround",
+					"next": 0,
+					"start": 0,
+					"archiveIterations": 1,
+					"archiveStart": 0,
+					"x": 162,
+					"y": 94,
+					"dx": 0,
+					"dy": 0,
+					"path": "-1",
+					"pathEnd": "stop",
+					"states": [
+						{
+							"next": "10",
+							"dx": "1"
+						},
+						{
+							"next": "10",
+							"dx": "-1"
+						}
+					],
+					"firstStateAt": 0
+				},
+				{
+					"ID": "entity1580608679855",
+					"entityName": "boxing-gloves-powerup.ent",
+					"iterations": 1,
+					"drawOnCanvas": "aboveGround",
+					"next": 0,
+					"start": 0,
+					"archiveIterations": 1,
+					"archiveStart": 0,
+					"x": 91,
+					"y": 571,
+					"dx": 0,
+					"dy": 0,
+					"path": "-1",
+					"pathEnd": "loop",
+					"states": [],
+					"firstStateAt": 0
+				},
+				{
+					"ID": "entity1580608662688",
+					"entityName": "bow-arrow-powerup.ent",
+					"iterations": 1,
+					"drawOnCanvas": "aboveGround",
+					"next": 0,
+					"start": 0,
+					"archiveIterations": 1,
+					"archiveStart": 0,
+					"x": 13,
+					"y": 571,
+					"dx": 0,
+					"dy": 0,
+					"path": "",
+					"pathEnd": "loop",
+					"states": [],
+					"firstStateAt": 0
+				},
+				{
+					"ID": "entity1578914947560",
+					"entityName": "skeletonWalksRight.entity",
+					"iterations": -1,
+					"drawOnCanvas": "aboveGround",
+					"next": 50,
+					"start": 120,
+					"archiveIterations": -1,
+					"archiveStart": 120,
+					"x": -49,
+					"y": 467,
+					"dx": 1,
+					"dy": 0,
+					"path": "-1",
+					"pathEnd": "stop",
+					"states": [],
+					"firstStateAt": null
+				},
+				{
+					"ID": "entity1578914790118",
+					"entityName": "redcarr",
+					"iterations": -1,
+					"drawOnCanvas": "aboveGround",
+					"next": 80,
+					"start": 1,
+					"archiveIterations": -1,
+					"archiveStart": 1,
+					"x": 359,
+					"y": 20,
+					"dx": -1,
+					"dy": 0,
+					"path": "-1",
+					"pathEnd": "reverseLoop",
+					"states": [
+						{
+							"next": "50",
+							"dx": "1"
+						},
+						{
+							"next": "15",
+							"action": {
+								"name": "spawn",
+								"params": {
+									"name": "flower2"
+								}
+							},
+							"dy": "1"
+						},
+						{
+							"next": "0",
+							"action": {
+								"name": "removeSelf",
+								"params": {
+									"name": ""
+								}
+							}
+						}
+					],
+					"firstStateAt": 50
+				},
+				{
+					"ID": "entity1583760826391",
+					"entityName": "ball.entity",
+					"iterations": 1,
+					"drawOnCanvas": "aboveGround",
+					"next": 0,
+					"start": 0,
+					"archiveIterations": 1,
+					"archiveStart": 0,
+					"x": 154,
+					"y": 598,
+					"dx": 0,
+					"dy": 0,
+					"path": "-1",
+					"pathEnd": "loop",
+					"states": [],
+					"firstStateAt": 0,
+					"energy": 20,
+					"strength": 1,
+					"resistance": 2
+				},
+				{
+					"ID": "entity1583855791989",
+					"entityName": "sword-shield-powerup.ent",
+					"iterations": 1,
+					"drawOnCanvas": "ground",
+					"next": 0,
+					"start": 0,
+					"archiveIterations": 1,
+					"archiveStart": 0,
+					"x": 292,
+					"y": 575,
+					"dx": 0,
+					"dy": 0,
+					"path": "-1",
+					"pathEnd": "loop",
+					"states": [],
+					"firstStateAt": 0,
+					"energy": 0,
+					"strength": 2,
+					"resistance": 20
+				}
+			],
+			"spawnBalls": [
+				"ball.entity"
+			],
+			"maxCasualties": "",
+			"objectives": [
+				{
+					"name": "destroyBW",
+					"value": "true",
+					"description": "Destroy all bricks",
+					"messageSuccess": "Objective complete",
+					"messageFailure": "Objective failed"
+				},
+				{
+					"name": "timer",
+					"value": "1200",
+					"description": "Time limit",
+					"messageSuccess": "Objective complete",
+					"messageFailure": "Objective failed"
+				},
+				{
+					"name": "minCombos",
+					"value": "10",
+					"description": "Minimum combos",
+					"messageSuccess": "Objective complete",
+					"messageFailure": "Objective failed"
+				}
+			],
+			"BW_drawOnCanvas": "aboveGround",
+			"stage_brickwall_name": "fish2.brickwall",
+			"BW_x": 361,
+			"BW_y": 119,
+			"BW_dx": 0,
+			"BW_dy": 0,
+			"BW_path": -1,
+			"BW_pathMode": "",
+			"stage_BW_pathEnd": "loop",
+			"BW_pathStep": 1,
+			"BW_pathIdx": 0,
+			"BW_states": [
+				{
+					"next": "60",
+					"dx": "-1"
+				},
+				{
+					"next": "60",
+					"dx": "1"
+				}
+			],
+			"BW_firstStateAt": 50,
+			"scrollingScreens": [
+				[
+					{
+						"screensToScroll": "1",
+						"screensScrollSpeed": "0"
+					},
+					{
+						"spriteName": "grass_river.BG.sprt",
+						"drawOnCanvas": "groundScrolling",
+						"loop": "2"
+					}
+				]
+			],
+			"music": "game_assets/sounds/bgm_1-loop.mp3"
+		},
+		"description": "",
+		"collection": "stages",
+		"id": 164
+	},
+	{
+		"name": "mySixthStage.stg",
+		"object": {
+			"destination_dir": "game_assets/stages",
+			"name": "mySixthStage.stg",
+			"description": "",
+			"stage_entityCannons": [
+				{
+					"ID": "entity1580597808032",
+					"entityName": "bow-arrow-powerup.ent",
+					"iterations": -1,
+					"drawOnCanvas": "ground",
+					"next": 100,
+					"start": 10,
+					"archiveIterations": -1,
+					"archiveStart": 10,
+					"x": 33,
+					"y": -65,
+					"dx": 0,
+					"dy": 1,
+					"path": "-1",
+					"pathEnd": "loop",
+					"states": [],
+					"firstStateAt": 0
+				},
+				{
+					"ID": "entity1580495050329",
+					"entityName": "runningeye.ent",
+					"iterations": -1,
+					"drawOnCanvas": "aboveGround",
+					"next": 80,
+					"start": 20,
+					"archiveIterations": -1,
+					"archiveStart": 20,
+					"x": -50,
+					"y": 255,
+					"dx": 1,
+					"dy": 1,
+					"path": "-1",
+					"pathEnd": "loop",
+					"states": [],
+					"firstStateAt": 0
+				},
+				{
+					"ID": "entity1580604178460",
+					"entityName": "boxing-gloves-powerup.ent",
+					"iterations": -1,
+					"drawOnCanvas": "ground",
+					"next": 100,
+					"start": 30,
+					"archiveIterations": -1,
+					"archiveStart": 30,
+					"x": 163,
+					"y": -49,
+					"dx": 0,
+					"dy": 1,
+					"path": "-1",
+					"pathEnd": "loop",
+					"states": [],
+					"firstStateAt": 0
+				},
+				{
+					"ID": "entity1580248087969",
+					"entityName": "starbucks2.ent",
+					"iterations": 3,
+					"drawOnCanvas": "sky",
+					"next": 160,
+					"start": 80,
+					"archiveIterations": 3,
+					"archiveStart": 80,
+					"x": -120,
+					"y": 7,
+					"dx": 0,
+					"dy": 0,
+					"path": "-1",
+					"pathEnd": "reverseLoop",
+					"states": [
+						{
+							"next": "10",
+							"dx": "1",
+							"dy": "0"
+						},
+						{
+							"next": "10",
+							"dx": "0",
+							"dy": "1"
+						},
+						{
+							"next": "10",
+							"dx": "-1",
+							"dy": "0"
+						},
+						{
+							"next": "10",
+							"dx": "0",
+							"dy": "-1"
+						}
+					],
+					"firstStateAt": 0,
+					"energy": 50,
+					"strength": 4,
+					"resistance": 2
+				},
+				{
+					"ID": "entity1583903930591",
+					"entityName": "ball.entity",
+					"iterations": 1,
+					"drawOnCanvas": "aboveGround",
+					"next": 0,
+					"start": 0,
+					"archiveIterations": 1,
+					"archiveStart": 0,
+					"x": 166,
+					"y": 597,
+					"dx": 0,
+					"dy": 0,
+					"path": "-1",
+					"pathEnd": "loop",
+					"states": [],
+					"firstStateAt": 0,
+					"energy": 20,
+					"strength": 1,
+					"resistance": 2
+				},
+				{
+					"ID": "entity1581032325316",
+					"entityName": "angel-portal-powerup.ent",
+					"iterations": -1,
+					"drawOnCanvas": "sky",
+					"next": 100,
+					"start": 60,
+					"archiveIterations": -1,
+					"archiveStart": 60,
+					"x": 43,
+					"y": -85,
+					"dx": 0,
+					"dy": 1,
+					"path": "-1",
+					"pathEnd": "loop",
+					"states": [
+						{
+							"next": "0",
+							"action": {
+								"name": "removeSelf",
+								"params": {
+									"name": ""
+								}
+							}
+						}
+					],
+					"firstStateAt": 120,
+					"energy": 0,
+					"strength": 0,
+					"resistance": null
+				}
+			],
+			"spawnBalls": [
+				"ball.entity"
+			],
+			"maxCasualties": "",
+			"objectives": [
+				{
+					"name": "destroyBW",
+					"value": "true",
+					"description": "Destroy all bricks",
+					"messageSuccess": "Objective complete",
+					"messageFailure": "Objective failed"
+				},
+				{
+					"name": "targets",
+					"value": [
+						{
+							"name": "starbucks2.ent",
+							"count": "1"
+						},
+						{
+							"name": "runningeye.ent",
+							"count": "1"
+						}
+					],
+					"description": "eliminate at least 1 starbucks and 1 running eye",
+					"messageSuccess": "Objective complete",
+					"messageFailure": "Objective failed"
+				},
+				{
+					"name": "timer",
+					"value": "1200",
+					"description": "in less than 120 seconds!",
+					"messageSuccess": "Objective complete",
+					"messageFailure": "Objective failed"
+				},
+				{
+					"name": "minCombos",
+					"value": "50",
+					"description": "do 50 combos",
+					"messageSuccess": "Objective complete",
+					"messageFailure": "Objective failed"
+				}
+			],
+			"BW_drawOnCanvas": "sky",
+			"stage_brickwall_name": "4x4x4x50-blue.brickwall",
+			"BW_x": 90,
+			"BW_y": 1,
+			"BW_dx": 0,
+			"BW_dy": 0,
+			"BW_path": -1,
+			"BW_pathMode": "absolute",
+			"stage_BW_pathEnd": "loop",
+			"BW_pathStep": 1,
+			"BW_pathIdx": 0,
+			"BW_states": [
+				{
+					"next": "40",
+					"dy": "0"
+				},
+				{
+					"next": "40",
+					"pathEnd": "reverseLoop",
+					"pathIdx": "0",
+					"path": "complexe.abs",
+					"pathStep": "1"
+				},
+				{
+					"next": "40",
+					"dy": "-1"
+				}
+			],
+			"BW_firstStateAt": 0,
+			"scrollingScreens": [
+				[
+					{
+						"screensToScroll": "10",
+						"screensScrollSpeed": "1"
+					},
+					{
+						"spriteName": "forest1.sprt",
+						"drawOnCanvas": "groundScrolling",
+						"loop": "-1"
+					},
+					{
+						"spriteName": "forest1.sprt",
+						"drawOnCanvas": "groundScrolling",
+						"loop": "-1"
+					}
+				],
+				[
+					{
+						"screensToScroll": "10",
+						"screensScrollSpeed": "2"
+					},
+					{
+						"spriteName": "clouds.BG.1.sprt",
+						"drawOnCanvas": "skyScrolling",
+						"loop": "-1"
+					},
+					{
+						"spriteName": "clouds.BG.1.sprt",
+						"drawOnCanvas": "skyScrolling",
+						"loop": "-1"
+					}
+				]
+			],
+			"music": "game_assets/sounds/bgm_10-loop.mp3"
+		},
+		"description": "",
+		"collection": "stages",
+		"id": 165
+	},
+	{
+		"name": "myFirstStage.stg",
+		"object": {
+			"destination_dir": "game_assets/stages",
+			"name": "myFirstStage.stg",
+			"description": "",
+			"stage_entityCannons": [
+				{
+					"ID": "entity1580220410778",
+					"entityName": "redcarr",
+					"iterations": -1,
+					"drawOnCanvas": "aboveGround",
+					"next": 60,
+					"start": 20,
+					"archiveIterations": -1,
+					"archiveStart": 20,
+					"x": 201,
+					"y": 64,
+					"dx": -1,
+					"dy": 0,
+					"path": "-1",
+					"pathEnd": "reverseLoop",
+					"states": [
+						{
+							"next": "50",
+							"action": {
+								"name": "removeSelf",
+								"params": {
+									"name": ""
+								}
+							}
+						}
+					],
+					"firstStateAt": 60
+				},
+				{
+					"ID": "entity1580220754225",
+					"entityName": "skeletonWalksRight.entity",
+					"iterations": -1,
+					"drawOnCanvas": "aboveGround",
+					"next": 60,
+					"start": 10,
+					"archiveIterations": -1,
+					"archiveStart": 10,
+					"x": -189,
+					"y": 463,
+					"dx": 1,
+					"dy": 0,
+					"path": "-1",
+					"pathEnd": "stop",
+					"states": [
+						{
+							"next": "30",
+							"dy": "-1",
+							"dx": "0"
+						},
+						{
+							"next": "0",
+							"action": {
+								"name": "removeSelf",
+								"params": {
+									"name": ""
+								}
+							}
+						}
+					],
+					"firstStateAt": 10
+				},
+				{
+					"ID": "entity1583565114156",
+					"entityName": "bow-arrow-powerup.ent",
+					"iterations": 1,
+					"drawOnCanvas": "sky",
+					"next": 0,
+					"start": 0,
+					"archiveIterations": 1,
+					"archiveStart": 0,
+					"x": 5,
+					"y": -51,
+					"dx": 0,
+					"dy": 0,
+					"path": "-1",
+					"pathEnd": "loop",
+					"states": [
+						{
+							"next": "0",
+							"dy": "1",
+							"outOfVerticalBoundaryRemove": "true",
+							"y": "-5"
+						}
+					],
+					"firstStateAt": 50
+				},
+				{
+					"ID": "entity1583564041505",
+					"entityName": "ball.entity",
+					"iterations": 1,
+					"drawOnCanvas": "aboveGround",
+					"next": 0,
+					"start": 0,
+					"archiveIterations": 1,
+					"archiveStart": 0,
+					"x": 12,
+					"y": 519,
+					"dx": 0,
+					"dy": 0,
+					"path": "",
+					"pathEnd": "loop",
+					"states": [],
+					"firstStateAt": 0
+				}
+			],
+			"spawnBalls": [
+				"ball.entity"
+			],
+			"maxCasualties": "",
+			"objectives": [
+				{
+					"name": "destroyBW",
+					"value": "true",
+					"description": "Destroy all bricks",
+					"messageSuccess": "Objective complete",
+					"messageFailure": "Objective failed"
+				},
+				{
+					"name": "targets",
+					"value": [
+						{
+							"name": "redcarr",
+							"count": "5"
+						}
+					],
+					"description": "Destroy 5 cars",
+					"messageSuccess": "Objective complete",
+					"messageFailure": "Objective failed"
+				},
+				{
+					"name": "minCombos",
+					"value": "10",
+					"description": "Minimum combos",
+					"messageSuccess": "Objective complete",
+					"messageFailure": "Objective failed"
+				}
+			],
+			"BW_drawOnCanvas": "aboveGround",
+			"stage_brickwall_name": "brickwalltestImage",
+			"BW_x": 75,
+			"BW_y": 0,
+			"BW_dx": 0,
+			"BW_dy": 0,
+			"BW_path": "v.abs",
+			"BW_pathMode": "absolute",
+			"stage_BW_pathEnd": "loop",
+			"BW_pathStep": 1,
+			"BW_pathIdx": 0,
+			"BW_states": [
+				{
+					"next": "50",
+					"path": "-1",
+					"dx": "0",
+					"dy": "0",
+					"pathIdx": "0"
+				},
+				{
+					"next": "30",
+					"dx": "-1"
+				},
+				{
+					"next": "20",
+					"dx": "1"
+				},
+				{
+					"next": "30",
+					"dx": "0",
+					"dy": "1"
+				},
+				{
+					"next": "30",
+					"dy": "-1"
+				},
+				{
+					"next": "20",
+					"pathIdx": "0",
+					"path": "complexe.abs",
+					"pathStep": "1",
+					"pathEnd": "stop",
+					"dx": "0",
+					"dy": "0"
+				}
+			],
+			"BW_firstStateAt": 50,
+			"scrollingScreens": [
+				[
+					{
+						"screensToScroll": "20",
+						"screensScrollSpeed": "2"
+					},
+					{
+						"spriteName": "grass_river.BG.sprt",
+						"drawOnCanvas": "groundScrolling",
+						"loop": "10"
+					},
+					{
+						"spriteName": "grass_river.BG.sprt",
+						"drawOnCanvas": "groundScrolling",
+						"loop": "10"
+					}
+				]
+			],
+			"music": "game_assets/sounds/bgm_1-loop.mp3"
+		},
+		"description": "",
+		"collection": "stages",
+		"id": 166
+	},
+	{
+		"name": "destination-marker-50x50.sprt",
+		"object": {
+			"destination_dir": "game_assets/sprites",
+			"name": "destination-marker-50x50.sprt",
+			"src": "game_assets/images/destination-marker-50x50.png?t=1605806389",
+			"width": 50,
+			"height": 50,
+			"positions": [
+				[
+					0,
+					0
+				],
+				[
+					50,
+					0
+				],
+				[
+					100,
+					0
+				],
+				[
+					150,
+					0
+				],
+				[
+					200,
+					0
+				],
+				[
+					250,
+					0
+				],
+				[
+					300,
+					0
+				],
+				[
+					350,
+					0
+				],
+				[
+					400,
+					0
+				],
+				[
+					450,
+					0
+				]
+			],
+			"frame": 0,
+			"frameMax": 9,
+			"frameTicker": 0,
+			"nextFrameAt": 4
+		},
+		"collection": "sprites",
+		"id": 167
+	},
+	{
+		"name": "palmtree-1.sprt",
+		"object": {
+			"destination_dir": "game_assets/sprites",
+			"name": "palmtree-1.sprt",
+			"src": "game_assets/images/palmtree-1.png?t=1588051333",
+			"width": 118,
+			"height": 127,
+			"positions": [
+				[
+					0,
+					0
+				],
+				[
+					0,
+					0
+				]
+			],
+			"frame": 0,
+			"frameMax": 1,
+			"frameTicker": 0,
+			"nextFrameAt": 12
+		},
+		"collection": "sprites",
+		"id": 168
+	},
+	{
+		"name": "speedChangerArrow.sprt",
+		"object": {
+			"destination_dir": "game_assets/sprites",
+			"name": "speedChangerArrow.sprt",
+			"src": "game_assets/images/speedChangerArrowSprite-30x30.png?t=1603866977",
+			"width": 30,
+			"height": 30,
+			"positions": [
+				[
+					0,
+					0
+				],
+				[
+					30,
+					0
+				],
+				[
+					60,
+					0
+				],
+				[
+					90,
+					0
+				],
+				[
+					120,
+					0
+				],
+				[
+					150,
+					0
+				],
+				[
+					180,
+					0
+				],
+				[
+					210,
+					0
+				]
+			],
+			"frame": 0,
+			"frameMax": 7,
+			"frameTicker": 0,
+			"nextFrameAt": 12
+		},
+		"collection": "sprites",
+		"id": 169
+	},
+	{
+		"name": "myStage7.stg",
+		"object": {
+			"destination_dir": "game_assets/stages",
+			"name": "myStage7.stg",
+			"description": "Protect the swimmers and defeat the boss!",
+			"stage_entityCannons": [
+				{
+					"ID": "entity1594851083835",
+					"entityName": "shark-64x30-move-left.ent",
+					"iterations": -1,
+					"drawOnCanvas": "aboveGround",
+					"next": 50,
+					"start": 20,
+					"archiveIterations": -1,
+					"archiveStart": 20,
+					"x": 359,
+					"y": 349,
+					"dx": -1,
+					"dy": 0,
+					"path": "-1",
+					"pathEnd": "loop",
+					"states": [
+						{
+							"next": "0",
+							"action": {
+								"name": "spawn",
+								"params": {
+									"name": "shark-64x30-attack-left.ent"
+								}
+							},
+							"drawOnCanvas": "aboveGround"
+						},
+						{
+							"next": "0",
+							"action": {
+								"name": "removeSelf",
+								"params": {
+									"name": ""
+								}
+							}
+						}
+					],
+					"firstStateAt": 15,
+					"energy": 0,
+					"strength": 0,
+					"resistance": 0
+				},
+				{
+					"ID": "entity1594851118450",
+					"entityName": "shark-64x30-move-right.ent",
+					"iterations": -1,
+					"drawOnCanvas": "aboveGround",
+					"next": 50,
+					"start": 40,
+					"archiveIterations": -1,
+					"archiveStart": 40,
+					"x": -64,
+					"y": 181,
+					"dx": 1,
+					"dy": 0,
+					"path": "-1",
+					"pathEnd": "loop",
+					"states": [
+						{
+							"next": "1",
+							"action": {
+								"name": "spawn",
+								"params": {
+									"name": "shark-64x30-attack-right.ent"
+								}
+							}
+						},
+						{
+							"next": "0",
+							"action": {
+								"name": "removeSelf",
+								"params": {
+									"name": ""
+								}
+							}
+						}
+					],
+					"firstStateAt": 15,
+					"energy": 0,
+					"strength": 0,
+					"resistance": 0
+				},
+				{
+					"ID": "entity1592597255696",
+					"entityName": "shark-in-water-right.ent",
+					"iterations": 1,
+					"drawOnCanvas": "midAir",
+					"next": 0,
+					"start": 40,
+					"archiveIterations": 1,
+					"archiveStart": 40,
+					"x": 125,
+					"y": 328,
+					"dx": 0,
+					"dy": 0,
+					"path": "-1",
+					"pathEnd": "loop",
+					"states": [
+						{
+							"next": "15",
+							"dx": "4",
+							"dy": "0",
+							"resistance": "50",
+							"collideWithPaddleBounce": "false",
+							"collidePaddleLoseEnergy": "false"
+						},
+						{
+							"next": "10",
+							"dy": "-5",
+							"dx": "0",
+							"strength": "20",
+							"resistance": "0",
+							"action": {
+								"name": "spawn",
+								"params": {
+									"name": "splash-140x250.ent"
+								}
+							}
+						},
+						{
+							"next": "10",
+							"dy": "5",
+							"dx": "0"
+						},
+						{
+							"next": "15",
+							"dx": "-4",
+							"dy": "0",
+							"strength": "0",
+							"resistance": "50",
+							"action": {
+								"name": "spawn",
+								"params": {
+									"name": "splash-140x250.ent"
+								}
+							}
+						},
+						{
+							"next": "20",
+							"dx": "0",
+							"y": "-200",
+							"x": "-200",
+							"dy": "0"
+						},
+						{
+							"next": "10",
+							"y": "300",
+							"x": "120",
+							"dy": "-5",
+							"action": {
+								"name": "spawn",
+								"params": {
+									"name": "splash-140x250.ent"
+								}
+							},
+							"resistance": "0",
+							"strength": "20"
+						},
+						{
+							"next": "10",
+							"dy": "5",
+							"dx": "0"
+						},
+						{
+							"next": "1",
+							"action": {
+								"name": "spawn",
+								"params": {
+									"name": "splash-140x250.ent"
+								}
+							},
+							"dy": "0"
+						},
+						{
+							"next": "20",
+							"x": "-200",
+							"y": "-200"
+						},
+						{
+							"next": "0",
+							"x": "0",
+							"y": "300"
+						}
+					],
+					"firstStateAt": 40,
+					"energy": 100,
+					"strength": 0,
+					"resistance": 50
+				},
+				{
+					"ID": "entity1605558073198",
+					"entityName": "destination-marker-50x50.ent",
+					"iterations": 1,
+					"drawOnCanvas": "ground",
+					"next": 0,
+					"start": 0,
+					"archiveIterations": 1,
+					"archiveStart": 0,
+					"x": 143,
+					"y": 19,
+					"dx": 0,
+					"dy": 0,
+					"path": "-1",
+					"pathEnd": "loop",
+					"states": [],
+					"firstStateAt": 0,
+					"energy": 0,
+					"strength": 0,
+					"resistance": 0
+				},
+				{
+					"ID": "entity1605806854814",
+					"entityName": "swimmer-female-blonde.ent",
+					"iterations": -1,
+					"drawOnCanvas": "aboveGround",
+					"next": 60,
+					"start": 0,
+					"archiveIterations": -1,
+					"archiveStart": 0,
+					"x": 159,
+					"y": 700,
+					"dx": 0,
+					"dy": -1,
+					"path": "-1",
+					"pathEnd": "loop",
+					"states": [],
+					"firstStateAt": 0,
+					"energy": 10,
+					"strength": 0,
+					"resistance": 0,
+					"rotation": 0
+				}
+			],
+			"spawnBalls": [
+				"swimmer-female-blonde.ent"
+			],
+			"maxCasualties": 2,
+			"objectives": [
+				{
+					"name": "targets",
+					"value": [
+						{
+							"name": "shark-in-water-right.ent",
+							"count": "1"
+						}
+					],
+					"description": "Kill the boss",
+					"messageSuccess": "Objective complete",
+					"messageFailure": "Objective failed"
+				},
+				{
+					"name": "escortees",
+					"value": [
+						{
+							"name": "swimmer-female-blonde.ent",
+							"count": "4"
+						}
+					],
+					"description": "escort to safety",
+					"messageSuccess": "Objective complete",
+					"messageFailure": "Objective failed"
+				}
+			],
+			"BW_drawOnCanvas": "combo",
+			"stage_brickwall_name": "",
+			"BW_x": 54,
+			"BW_y": 92,
+			"BW_dx": 0,
+			"BW_dy": 0,
+			"BW_path": -1,
+			"BW_pathMode": "",
+			"stage_BW_pathEnd": "loop",
+			"BW_pathStep": 1,
+			"BW_pathIdx": 0,
+			"BW_states": [],
+			"BW_firstStateAt": "",
+			"scrollingScreens": [
+				[
+					{
+						"screensToScroll": "10",
+						"screensScrollSpeed": "2"
+					},
+					{
+						"spriteName": "clouds.BG.1.sprt",
+						"drawOnCanvas": "skyScrolling",
+						"loop": "5"
+					},
+					{
+						"spriteName": "clouds.BG.1.sprt",
+						"drawOnCanvas": "skyScrolling",
+						"loop": "5"
+					}
+				],
+				[
+					{
+						"screensToScroll": "1",
+						"screensScrollSpeed": "0"
+					},
+					{
+						"spriteName": "ocean-waves-360x650.sprt",
+						"drawOnCanvas": "groundScrolling",
+						"loop": "-1"
+					},
+					{
+						"spriteName": "ocean-waves-360x650.sprt",
+						"drawOnCanvas": "groundScrolling",
+						"loop": "0"
+					}
+				]
+			],
+			"music": "game_assets/sounds/bgm_3-loop.mp3"
+		},
+		"description": "Protect the swimmers and defeat the boss!",
+		"collection": "stages",
+		"id": 170
+	},
+	{
+		"name": "myStage5.stg",
+		"object": {
+			"destination_dir": "game_assets/stages",
+			"name": "myStage5.stg",
+			"description": "Destroy the turtle shell and kill 5 crabs.  Protect the boy!",
+			"stage_entityCannons": [
+				{
+					"ID": "entity1581208026656",
+					"entityName": "boxing-gloves-powerup.ent",
+					"iterations": 1,
+					"drawOnCanvas": "aboveGround",
+					"next": 0,
+					"start": 340,
+					"archiveIterations": 1,
+					"archiveStart": 340,
+					"x": 47,
+					"y": 404,
+					"dx": 0,
+					"dy": 0,
+					"path": "-1",
+					"pathEnd": "loop",
+					"states": [
+						{
+							"next": "0",
+							"action": {
+								"name": "removeSelf",
+								"params": {
+									"name": ""
+								}
+							}
+						}
+					],
+					"firstStateAt": 100,
+					"energy": 0,
+					"strength": 3,
+					"resistance": 0
+				},
+				{
+					"ID": "entity1587417135573",
+					"entityName": "bow-arrow-powerup.ent",
+					"iterations": 1,
+					"drawOnCanvas": "aboveGround",
+					"next": 0,
+					"start": 0,
+					"archiveIterations": 1,
+					"archiveStart": 0,
+					"x": 277,
+					"y": 405,
+					"dx": 0,
+					"dy": 0,
+					"path": "",
+					"pathEnd": "loop",
+					"states": [],
+					"firstStateAt": 0,
+					"energy": 0,
+					"strength": 0,
+					"resistance": null
+				},
+				{
+					"ID": "entity1587417156379",
+					"entityName": "sword-shield-powerup.ent",
+					"iterations": 1,
+					"drawOnCanvas": "aboveGround",
+					"next": 0,
+					"start": 0,
+					"archiveIterations": 1,
+					"archiveStart": 0,
+					"x": 141,
+					"y": 399,
+					"dx": 0,
+					"dy": 0,
+					"path": "-1",
+					"pathEnd": "loop",
+					"states": [],
+					"firstStateAt": 0,
+					"energy": 0,
+					"strength": 2,
+					"resistance": 20
+				},
+				{
+					"ID": "entity1595875438918",
+					"entityName": "beachball.ent",
+					"iterations": 1,
+					"drawOnCanvas": "sky",
+					"next": 0,
+					"start": 0,
+					"archiveIterations": 1,
+					"archiveStart": 0,
+					"x": 155,
+					"y": 557,
+					"dx": 0,
+					"dy": 0,
+					"path": "-1",
+					"pathEnd": "loop",
+					"states": [],
+					"firstStateAt": 0,
+					"energy": 0,
+					"strength": 2,
+					"resistance": 100
+				},
+				{
+					"ID": "entity1596122237987",
+					"entityName": "beach-rock.ent",
+					"iterations": 1,
+					"drawOnCanvas": "aboveGround",
+					"next": 0,
+					"start": 0,
+					"archiveIterations": 1,
+					"archiveStart": 0,
+					"x": 204,
+					"y": 432,
+					"dx": 0,
+					"dy": 0,
+					"path": "-1",
+					"pathEnd": "loop",
+					"states": [],
+					"firstStateAt": 0,
+					"energy": 0,
+					"strength": 0,
+					"resistance": 0
+				},
+				{
+					"ID": "entity1602705905159",
+					"entityName": "crocodile-rush-down.ent",
+					"iterations": -1,
+					"drawOnCanvas": "aboveGround",
+					"next": 40,
+					"start": 40,
+					"archiveIterations": -1,
+					"archiveStart": 40,
+					"x": 8,
+					"y": -224,
+					"dx": 0,
+					"dy": 0,
+					"path": "-1",
+					"pathEnd": "loop",
+					"states": [
+						{
+							"next": "30",
+							"dx": "1",
+							"dy": "0"
+						},
+						{
+							"next": "30",
+							"dx": "-1",
+							"dy": "0"
+						},
+						{
+							"next": "30",
+							"dx": "0",
+							"dy": "1"
+						}
+					],
+					"firstStateAt": 0,
+					"energy": 40,
+					"strength": 2,
+					"resistance": 2
+				},
+				{
+					"ID": "entity1602707241783",
+					"entityName": "crab-walk.ent",
+					"iterations": -1,
+					"drawOnCanvas": "aboveGround",
+					"next": 85,
+					"start": 75,
+					"archiveIterations": -1,
+					"archiveStart": 75,
+					"x": 358,
+					"y": 346,
+					"dx": -1,
+					"dy": 0,
+					"path": "-1",
+					"pathEnd": "loop",
+					"states": [],
+					"firstStateAt": 0,
+					"energy": 5,
+					"strength": 2,
+					"resistance": 1,
+					"rotation": 270
+				},
+				{
+					"ID": "entity1603901687450",
+					"entityName": "speedChangerArrow-UP.ent",
+					"iterations": 1,
+					"drawOnCanvas": "aboveGround",
+					"next": 0,
+					"start": 0,
+					"archiveIterations": 1,
+					"archiveStart": 0,
+					"x": 5,
+					"y": 281,
+					"dx": 5,
+					"dy": 5,
+					"path": "-1",
+					"pathEnd": "loop",
+					"states": [],
+					"firstStateAt": 0,
+					"energy": 0,
+					"strength": 0,
+					"resistance": 0,
+					"rotation": 135
+				},
+				{
+					"ID": "entity1603901688558",
+					"entityName": "speedChangerArrow-UP.ent",
+					"iterations": 1,
+					"drawOnCanvas": "aboveGround",
+					"next": 0,
+					"start": 0,
+					"archiveIterations": 1,
+					"archiveStart": 0,
+					"x": 151,
+					"y": 446,
+					"dx": 5,
+					"dy": -5,
+					"path": "-1",
+					"pathEnd": "loop",
+					"states": [],
+					"firstStateAt": 0,
+					"energy": 0,
+					"strength": 0,
+					"resistance": 0,
+					"rotation": 45
+				},
+				{
+					"ID": "entity1603949391412",
+					"entityName": "speedChangerArrow-UP.ent",
+					"iterations": 1,
+					"drawOnCanvas": "aboveGround",
+					"next": 0,
+					"start": 0,
+					"archiveIterations": 1,
+					"archiveStart": 0,
+					"x": 164,
+					"y": 133,
+					"dx": -1,
+					"dy": 10,
+					"path": "-1",
+					"pathEnd": "loop",
+					"states": [],
+					"firstStateAt": 0,
+					"energy": 0,
+					"strength": 0,
+					"resistance": 0,
+					"rotation": 225
+				},
+				{
+					"ID": "entity1587505946284",
+					"entityName": "snake.ent",
+					"iterations": -1,
+					"drawOnCanvas": "aboveGround",
+					"next": 80,
+					"start": 0,
+					"archiveIterations": -1,
+					"archiveStart": 0,
+					"x": 77,
+					"y": -50,
+					"dx": 0,
+					"dy": 0,
+					"path": "-1",
+					"pathEnd": "loop",
+					"states": [
+						{
+							"next": "20",
+							"dy": "2",
+							"dx": "1"
+						},
+						{
+							"next": "60",
+							"dy": "0",
+							"dx": "0"
+						},
+						{
+							"next": "20",
+							"dx": "-1",
+							"dy": "2"
+						}
+					],
+					"firstStateAt": 50,
+					"energy": 2,
+					"strength": 5,
+					"resistance": 2
+				},
+				{
+					"ID": "entity1603953146818",
+					"entityName": "speedChangerArrow-UP.ent",
+					"iterations": 1,
+					"drawOnCanvas": "aboveGround",
+					"next": 0,
+					"start": 0,
+					"archiveIterations": 1,
+					"archiveStart": 0,
+					"x": 324,
+					"y": 298,
+					"dx": -5,
+					"dy": -5,
+					"path": "-1",
+					"pathEnd": "loop",
+					"states": [],
+					"firstStateAt": 0,
+					"energy": 0,
+					"strength": 0,
+					"resistance": 0,
+					"rotation": 315
+				},
+				{
+					"ID": "entity1604246063753",
+					"entityName": "palmtree1.ent",
+					"iterations": 1,
+					"drawOnCanvas": "aboveGround",
+					"next": 0,
+					"start": 0,
+					"archiveIterations": 1,
+					"archiveStart": 0,
+					"x": 111,
+					"y": 184,
+					"dx": 0,
+					"dy": 0,
+					"path": "-1",
+					"pathEnd": "loop",
+					"states": [],
+					"firstStateAt": 0,
+					"energy": 0,
+					"strength": 0,
+					"resistance": 0
+				}
+			],
+			"spawnBalls": [],
+			"maxCasualties": "",
+			"objectives": [
+				{
+					"name": "targets",
+					"value": [
+						{
+							"name": "crab-walk.ent",
+							"count": "5"
+						}
+					],
+					"description": "Kill / Remove targets",
+					"messageSuccess": "Objective complete",
+					"messageFailure": "Objective failed"
+				},
+				{
+					"name": "destroyBW",
+					"value": "true",
+					"description": "Destroy all bricks",
+					"messageSuccess": "Objective complete",
+					"messageFailure": "Objective failed"
+				},
+				{
+					"name": "timer",
+					"value": "1200",
+					"description": "Time limit",
+					"messageSuccess": "Objective complete",
+					"messageFailure": "Objective failed"
+				}
+			],
+			"BW_drawOnCanvas": "ground",
+			"stage_brickwall_name": "turtle_shell.bw",
+			"BW_x": 0,
+			"BW_y": 80,
+			"BW_dx": 0,
+			"BW_dy": 0,
+			"BW_path": -1,
+			"BW_pathMode": "",
+			"stage_BW_pathEnd": "loop",
+			"BW_pathStep": 1,
+			"BW_pathIdx": 0,
+			"BW_states": [],
+			"BW_firstStateAt": 100,
+			"scrollingScreens": [
+				[
+					{
+						"screensToScroll": "10",
+						"screensScrollSpeed": "0"
+					},
+					{
+						"spriteName": "sand-360x600.sprt",
+						"drawOnCanvas": "groundScrolling",
+						"loop": "-1"
+					},
+					{
+						"spriteName": "sand-360x600.sprt",
+						"drawOnCanvas": "groundScrolling",
+						"loop": "-1"
+					}
+				],
+				[
+					{
+						"screensToScroll": "20",
+						"screensScrollSpeed": "1"
+					},
+					{
+						"spriteName": "clouds.BG.1.sprt",
+						"drawOnCanvas": "skyScrolling",
+						"loop": "-1"
+					},
+					{
+						"spriteName": "clouds.BG.1.sprt",
+						"drawOnCanvas": "skyScrolling",
+						"loop": "-1"
+					}
+				]
+			],
+			"music": "game_assets/sounds/bgm_3-loop.mp3"
+		},
+		"description": "Destroy the turtle shell and kill 5 crabs.  Protect the boy!",
+		"collection": "stages",
+		"id": 171
+	},
+	{
+		"name": "beachball-right.sprt",
+		"object": {
+			"destination_dir": "game_assets/sprites",
+			"name": "beachball-right.sprt",
+			"src": "game_assets/images/BEACHBALL-RIGHT-16x16.png?t=1596220623",
+			"width": 16,
+			"height": 16,
+			"positions": [
+				[
+					0,
+					0
+				],
+				[
+					16,
+					0
+				],
+				[
+					32,
+					0
+				],
+				[
+					48,
+					0
+				],
+				[
+					64,
+					0
+				],
+				[
+					80,
+					0
+				]
+			],
+			"frame": 0,
+			"frameMax": 5,
+			"frameTicker": 0,
+			"nextFrameAt": 12
+		},
+		"collection": "sprites",
+		"id": 172
+	},
+	{
+		"name": "beachball-bottom.sprt",
+		"object": {
+			"destination_dir": "game_assets/sprites",
+			"name": "beachball-bottom.sprt",
+			"src": "game_assets/images/BEACHBALL-BOTTOM-16X16.png?t=1595874939",
+			"width": 16,
+			"height": 16,
+			"positions": [
+				[
+					0,
+					0
+				],
+				[
+					16,
+					0
+				],
+				[
+					32,
+					0
+				],
+				[
+					48,
+					0
+				],
+				[
+					64,
+					0
+				],
+				[
+					80,
+					0
+				]
+			],
+			"frame": 0,
+			"frameMax": 5,
+			"frameTicker": 0,
+			"nextFrameAt": 12
+		},
+		"collection": "sprites",
+		"id": 173
+	},
+	{
+		"name": "beachball-top.sprt",
+		"object": {
+			"destination_dir": "game_assets/sprites",
+			"name": "beachball-top.sprt",
+			"src": "game_assets/images/BEACHBALL-TOP-16x16.png?t=1596220852",
+			"width": 16,
+			"height": 16,
+			"positions": [
+				[
+					0,
+					0
+				],
+				[
+					16,
+					0
+				],
+				[
+					32,
+					0
+				],
+				[
+					48,
+					0
+				],
+				[
+					64,
+					0
+				],
+				[
+					80,
+					0
+				]
+			],
+			"frame": 0,
+			"frameMax": 5,
+			"frameTicker": 0,
+			"nextFrameAt": 12
+		},
+		"collection": "sprites",
+		"id": 174
+	},
+	{
+		"name": "beachball-left.sprt",
+		"object": {
+			"destination_dir": "game_assets/sprites",
+			"name": "beachball-left.sprt",
+			"src": "game_assets/images/BEACHBALL-LEFT-16x16.png?t=1596220623",
+			"width": 16,
+			"height": 16,
+			"positions": [
+				[
+					0,
+					0
+				],
+				[
+					16,
+					0
+				],
+				[
+					32,
+					0
+				],
+				[
+					48,
+					0
+				],
+				[
+					64,
+					0
+				],
+				[
+					80,
+					0
+				]
+			],
+			"frame": 0,
+			"frameMax": 5,
+			"frameTicker": 0,
+			"nextFrameAt": 12
+		},
+		"collection": "sprites",
+		"id": 175
+	},
+	{
+		"name": "seaweed-3.sprt",
+		"object": {
+			"destination_dir": "game_assets/sprites",
+			"name": "seaweed-3.sprt",
+			"src": "game_assets/images/seaweed-3.png?t=1588051005",
+			"width": 24,
+			"height": 22,
+			"positions": [
+				[
+					0,
+					0
+				],
+				[
+					0,
+					0
+				]
+			],
+			"frame": 0,
+			"frameMax": 1,
+			"frameTicker": 0,
+			"nextFrameAt": 12
+		},
+		"collection": "sprites",
+		"id": 176
+	},
+	{
+		"name": "seaweed-2.sprt",
+		"object": {
+			"destination_dir": "game_assets/sprites",
+			"name": "seaweed-2.sprt",
+			"src": "game_assets/images/seaweed-2.png?t=1588051005",
+			"width": 19,
+			"height": 23,
+			"positions": [
+				[
+					0,
+					0
+				],
+				[
+					0,
+					0
+				]
+			],
+			"frame": 0,
+			"frameMax": 1,
+			"frameTicker": 0,
+			"nextFrameAt": 12
+		},
+		"collection": "sprites",
+		"id": 177
+	},
+	{
+		"name": "beach-rock.sprt",
+		"object": {
+			"destination_dir": "game_assets/sprites",
+			"name": "beach-rock.sprt",
+			"src": "game_assets/images/BEACH-ROCK.png?t=1596123292",
+			"width": 59,
+			"height": 55,
+			"positions": [
+				[
+					0,
+					0
+				],
+				[
+					0,
+					0
+				]
+			],
+			"frame": 0,
+			"frameMax": 1,
+			"frameTicker": 0,
+			"nextFrameAt": 12
+		},
+		"collection": "sprites",
+		"id": 178
+	},
+	{
+		"name": "shark-30x64-attack-up.sprt",
+		"object": {
+			"destination_dir": "game_assets/sprites",
+			"name": "shark-30x64-attack-up.sprt",
+			"src": "game_assets/images/shark-20x43-up-spritesheet-sheet.png?t=1594974925",
+			"width": 20,
+			"height": 43,
+			"positions": [
+				[
+					0,
+					0
+				],
+				[
+					20,
+					0
+				],
+				[
+					40,
+					0
+				],
+				[
+					60,
+					0
+				],
+				[
+					80,
+					0
+				]
+			],
+			"frame": 0,
+			"frameMax": 4,
+			"frameTicker": 0,
+			"nextFrameAt": 8
+		},
+		"collection": "sprites",
+		"id": 179
+	},
+	{
+		"name": "seaweed-1.sprt",
+		"object": {
+			"destination_dir": "game_assets/sprites",
+			"name": "seaweed-1.sprt",
+			"src": "game_assets/images/seaweed-1.png?t=1588051005",
+			"width": 23,
+			"height": 29,
+			"positions": [
+				[
+					0,
+					0
+				],
+				[
+					0,
+					0
+				]
+			],
+			"frame": 0,
+			"frameMax": 1,
+			"frameTicker": 0,
+			"nextFrameAt": 12
+		},
+		"collection": "sprites",
+		"id": 180
+	},
+	{
+		"name": "shark-30x64-attack-down.sprt",
+		"object": {
+			"destination_dir": "game_assets/sprites",
+			"name": "shark-30x64-attack-down.sprt",
+			"src": "game_assets/images/shark-20x43-down-spritesheet-sheet.png?t=1594974525",
+			"width": 20,
+			"height": 43,
+			"positions": [
+				[
+					0,
+					0
+				],
+				[
+					20,
+					0
+				],
+				[
+					40,
+					0
+				],
+				[
+					60,
+					0
+				],
+				[
+					80,
+					0
+				]
+			],
+			"frame": 0,
+			"frameMax": 4,
+			"frameTicker": 0,
+			"nextFrameAt": 8
+		},
+		"collection": "sprites",
+		"id": 181
+	},
+	{
+		"name": "shark-64x30-groggy.sprt",
+		"object": {
+			"destination_dir": "game_assets/sprites",
+			"name": "shark-64x30-groggy.sprt",
+			"src": "game_assets/images/shark-64x30-groggy-spritesheet.png?t=1594857285",
+			"width": 64,
+			"height": 30,
+			"positions": [
+				[
+					0,
+					0
+				],
+				[
+					64,
+					0
+				],
+				[
+					128,
+					0
+				],
+				[
+					192,
+					0
+				]
+			],
+			"frame": 0,
+			"frameMax": 3,
+			"frameTicker": 0,
+			"nextFrameAt": 8
+		},
+		"collection": "sprites",
+		"id": 182
+	},
+	{
+		"name": "shark-64x30-move-left.sprt",
+		"object": {
+			"destination_dir": "game_assets/sprites",
+			"name": "shark-64x30-move-left.sprt",
+			"src": "game_assets/images/shark-34x30-left-fin-spritesheet.png?t=1594826053",
+			"width": 64,
+			"height": 30,
+			"positions": [
+				[
+					0,
+					0
+				],
+				[
+					0,
+					0
+				],
+				[
+					64,
+					0
+				],
+				[
+					64,
+					0
+				],
+				[
+					128,
+					0
+				],
+				[
+					128,
+					0
+				],
+				[
+					192,
+					0
+				],
+				[
+					192,
+					0
+				]
+			],
+			"frame": 0,
+			"frameMax": 3,
+			"frameTicker": 0,
+			"nextFrameAt": 12
+		},
+		"collection": "sprites",
+		"id": 183
+	},
+	{
+		"name": "shark-64x30-attack-right.sprt",
+		"object": {
+			"destination_dir": "game_assets/sprites",
+			"name": "shark-64x30-attack-right.sprt",
+			"src": "game_assets/images/shark-34x30-right-spritesheet.png?t=1594824681",
+			"width": 64,
+			"height": 30,
+			"positions": [
+				[
+					0,
+					0
+				],
+				[
+					64,
+					0
+				],
+				[
+					128,
+					0
+				],
+				[
+					192,
+					0
+				]
+			],
+			"frame": 0,
+			"frameMax": 3,
+			"frameTicker": 0,
+			"nextFrameAt": 8
+		},
+		"collection": "sprites",
+		"id": 184
+	},
+	{
+		"name": "shark-64x30-move-right.sprt",
+		"object": {
+			"destination_dir": "game_assets/sprites",
+			"name": "shark-64x30-move-right.sprt",
+			"src": "game_assets/images/shark-34x30-right-fin-spritesheet.png?t=1594826053",
+			"width": 64,
+			"height": 30,
+			"positions": [
+				[
+					192,
+					0
+				],
+				[
+					192,
+					0
+				],
+				[
+					128,
+					0
+				],
+				[
+					128,
+					0
+				],
+				[
+					64,
+					0
+				],
+				[
+					64,
+					0
+				],
+				[
+					0,
+					0
+				],
+				[
+					0,
+					0
+				]
+			],
+			"frame": 0,
+			"frameMax": 3,
+			"frameTicker": 0,
+			"nextFrameAt": 12
+		},
+		"collection": "sprites",
+		"id": 185
+	},
+	{
+		"name": "teleportation-back.sprt",
+		"object": {
+			"destination_dir": "game_assets/sprites",
+			"name": "teleportation-back.sprt",
+			"src": "game_assets/images/teleportation-spritesheet-sheet.png?t=1594084216",
+			"width": 90,
+			"height": 700,
+			"positions": [
+				[
+					450,
+					0
+				],
+				[
+					360,
+					0
+				],
+				[
+					270,
+					0
+				],
+				[
+					180,
+					0
+				],
+				[
+					90,
+					0
+				],
+				[
+					0,
+					0
+				]
+			],
+			"frame": 0,
+			"frameMax": 5,
+			"frameTicker": 0,
+			"nextFrameAt": 12
+		},
+		"collection": "sprites",
+		"id": 186
+	},
+	{
+		"name": "teleportation.sprt",
+		"object": {
+			"destination_dir": "game_assets/sprites",
+			"name": "teleportation.sprt",
+			"src": "game_assets/images/teleportation-spritesheet-sheet.png?t=1594084216",
+			"width": 90,
+			"height": 700,
+			"positions": [
+				[
+					0,
+					0
+				],
+				[
+					90,
+					0
+				],
+				[
+					180,
+					0
+				],
+				[
+					270,
+					0
+				],
+				[
+					360,
+					0
+				],
+				[
+					450,
+					0
+				]
+			],
+			"frame": 0,
+			"frameMax": 5,
+			"frameTicker": 0,
+			"nextFrameAt": 12
+		},
+		"collection": "sprites",
+		"id": 187
+	},
+	{
+		"name": "shark-groggy.sprt",
+		"object": {
+			"destination_dir": "game_assets/sprites",
+			"name": "shark-groggy.sprt",
+			"src": "game_assets/images/great-white-GROGGY-420x250.png?t=1593815582",
+			"width": 140,
+			"height": 250,
+			"positions": [
+				[
+					280,
+					0
+				],
+				[
+					0,
+					0
+				],
+				[
+					140,
+					0
+				],
+				[
+					0,
+					0
+				]
+			],
+			"frame": 0,
+			"frameMax": 3,
+			"frameTicker": 0,
+			"nextFrameAt": 24
+		},
+		"collection": "sprites",
+		"id": 188
+	},
+	{
+		"name": "shark-64x30-attack-left.sprt",
+		"object": {
+			"destination_dir": "game_assets/sprites",
+			"name": "shark-64x30-attack-left.sprt",
+			"src": "game_assets/images/shark-34x30-left-spritesheet.png",
+			"width": 64,
+			"height": 30,
+			"positions": [
+				[
+					192,
+					0
+				],
+				[
+					128,
+					0
+				],
+				[
+					64,
+					0
+				],
+				[
+					0,
+					0
+				]
+			],
+			"frame": 0,
+			"frameMax": 3,
+			"frameTicker": 0,
+			"nextFrameAt": 8
+		},
+		"collection": "sprites",
+		"id": 189
+	},
+	{
+		"name": "ocean-waves-360x650.sprt",
+		"object": {
+			"destination_dir": "game_assets/sprites",
+			"name": "ocean-waves-360x650.sprt",
+			"src": "game_assets/images/ocean-waves-spritesheet-360x650.png?t=1593632683",
+			"width": 360,
+			"height": 650,
+			"positions": [
+				[
+					0,
+					0
+				],
+				[
+					360,
+					0
+				],
+				[
+					720,
+					0
+				],
+				[
+					1080,
+					0
+				],
+				[
+					720,
+					0
+				],
+				[
+					360,
+					0
+				]
+			],
+			"frame": 0,
+			"frameMax": 5,
+			"frameTicker": 0,
+			"nextFrameAt": 24
+		},
+		"collection": "sprites",
+		"id": 190
+	},
+	{
+		"name": "shark-in-water-right.sprt",
+		"object": {
+			"destination_dir": "game_assets/sprites",
+			"name": "shark-in-water-right.sprt",
+			"src": "game_assets/images/shark-in-water-right.png?t=1592602110",
+			"width": 70,
+			"height": 104,
+			"positions": [
+				[
+					210,
+					0
+				],
+				[
+					0,
+					0
+				],
+				[
+					70,
+					0
+				],
+				[
+					140,
+					0
+				],
+				[
+					140,
+					0
+				],
+				[
+					70,
+					0
+				],
+				[
+					0,
+					0
+				],
+				[
+					210,
+					0
+				]
+			],
+			"frame": 0,
+			"frameMax": 6,
+			"frameTicker": 0,
+			"nextFrameAt": 12
+		},
+		"collection": "sprites",
+		"id": 191
+	},
+	{
+		"name": "shark-in-water-left.sprt",
+		"object": {
+			"destination_dir": "game_assets/sprites",
+			"name": "shark-in-water-left.sprt",
+			"src": "game_assets/images/shark-in-water-left.png?t=1592602110",
+			"width": 70,
+			"height": 104,
+			"positions": [
+				[
+					210,
+					0
+				],
+				[
+					0,
+					0
+				],
+				[
+					70,
+					0
+				],
+				[
+					140,
+					0
+				],
+				[
+					140,
+					0
+				],
+				[
+					70,
+					0
+				],
+				[
+					0,
+					0
+				],
+				[
+					210,
+					0
+				]
+			],
+			"frame": 0,
+			"frameMax": 6,
+			"frameTicker": 0,
+			"nextFrameAt": 12
+		},
+		"collection": "sprites",
+		"id": 192
+	},
+	{
+		"name": "splash-140x250.sprt",
+		"object": {
+			"destination_dir": "game_assets/sprites",
+			"name": "splash-140x250.sprt",
+			"src": "game_assets/images/splash-spritesheet-140x250.png?t=1593560217",
+			"width": 140,
+			"height": 250,
+			"positions": [
+				[
+					0,
+					0
+				],
+				[
+					140,
+					0
+				],
+				[
+					280,
+					0
+				],
+				[
+					420,
+					0
+				],
+				[
+					560,
+					0
+				],
+				[
+					700,
+					0
+				],
+				[
+					840,
+					0
+				],
+				[
+					980,
+					0
+				]
+			],
+			"frame": 0,
+			"frameMax": 7,
+			"frameTicker": 0,
+			"nextFrameAt": 12
+		},
+		"collection": "sprites",
+		"id": 193
+	},
+	{
+		"name": "sand-360x600.sprt",
+		"object": {
+			"destination_dir": "game_assets/sprites",
+			"name": "sand-360x600.sprt",
+			"src": "game_assets/images/sand-360x600.png?t=1587510678",
+			"width": 360,
+			"height": 600,
+			"positions": [
+				[
+					0,
+					0
+				],
+				[
+					0,
+					0
+				]
+			],
+			"frame": 0,
+			"frameMax": 1,
+			"frameTicker": 0,
+			"nextFrameAt": 12
+		},
+		"collection": "sprites",
+		"id": 194
+	},
+	{
+		"name": "great-white-attack-up-down.sprt",
+		"object": {
+			"destination_dir": "game_assets/sprites",
+			"name": "great-white-attack-up-down.sprt",
+			"src": "game_assets/images/great-white-attack-up-down-560x250.png?t=1587684968",
+			"width": 140,
+			"height": 250,
+			"positions": [
+				[
+					0,
+					0
+				],
+				[
+					140,
+					0
+				],
+				[
+					280,
+					0
+				],
+				[
+					420,
+					0
+				]
+			],
+			"frame": 0,
+			"frameMax": 3,
+			"frameTicker": 0,
+			"nextFrameAt": 48
+		},
+		"collection": "sprites",
+		"id": 195
+	},
+	{
+		"name": "great-white-attack-up.sprt",
+		"object": {
+			"destination_dir": "game_assets/sprites",
+			"name": "great-white-attack-up.sprt",
+			"src": "game_assets/images/great-white-attack-up-down-560x250.png?t=1606366894",
+			"width": 140,
+			"height": 250,
+			"positions": [
+				[
+					0,
+					0
+				],
+				[
+					140,
+					0
+				]
+			],
+			"frame": 0,
+			"frameMax": 1,
+			"frameTicker": 0,
+			"nextFrameAt": 96,
+			"hitboxes": [
+				{
+					"x": 44,
+					"y": 0,
+					"h": 248,
+					"w": 52,
+					"idx": 0
+				},
+				{
+					"x": 46,
+					"y": 31,
+					"h": 201,
+					"w": 50,
+					"idx": 1
+				}
+			]
+		},
+		"collection": "sprites",
+		"id": 196
+	},
+	{
+		"name": "great-white-attack-down.sprt",
+		"object": {
+			"destination_dir": "game_assets/sprites",
+			"name": "great-white-attack-down.sprt",
+			"src": "game_assets/images/great-white-attack-up-down-560x250.png?t=1606365991",
+			"width": 140,
+			"height": 250,
+			"positions": [
+				[
+					280,
+					0
+				],
+				[
+					420,
+					0
+				]
+			],
+			"frame": 0,
+			"frameMax": 1,
+			"frameTicker": 0,
+			"nextFrameAt": 48,
+			"hitboxes": [
+				{
+					"x": 25,
+					"y": 75,
+					"h": 145,
+					"w": 83,
+					"idx": 0
+				},
+				{
+					"x": 44,
+					"y": 43,
+					"h": 200,
+					"w": 49,
+					"idx": 1
+				}
+			]
+		},
+		"collection": "sprites",
+		"id": 197
+	},
+	{
+		"name": "snake-static.sprt",
+		"object": {
+			"destination_dir": "game_assets/sprites",
+			"name": "snake-static.sprt",
+			"src": "game_assets/images/snake-static-120x38.png?t=1587505376",
+			"width": 40,
+			"height": 38,
+			"positions": [
+				[
+					0,
+					0
+				],
+				[
+					40,
+					0
+				],
+				[
+					80,
+					0
+				]
+			],
+			"frame": 0,
+			"frameMax": 2,
+			"frameTicker": 0,
+			"nextFrameAt": 12
+		},
+		"collection": "sprites",
+		"id": 198
+	},
+	{
+		"name": "snake-crawl-down.sprt",
+		"object": {
+			"destination_dir": "game_assets/sprites",
+			"name": "snake-crawl-down.sprt",
+			"src": "game_assets/images/snake-crawl-down-384x92.png?t=1587491648",
+			"width": 48,
+			"height": 92,
+			"positions": [
+				[
+					0,
+					0
+				],
+				[
+					48,
+					0
+				],
+				[
+					96,
+					0
+				],
+				[
+					144,
+					0
+				],
+				[
+					192,
+					0
+				],
+				[
+					240,
+					0
+				],
+				[
+					288,
+					0
+				],
+				[
+					336,
+					0
+				]
+			],
+			"frame": 0,
+			"frameMax": 7,
+			"frameTicker": 0,
+			"nextFrameAt": 12
+		},
+		"collection": "sprites",
+		"id": 199
+	},
+	{
+		"name": "crocodile-rush-down-75x186.sprt",
+		"object": {
+			"destination_dir": "game_assets/sprites",
+			"name": "crocodile-rush-down-75x186.sprt",
+			"src": "game_assets/images/crocodile-375x186.png?t=1587576990",
+			"width": 75,
+			"height": 186,
+			"positions": [
+				[
+					0,
+					0
+				],
+				[
+					75,
+					0
+				],
+				[
+					150,
+					0
+				],
+				[
+					75,
+					0
+				],
+				[
+					0,
+					0
+				],
+				[
+					225,
+					0
+				],
+				[
+					300,
+					0
+				],
+				[
+					225,
+					0
+				]
+			],
+			"frame": 0,
+			"frameMax": 7,
+			"frameTicker": 0,
+			"nextFrameAt": 8
+		},
+		"collection": "sprites",
+		"id": 200
+	},
+	{
+		"name": "crab-walk-192x32.sprt",
+		"object": {
+			"destination_dir": "game_assets/sprites",
+			"name": "crab-walk-192x32.sprt",
+			"src": "game_assets/images/crab-walk-192x32.png?t=1587424340",
+			"width": 48,
+			"height": 48,
+			"positions": [
+				[
+					0,
+					0
+				],
+				[
+					48,
+					0
+				],
+				[
+					96,
+					0
+				],
+				[
+					144,
+					0
+				]
+			],
+			"frame": 0,
+			"frameMax": 3,
+			"frameTicker": 0,
+			"nextFrameAt": 6
+		},
+		"collection": "sprites",
+		"id": 201
+	},
+	{
+		"name": "angel-GABRIELLE-fly.sprt",
+		"object": {
+			"destination_dir": "game_assets/sprites",
+			"name": "angel-GABRIELLE-fly.sprt",
+			"src": "game_assets/images/ANGEL-GABRIELLE-FLY-NEUTRAL-spritesheet-320x63.png?t=1587238360",
+			"width": 80,
+			"height": 63,
+			"positions": [
+				[
+					0,
+					0
+				],
+				[
+					80,
+					0
+				],
+				[
+					160,
+					0
+				],
+				[
+					240,
+					0
+				]
+			],
+			"frame": 0,
+			"frameMax": 3,
+			"frameTicker": 0,
+			"nextFrameAt": 12
+		},
+		"collection": "sprites",
+		"id": 202
+	},
+	{
+		"name": "angel-GABRIELLE-boxing.sprt",
+		"object": {
+			"destination_dir": "game_assets/sprites",
+			"name": "angel-GABRIELLE-boxing.sprt",
+			"src": "game_assets/images/ANGEL-GABRIELLE-BOXING-640x103.png?t=1587251091",
+			"width": 80,
+			"height": 103,
+			"positions": [
+				[
+					0,
+					0
+				],
+				[
+					80,
+					0
+				],
+				[
+					160,
+					0
+				],
+				[
+					240,
+					0
+				],
+				[
+					320,
+					0
+				],
+				[
+					400,
+					0
+				],
+				[
+					480,
+					0
+				],
+				[
+					560,
+					0
+				]
+			],
+			"frame": 0,
+			"frameMax": 7,
+			"frameTicker": 0,
+			"nextFrameAt": 6
+		},
+		"collection": "sprites",
+		"id": 203
+	},
+	{
+		"name": "angel-GABRIELLE-sword-shield.sprt",
+		"object": {
+			"destination_dir": "game_assets/sprites",
+			"name": "angel-GABRIELLE-sword-shield.sprt",
+			"src": "game_assets/images/ANGEL-GABRIELLE-SWORD-SHIELD-320x103.png?t=1587252696",
+			"width": 80,
+			"height": 103,
+			"positions": [
+				[
+					0,
+					0
+				],
+				[
+					80,
+					0
+				],
+				[
+					160,
+					0
+				],
+				[
+					240,
+					0
+				]
+			],
+			"frame": 0,
+			"frameMax": 3,
+			"frameTicker": 0,
+			"nextFrameAt": 4
+		},
+		"collection": "sprites",
+		"id": 204
+	},
+	{
+		"name": "angel-GABRIELLE-bow-arrow.sprt",
+		"object": {
+			"destination_dir": "game_assets/sprites",
+			"name": "angel-GABRIELLE-bow-arrow.sprt",
+			"src": "game_assets/images/ANGEL-GABRIELLE-SHOOT-ARROW-320x103.png?t=1587241880",
+			"width": 80,
+			"height": 103,
+			"positions": [
+				[
+					0,
+					0
+				],
+				[
+					80,
+					0
+				],
+				[
+					160,
+					0
+				],
+				[
+					240,
+					0
+				]
+			],
+			"frame": 0,
+			"frameMax": 3,
+			"frameTicker": 0,
+			"nextFrameAt": 6
+		},
+		"collection": "sprites",
+		"id": 205
+	},
+	{
+		"name": "angel-GABRIELLE-push-portal.sprt",
+		"object": {
+			"destination_dir": "game_assets/sprites",
+			"name": "angel-GABRIELLE-push-portal.sprt",
+			"src": "game_assets/images/ANGEL-GABRIELLE-PUSH-PORTAL-spritesheet-320x63.png?t=1587238360",
+			"width": 80,
+			"height": 63,
+			"positions": [
+				[
+					0,
+					0
+				],
+				[
+					80,
+					0
+				],
+				[
+					160,
+					0
+				],
+				[
+					240,
+					0
+				]
+			],
+			"frame": 0,
+			"frameMax": 3,
+			"frameTicker": 0,
+			"nextFrameAt": 12
+		},
+		"collection": "sprites",
+		"id": 206
+	},
+	{
+		"name": "angel-G-ARROW-fly.sprt",
+		"object": {
+			"destination_dir": "game_assets/sprites",
+			"name": "angel-G-ARROW-fly.sprt",
+			"src": "game_assets/images/angel-Golden-ARROW-fly320x75.png?t=1586972874",
+			"width": 80,
+			"height": 75,
+			"positions": [
+				[
+					0,
+					0
+				],
+				[
+					80,
+					0
+				],
+				[
+					160,
+					0
+				],
+				[
+					240,
+					0
+				]
+			],
+			"frame": 0,
+			"frameMax": 3,
+			"frameTicker": 0,
+			"nextFrameAt": 12
+		},
+		"collection": "sprites",
+		"id": 207
+	},
+	{
+		"name": "angel-g-arrow-sword-shield.sprt",
+		"object": {
+			"destination_dir": "game_assets/sprites",
+			"name": "angel-g-arrow-sword-shield.sprt",
+			"src": "game_assets/images/angel-G-arrow-sword-shield-320x105.png?t=1587153465",
+			"width": 80,
+			"height": 105,
+			"positions": [
+				[
+					0,
+					0
+				],
+				[
+					80,
+					0
+				],
+				[
+					0,
+					0
+				],
+				[
+					160,
+					0
+				],
+				[
+					0,
+					0
+				],
+				[
+					240,
+					0
+				]
+			],
+			"frame": 0,
+			"frameMax": 5,
+			"frameTicker": 0,
+			"nextFrameAt": 6
+		},
+		"collection": "sprites",
+		"id": 208
+	},
+	{
+		"name": "angel-archer-push-portal.sprt",
+		"object": {
+			"destination_dir": "game_assets/sprites",
+			"name": "angel-archer-push-portal.sprt",
+			"src": "game_assets/images/ANGEL-ARCHER-PUSH-PORTAL-spritesheet-320x75.png?t=1586976764",
+			"width": 80,
+			"height": 75,
+			"positions": [
+				[
+					0,
+					0
+				],
+				[
+					80,
+					0
+				],
+				[
+					160,
+					0
+				],
+				[
+					240,
+					0
+				]
+			],
+			"frame": 0,
+			"frameMax": 3,
+			"frameTicker": 0,
+			"nextFrameAt": 12
+		},
+		"collection": "sprites",
+		"id": 209
+	},
+	{
+		"name": "angel-G-arrow-boxing.sprt",
+		"object": {
+			"destination_dir": "game_assets/sprites",
+			"name": "angel-G-arrow-boxing.sprt",
+			"src": "game_assets/images/angel-G-arrow-boxing-800x85.png?t=1587079046",
+			"width": 80,
+			"height": 85,
+			"positions": [
+				[
+					0,
+					0
+				],
+				[
+					80,
+					0
+				],
+				[
+					160,
+					0
+				],
+				[
+					240,
+					0
+				],
+				[
+					320,
+					0
+				],
+				[
+					400,
+					0
+				],
+				[
+					480,
+					0
+				],
+				[
+					560,
+					0
+				],
+				[
+					640,
+					0
+				],
+				[
+					720,
+					0
+				]
+			],
+			"frame": 0,
+			"frameMax": 9,
+			"frameTicker": 0,
+			"nextFrameAt": 8
+		},
+		"collection": "sprites",
+		"id": 210
+	},
+	{
+		"name": "angel-archer-bow-arrow.sprt",
+		"object": {
+			"destination_dir": "game_assets/sprites",
+			"name": "angel-archer-bow-arrow.sprt",
+			"src": "game_assets/images/ANGEL-ARCHER-BOW-spritesheet-320x75.png?t=1586988446",
+			"width": 80,
+			"height": 105,
+			"positions": [
+				[
+					0,
+					0
+				],
+				[
+					80,
+					0
+				],
+				[
+					160,
+					0
+				],
+				[
+					240,
+					0
+				]
+			],
+			"frame": 0,
+			"frameMax": 3,
+			"frameTicker": 0,
+			"nextFrameAt": 3
+		},
+		"collection": "sprites",
+		"id": 211
+	},
+	{
+		"name": "angel-boxing.sprt",
+		"object": {
+			"destination_dir": "game_assets/sprites",
+			"name": "angel-boxing.sprt",
+			"src": "game_assets/images/angel-boxing-spritesheet-150x46.png?t=1591459080",
+			"width": 50,
+			"height": 46,
+			"positions": [
+				[
+					0,
+					0
+				],
+				[
+					0,
+					0
+				],
+				[
+					50,
+					0
+				],
+				[
+					50,
+					0
+				],
+				[
+					100,
+					0
+				],
+				[
+					100,
+					0
+				],
+				[
+					50,
+					0
+				],
+				[
+					50,
+					0
+				]
+			],
+			"frame": 0,
+			"frameMax": 7,
+			"frameTicker": 0,
+			"nextFrameAt": 5
+		},
+		"collection": "sprites",
+		"id": 212
+	},
+	{
+		"name": "angel-archer.sprt",
+		"object": {
+			"name": "angel-archer.sprt",
+			"src": "game_assets/images/angel-archer-spritesheet-300x46.png?t=1580660367",
+			"width": 50,
+			"height": 46,
+			"positions": [
+				[
+					0,
+					0
+				],
+				[
+					50,
+					0
+				],
+				[
+					100,
+					0
+				],
+				[
+					150,
+					0
+				],
+				[
+					200,
+					0
+				],
+				[
+					250,
+					0
+				]
+			],
+			"frame": 0,
+			"frameMax": 5,
+			"frameTicker": 0,
+			"nextFrameAt": 12
+		},
+		"collection": "sprites",
+		"id": 213
+	},
+	{
+		"name": "angel-sword-shield.sprt",
+		"object": {
+			"destination_dir": "game_assets/sprites",
+			"name": "angel-sword-shield.sprt",
+			"src": "game_assets/images/angel-sword-shield-spritesheet-150x46.png?t=1583847457",
+			"width": 50,
+			"height": 46,
+			"positions": [
+				[
+					0,
+					0
+				],
+				[
+					50,
+					0
+				],
+				[
+					100,
+					0
+				]
+			],
+			"frame": 0,
+			"frameMax": 2,
+			"frameTicker": 0,
+			"nextFrameAt": 5
+		},
+		"collection": "sprites",
+		"id": 214
+	},
+	{
+		"name": "angel-M.angelo-fly.sprt",
+		"object": {
+			"destination_dir": "game_assets/sprites",
+			"name": "angel-M.angelo-fly.sprt",
+			"src": "game_assets/images/angel-M.angelo-fly320x70.png?t=1586471281",
+			"width": 80,
+			"height": 70,
+			"positions": [
+				[
+					0,
+					0
+				],
+				[
+					80,
+					0
+				],
+				[
+					160,
+					0
+				],
+				[
+					240,
+					0
+				]
+			],
+			"frame": 0,
+			"frameMax": 3,
+			"frameTicker": 0,
+			"nextFrameAt": 12
+		},
+		"collection": "sprites",
+		"id": 215
+	},
+	{
+		"name": "angel-M.angelo-push-portal.sprt",
+		"object": {
+			"destination_dir": "game_assets/sprites",
+			"name": "angel-M.angelo-push-portal.sprt",
+			"src": "game_assets/images/angel-M.angelo-push-portal-320x67.png?t=1586645181",
+			"width": 80,
+			"height": 67,
+			"positions": [
+				[
+					0,
+					0
+				],
+				[
+					80,
+					0
+				],
+				[
+					160,
+					0
+				],
+				[
+					240,
+					0
+				]
+			],
+			"frame": 0,
+			"frameMax": 3,
+			"frameTicker": 0,
+			"nextFrameAt": 12
+		},
+		"collection": "sprites",
+		"id": 216
+	},
+	{
+		"name": "angel-M.angelo-archer.sprt",
+		"object": {
+			"destination_dir": "game_assets/sprites",
+			"name": "angel-M.angelo-archer.sprt",
+			"src": "game_assets/images/angel-M.angelo-archer-320x90.png?t=1586626898",
+			"width": 80,
+			"height": 90,
+			"positions": [
+				[
+					0,
+					0
+				],
+				[
+					80,
+					0
+				],
+				[
+					160,
+					0
+				],
+				[
+					240,
+					0
+				]
+			],
+			"frame": 0,
+			"frameMax": 3,
+			"frameTicker": 0,
+			"nextFrameAt": 3
+		},
+		"collection": "sprites",
+		"id": 217
+	},
+	{
+		"name": "angel-M.angelo-boxing.sprt",
+		"object": {
+			"destination_dir": "game_assets/sprites",
+			"name": "angel-M.angelo-boxing.sprt",
+			"src": "game_assets/images/angel-M.angelo-boxing-720x80.png?t=1586549237",
+			"width": 80,
+			"height": 80,
+			"positions": [
+				[
+					0,
+					0
+				],
+				[
+					80,
+					0
+				],
+				[
+					160,
+					0
+				],
+				[
+					240,
+					0
+				],
+				[
+					320,
+					0
+				],
+				[
+					400,
+					0
+				],
+				[
+					480,
+					0
+				],
+				[
+					560,
+					0
+				],
+				[
+					640,
+					0
+				],
+				[
+					320,
+					0
+				]
+			],
+			"frame": 0,
+			"frameMax": 9,
+			"frameTicker": 0,
+			"nextFrameAt": 5
+		},
+		"collection": "sprites",
+		"id": 218
+	},
+	{
+		"name": "angel-M.angelo-sword-shield.sprt",
+		"object": {
+			"destination_dir": "game_assets/sprites",
+			"name": "angel-M.angelo-sword-shield.sprt",
+			"src": "game_assets/images/angel-M.angelo-sword-shield-320x94.png?t=1591459080",
+			"width": 80,
+			"height": 94,
+			"positions": [
+				[
+					0,
+					0
+				],
+				[
+					80,
+					0
+				],
+				[
+					0,
+					0
+				],
+				[
+					160,
+					0
+				],
+				[
+					0,
+					0
+				],
+				[
+					240,
+					0
+				]
+			],
+			"frame": 0,
+			"frameMax": 5,
+			"frameTicker": 0,
+			"nextFrameAt": 6
+		},
+		"collection": "sprites",
+		"id": 219
+	},
+	{
+		"name": "gold-coin-12.5x13.sprt",
+		"object": {
+			"destination_dir": "game_assets/sprites",
+			"name": "gold-coin-12.5x13.sprt",
+			"src": "game_assets/images/gold-coin-spritesheet-75x13.png?t=1583025964",
+			"width": 12.5,
+			"height": 13,
+			"positions": [
+				[
+					0,
+					0
+				],
+				[
+					12.5,
+					0
+				],
+				[
+					25,
+					0
+				],
+				[
+					37.5,
+					0
+				],
+				[
+					50,
+					0
+				],
+				[
+					62.5,
+					0
+				]
+			],
+			"frame": 0,
+			"frameMax": 5,
+			"frameTicker": 0,
+			"nextFrameAt": 10
+		},
+		"collection": "sprites",
+		"id": 220
+	},
+	{
+		"name": "sword-shield-powerup.sprt",
+		"object": {
+			"destination_dir": "game_assets/sprites",
+			"name": "sword-shield-powerup.sprt",
+			"src": "game_assets/images/sword-shield-powerup.png?t=1583852507",
+			"width": 48,
+			"height": 48,
+			"positions": [
+				[
+					0,
+					0
+				]
+			],
+			"frame": 0,
+			"frameMax": 1,
+			"frameTicker": 0,
+			"nextFrameAt": 12
+		},
+		"collection": "sprites",
+		"id": 221
+	},
+	{
+		"name": "grass_river.BG.sprt",
+		"object": {
+			"name": "grass_river.BG.sprt",
+			"src": "game_assets/images/grass_river_spritesheet-1080x700.png?t=1581204380",
+			"width": 360,
+			"height": 700,
+			"positions": [
+				[
+					0,
+					0
+				],
+				[
+					360,
+					0
+				],
+				[
+					720,
+					0
+				]
+			],
+			"frame": 0,
+			"frameMax": 2,
+			"frameTicker": 0,
+			"nextFrameAt": 48
+		},
+		"collection": "sprites",
+		"id": 222
+	},
+	{
+		"name": "force-field-50x50.sprt",
+		"object": {
+			"destination_dir": "game_assets/sprites",
+			"name": "force-field-50x50.sprt",
+			"src": "game_assets/images/FORCE-FIELD-250X50.png?t=1582897762",
+			"width": 50,
+			"height": 50,
+			"positions": [
+				[
+					0,
+					0
+				],
+				[
+					50,
+					0
+				],
+				[
+					100,
+					0
+				],
+				[
+					150,
+					0
+				],
+				[
+					200,
+					0
+				]
+			],
+			"frame": 0,
+			"frameMax": 4,
+			"frameTicker": 0,
+			"nextFrameAt": 12
+		},
+		"collection": "sprites",
+		"id": 223
+	},
+	{
+		"name": "small-collision-48x48.sprt",
+		"object": {
+			"destination_dir": "game_assets/sprites",
+			"name": "small-collision-48x48.sprt",
+			"src": "game_assets/images/collision-48x48.png?t=1582591787",
+			"width": 48,
+			"height": 48,
+			"positions": [
+				[
+					0,
+					0
+				],
+				[
+					0,
+					0
+				]
+			],
+			"frame": 0,
+			"frameMax": 1,
+			"frameTicker": 0,
+			"nextFrameAt": 12
+		},
+		"collection": "sprites",
+		"id": 224
+	},
+	{
+		"name": "collision-16x16.sprt",
+		"object": {
+			"destination_dir": "game_assets/sprites",
+			"name": "collision-16x16.sprt",
+			"src": "game_assets/images/collision-16x16.png?t=1582588172",
+			"width": 16,
+			"height": 16,
+			"positions": [
+				[
+					0,
+					0
+				],
+				[
+					0,
+					0
+				]
+			],
+			"frame": 0,
+			"frameMax": 1,
+			"frameTicker": 0,
+			"nextFrameAt": 12
+		},
+		"collection": "sprites",
+		"id": 225
+	},
+	{
+		"name": "runningeyeright.sprt",
+		"object": {
+			"name": "runningeyeright.sprt",
+			"src": "game_assets/images/running-eye.png?t=1580494194",
+			"width": 32,
+			"height": 32,
+			"positions": [
+				[
+					0,
+					0
+				],
+				[
+					32,
+					0
+				],
+				[
+					64,
+					0
+				],
+				[
+					96,
+					0
+				],
+				[
+					128,
+					0
+				]
+			],
+			"frame": 0,
+			"frameMax": 5,
+			"frameTicker": 0,
+			"nextFrameAt": 12
+		},
+		"collection": "sprites",
+		"id": 226
+	},
+	{
+		"name": "swimmer-female-blonde.sprt",
+		"object": {
+			"destination_dir": "game_assets/sprites",
+			"name": "swimmer-female-blonde.sprt",
+			"src": "game_assets/images/SWIMMER-UP-SPRITESHEET-FEMALE-1.png?t=1602732621",
+			"width": 32,
+			"height": 32,
+			"positions": [
+				[
+					0,
+					0
+				],
+				[
+					32,
+					0
+				],
+				[
+					64,
+					0
+				]
+			],
+			"frame": 0,
+			"frameMax": 2,
+			"frameTicker": 0,
+			"nextFrameAt": 12
+		},
+		"collection": "sprites",
+		"id": 227
+	},
+	{
+		"name": "starbucks",
+		"object": {
+			"name": "starbucks",
+			"src": "game_assets/images/starbucks-cafe-front.png",
+			"width": 112.5,
+			"height": 40,
+			"positions": [
+				[
+					0,
+					0
+				],
+				[
+					112.5,
+					0
+				],
+				[
+					0,
+					40
+				],
+				[
+					112.5,
+					40
+				],
+				[
+					0,
+					80
+				],
+				[
+					112.5,
+					80
+				],
+				[
+					0,
+					120
+				],
+				[
+					0,
+					120
+				],
+				[
+					112.5,
+					120
+				],
+				[
+					0,
+					160
+				]
+			],
+			"frame": 0,
+			"frameMax": 10,
+			"frameTicker": 0,
+			"nextFrameAt": 12
+		},
+		"collection": "sprites",
+		"id": 228
+	},
+	{
+		"name": "car",
+		"object": {
+			"name": "car",
+			"src": "game_assets/images/redcarspritesheet.png",
+			"width": 130,
+			"height": 70,
+			"positions": [
+				[
+					0,
+					0
+				],
+				[
+					130,
+					0
+				]
+			],
+			"frame": 0,
+			"frameMax": 1,
+			"frameTicker": 0,
+			"nextFrameAt": 12
+		},
+		"collection": "sprites",
+		"id": 229
+	},
+	{
+		"name": "forest2.sprt",
+		"object": {
+			"name": "forest2.sprt",
+			"src": "game_assets/images/forest2.png?t=1580693865",
+			"width": 360,
+			"height": 700,
+			"positions": [
+				[
+					0,
+					0
+				],
+				[
+					0,
+					0
+				]
+			],
+			"frame": 0,
+			"frameMax": 1,
+			"frameTicker": 0,
+			"nextFrameAt": 12
+		},
+		"collection": "sprites",
+		"id": 230
+	},
+	{
+		"name": "disappear-600x100.sprt",
+		"object": {
+			"name": "disappear-600x100.sprt",
+			"src": "game_assets/images/disappear-600x100.png?t=1580764811",
+			"width": 100,
+			"height": 100,
+			"positions": [
+				[
+					0,
+					0
+				],
+				[
+					100,
+					0
+				],
+				[
+					200,
+					0
+				],
+				[
+					300,
+					0
+				],
+				[
+					400,
+					0
+				],
+				[
+					500,
+					0
+				]
+			],
+			"frame": 0,
+			"frameMax": 5,
+			"frameTicker": 0,
+			"nextFrameAt": 10
+		},
+		"collection": "sprites",
+		"id": 231
+	},
+	{
+		"name": "forest1.sprt",
+		"object": {
+			"name": "forest1.sprt",
+			"src": "game_assets/images/forest1.png?t=1580693865",
+			"width": 360,
+			"height": 700,
+			"positions": [
+				[
+					0,
+					0
+				],
+				[
+					0,
+					0
+				]
+			],
+			"frame": 0,
+			"frameMax": 1,
+			"frameTicker": 0,
+			"nextFrameAt": 12
+		},
+		"collection": "sprites",
+		"id": 232
+	},
+	{
+		"name": "combo-star-100x500.sprt",
+		"object": {
+			"name": "combo-star-100x500.sprt",
+			"src": "game_assets/images/combo-star-100x500.png?t=1580839764",
+			"width": 100,
+			"height": 100,
+			"positions": [
+				[
+					0,
+					0
+				],
+				[
+					100,
+					0
+				],
+				[
+					200,
+					0
+				],
+				[
+					300,
+					0
+				],
+				[
+					400,
+					0
+				]
+			],
+			"frame": 0,
+			"frameMax": 4,
+			"frameTicker": 0,
+			"nextFrameAt": 6
+		},
+		"collection": "sprites",
+		"id": 233
+	},
+	{
+		"name": "clouds.BG.1.sprt",
+		"object": {
+			"name": "clouds.BG.1.sprt",
+			"src": "game_assets/images/CLOUDS-BG-1-360x700.png?t=1581352795",
+			"width": 360,
+			"height": 700,
+			"positions": [
+				[
+					0,
+					0
+				],
+				[
+					0,
+					0
+				]
+			],
+			"frame": 0,
+			"frameMax": 1,
+			"frameTicker": 0,
+			"nextFrameAt": 12
+		},
+		"collection": "sprites",
+		"id": 234
+	},
+	{
+		"name": "boyWalkDown",
+		"object": {
+			"name": "boyWalkDown",
+			"src": "game_assets/images/boy-spritesheet-mirrored.png",
+			"width": 20.5,
+			"height": 24,
+			"positions": [
+				[
+					0,
+					0
+				],
+				[
+					20.5,
+					0
+				],
+				[
+					41,
+					0
+				],
+				[
+					61.5,
+					0
+				]
+			],
+			"frame": 0,
+			"frameMax": 3,
+			"frameTicker": 0,
+			"nextFrameAt": 12
+		},
+		"collection": "sprites",
+		"id": 235
+	},
+	{
+		"name": "boyWalkUp",
+		"object": {
+			"name": "boyWalkUp",
+			"src": "game_assets/images/boy-spritesheet.png",
+			"width": 20.5,
+			"height": 24,
+			"positions": [
+				[
+					0,
+					24
+				],
+				[
+					20.5,
+					24
+				],
+				[
+					41,
+					24
+				],
+				[
+					61.5,
+					24
+				]
+			],
+			"frame": 0,
+			"frameMax": 3,
+			"frameTicker": 0,
+			"nextFrameAt": 12
+		},
+		"collection": "sprites",
+		"id": 236
+	},
+	{
+		"name": "boyWalkRight",
+		"object": {
+			"name": "boyWalkRight",
+			"src": "game_assets/images/boy-spritesheet.png",
+			"width": 20.5,
+			"height": 24,
+			"positions": [
+				[
+					61.5,
+					72
+				],
+				[
+					41,
+					72
+				],
+				[
+					20.5,
+					72
+				],
+				[
+					0,
+					72
+				]
+			],
+			"frame": 0,
+			"frameMax": 3,
+			"frameTicker": 0,
+			"nextFrameAt": 12
+		},
+		"collection": "sprites",
+		"id": 237
+	},
+	{
+		"name": "boyWalkLeft",
+		"object": {
+			"name": "boyWalkLeft",
+			"src": "game_assets/images/boy-spritesheet.png",
+			"width": 20.5,
+			"height": 24,
+			"positions": [
+				[
+					0,
+					48
+				],
+				[
+					20.5,
+					48
+				],
+				[
+					41,
+					48
+				],
+				[
+					61.5,
+					48
+				]
+			],
+			"frame": 0,
+			"frameMax": 3,
+			"frameTicker": 0,
+			"nextFrameAt": 12
+		},
+		"collection": "sprites",
+		"id": 238
+	},
+	{
+		"name": "angel-flying-down.sprt",
+		"object": {
+			"name": "angel-flying-down.sprt",
+			"src": "game_assets/images/angel-flying-spritesheet-240x28.png?t=1581027861",
+			"width": 30,
+			"height": 28,
+			"positions": [
+				[
+					60,
+					0
+				],
+				[
+					90,
+					0
+				]
+			],
+			"frame": 0,
+			"frameMax": 1,
+			"frameTicker": 0,
+			"nextFrameAt": 12
+		},
+		"collection": "sprites",
+		"id": 239
+	},
+	{
+		"name": "boxing-gloves-powerup.sprt",
+		"object": {
+			"name": "boxing-gloves-powerup.sprt",
+			"src": "game_assets/images/gloves-powerup.png?t=1580603563",
+			"width": 24,
+			"height": 46,
+			"positions": [
+				[
+					0,
+					0
+				],
+				[
+					0,
+					0
+				]
+			],
+			"frame": 0,
+			"frameMax": 1,
+			"frameTicker": 0,
+			"nextFrameAt": 12
+		},
+		"collection": "sprites",
+		"id": 240
+	},
+	{
+		"name": "angel-flying-left.sprt",
+		"object": {
+			"name": "angel-flying-left.sprt",
+			"src": "game_assets/images/angel-flying-spritesheet-240x28.png?t=1581027861",
+			"width": 30,
+			"height": 28,
+			"positions": [
+				[
+					180,
+					0
+				],
+				[
+					210,
+					0
+				]
+			],
+			"frame": 0,
+			"frameMax": 1,
+			"frameTicker": 0,
+			"nextFrameAt": 12
+		},
+		"collection": "sprites",
+		"id": 241
+	},
+	{
+		"name": "skeletonWalksRight.sprite",
+		"object": {
+			"name": "skeletonWalksRight.sprite",
+			"src": "game_assets/images/spritesheet-skeleton-128x32.png",
+			"width": 32,
+			"height": 32,
+			"positions": [
+				[
+					0,
+					0
+				],
+				[
+					32,
+					0
+				],
+				[
+					64,
+					0
+				],
+				[
+					96,
+					0
+				]
+			],
+			"frame": 0,
+			"frameMax": 3,
+			"frameTicker": 0,
+			"nextFrameAt": 8
+		},
+		"collection": "sprites",
+		"id": 242
+	},
+	{
+		"name": "bow-arrow-powerup.sprt",
+		"object": {
+			"name": "bow-arrow-powerup.sprt",
+			"src": "game_assets/images/bow-arrow-powerup.png?t=1580597166",
+			"width": 24,
+			"height": 46,
+			"positions": [
+				[
+					0,
+					0
+				],
+				[
+					0,
+					0
+				]
+			],
+			"frame": 0,
+			"frameMax": 1,
+			"frameTicker": 0,
+			"nextFrameAt": 1
+		},
+		"collection": "sprites",
+		"id": 243
+	},
+	{
+		"name": "arrow.sprt",
+		"object": {
+			"name": "arrow.sprt",
+			"src": "game_assets/images/arrow.png?t=1580394974",
+			"width": 5,
+			"height": 20,
+			"positions": [
+				[
+					0,
+					0
+				],
+				[
+					0,
+					0
+				]
+			],
+			"frame": 0,
+			"frameMax": 1,
+			"frameTicker": 0,
+			"nextFrameAt": 1
+		},
+		"collection": "sprites",
+		"id": 244
+	},
+	{
+		"name": "angel-flying-right.sprt",
+		"object": {
+			"name": "angel-flying-right.sprt",
+			"src": "game_assets/images/angel-flying-spritesheet-240x28.png?t=1581027861",
+			"width": 30,
+			"height": 28,
+			"positions": [
+				[
+					120,
+					0
+				],
+				[
+					150,
+					0
+				]
+			],
+			"frame": 0,
+			"frameMax": 1,
+			"frameTicker": 0,
+			"nextFrameAt": 12
+		},
+		"collection": "sprites",
+		"id": 245
+	},
+	{
+		"name": "angel-portal.sprt",
+		"object": {
+			"name": "angel-portal.sprt",
+			"src": "game_assets/images/angel-portal-spritesheet.png?t=1581015336",
+			"width": 100,
+			"height": 80,
+			"positions": [
+				[
+					0,
+					0
+				],
+				[
+					100,
+					0
+				],
+				[
+					200,
+					0
+				]
+			],
+			"frame": 0,
+			"frameMax": 2,
+			"frameTicker": 0,
+			"nextFrameAt": 12
+		},
+		"collection": "sprites",
+		"id": 246
+	},
+	{
+		"name": "angel-flying.sprt",
+		"object": {
+			"name": "angel-flying.sprt",
+			"src": "game_assets/images/angel-neutral-up-spritesheet-60x28.png?t=1580643747",
+			"width": 30,
+			"height": 28,
+			"positions": [
+				[
+					0,
+					0
+				],
+				[
+					30,
+					0
+				]
+			],
+			"frame": 0,
+			"frameMax": 1,
+			"frameTicker": 0,
+			"nextFrameAt": 12
+		},
+		"collection": "sprites",
+		"id": 247
+	},
+	{
+		"name": "angel-flying-up.sprt",
+		"object": {
+			"name": "angel-flying-up.sprt",
+			"src": "game_assets/images/angel-flying-spritesheet-240x28.png?t=1581027861",
+			"width": 30,
+			"height": 28,
+			"positions": [
+				[
+					0,
+					0
+				],
+				[
+					30,
+					0
+				]
+			],
+			"frame": 0,
+			"frameMax": 1,
+			"frameTicker": 0,
+			"nextFrameAt": 12
+		},
+		"collection": "sprites",
+		"id": 248
+	},
+	{
+		"name": "turtle_shell.bw",
+		"object": {
+			"destination_dir": "game_assets/brickwalls",
+			"brickwall_name": "turtle_shell.bw",
+			"wallBrickMap": "[-1,-1,-1,2,2,2,2,-1,-1,-1,-1,-1,2,18,18,18,18,2,-1,-1,-1,2,2,18,19,19,18,2,2,-1,-1,2,18,2,17,17,2,18,2,-1,-1,2,18,17,14,14,17,18,2,-1,-1,2,2,2,14,14,2,2,2,-1,-1,2,18,17,19,19,17,18,2,-1,-1,2,18,2,17,17,2,18,2,-1,-1,-1,2,18,18,18,18,2,-1,-1,-1,-1,-1,2,2,2,2,-1,-1,-1]",
+			"wallBrickMapEnergy": "[0,0,0,3,3,3,3,0,0,0,0,0,3,1,1,1,1,3,0,0,0,3,3,1,1,1,1,3,3,0,0,3,1,3,3,1,3,1,3,0,0,3,1,1,1,1,1,1,3,0,0,3,3,3,1,1,3,3,3,0,0,3,1,1,1,1,1,1,3,0,0,3,1,3,1,1,3,1,3,0,0,0,3,1,1,1,1,3,0,0,0,0,0,3,3,3,3,0,0,0]",
+			"description": "Turtle shell",
+			"brickWidth": 36,
+			"brickHeight": 36,
+			"brickRowCount": 10,
+			"brickColumnCount": 10,
+			"brickPadding": 0,
+			"bricksFillStyle": "",
+			"brickWallSkin": "color",
+			"bricksEqualTiles": "same",
+			"brickWallImage": "",
+			"tileWidth": 36,
+			"tileHeight": 36,
+			"mapRows": 10,
+			"mapColumns": 10,
+			"sourceWidth": 360,
+			"sourceHeight": 360
+		},
+		"description": "Turtle shell",
+		"collection": "brickwalls",
+		"id": 249
+	},
+	{
+		"name": "brickwalltestImage",
+		"object": {
+			"brickwall_name": "brickwalltestImage",
+			"wallBrickMap": "[18,12,12,18,12,10,4,12,12,4,10,12,18,12,12,18]",
+			"wallBrickMapEnergy": "[2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2]",
+			"description": "This description is a test",
+			"brickWidth": 50,
+			"brickHeight": 50,
+			"brickRowCount": 4,
+			"brickColumnCount": 4,
+			"brickPadding": "",
+			"bricksFillStyle": "",
+			"brickWallSkin": "color",
+			"bricksEqualTiles": "same",
+			"brickWallImage": "",
+			"tileWidth": 50,
+			"tileHeight": 50,
+			"mapRows": 4,
+			"mapColumns": 4,
+			"sourceWidth": 200,
+			"sourceHeight": 200
+		},
+		"description": "This description is a test",
+		"collection": "brickwalls",
+		"id": 250
+	},
+	{
+		"name": "4x4x4x50-blue.brickwall",
+		"object": {
+			"brickwall_name": "4x4x4x50-blue.brickwall",
+			"wallBrickMap": "[6,6,6,6,7,7,7,7,8,8,8,8,9,9,9,9]",
+			"wallBrickMapEnergy": "[2,2,2,2,1,1,1,1,2,2,2,2,1,1,1,1]",
+			"description": "tedst",
+			"brickWidth": 50,
+			"brickHeight": 50,
+			"brickRowCount": 4,
+			"brickColumnCount": 4,
+			"brickPadding": "",
+			"bricksFillStyle": "",
+			"brickWallSkin": "color",
+			"bricksEqualTiles": "same",
+			"brickWallImage": "",
+			"tileWidth": 50,
+			"tileHeight": 50,
+			"mapRows": 4,
+			"mapColumns": 4,
+			"sourceWidth": 200,
+			"sourceHeight": 200
+		},
+		"description": "tedst",
+		"collection": "brickwalls",
+		"id": 251
+	},
+	{
+		"name": "brickwalltestColors.brickwall",
+		"object": {
+			"destination_dir": "game_assets/brickwalls",
+			"brickwall_name": "brickwalltestColors.brickwall",
+			"wallBrickMap": "[2,13,13,13,13,2,2,13,13,13,13,2,13,12,13,13,12,13,13,13,2,2,13,13,13,3,13,13,3,13,13,3,3,3,3,13]",
+			"wallBrickMapEnergy": "[-1,1,1,1,1,-1,-1,1,1,1,1,-1,1,1,1,1,1,1,1,1,-1,-1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]",
+			"description": "This description is a test",
+			"brickWidth": 50,
+			"brickHeight": 33,
+			"brickRowCount": 6,
+			"brickColumnCount": 6,
+			"brickPadding": 0,
+			"bricksFillStyle": "",
+			"brickWallSkin": "color",
+			"bricksEqualTiles": "same",
+			"brickWallImage": "",
+			"tileWidth": 50,
+			"tileHeight": 33,
+			"mapRows": 6,
+			"mapColumns": 6,
+			"sourceWidth": 300,
+			"sourceHeight": 200
+		},
+		"description": "This description is a test",
+		"collection": "brickwalls",
+		"id": 252
+	},
+	{
+		"name": "swimmer-female-blonde.ent",
+		"object": {
+			"destination_dir": "game_assets/entities",
+			"name": "swimmer-female-blonde.ent",
+			"type": "ball",
+			"energy": 10,
+			"strength": 0,
+			"resistance": 0,
+			"description": "swimmer female blonde",
+			"firstStateAt": 0,
+			"states": [],
+			"drawOnCanvas": "aboveGround",
+			"x": 158,
+			"y": 376,
+			"dx": 0,
+			"dy": 0,
+			"path": -1,
+			"pathEnd": "loop",
+			"pathStep": 1,
+			"pathIdx": 0,
+			"UP": "",
+			"LEFT": "",
+			"DEFAULT": "swimmer-female-blonde.sprt",
+			"RIGHT": "",
+			"DOWN": "",
+			"APPEAR": "",
+			"DISAPPEAR": "",
+			"PUNCHED": "",
+			"rotateForOrientation": true,
+			"spriteFacingUp": true,
+			"bounceHorizontally": true,
+			"bounceVertically": true,
+			"outOfHorizontalBoundaryRemove": false,
+			"outOfVerticalBoundaryRemove": false,
+			"collideWithPaddleRemove": false,
+			"collideWithPaddleBounce": true,
+			"BounceBallVertically": false,
+			"BounceBallHorizontally": false,
+			"collideBallRemoveBall": false,
+			"collideBallAttacksBall": false,
+			"collideBallLoseEnergy": false
+		},
+		"description": "swimmer female blonde",
+		"collection": "entities",
+		"id": 253
+	},
+	{
+		"name": "destination-marker-50x50.ent",
+		"object": {
+			"destination_dir": "game_assets/entities",
+			"name": "destination-marker-50x50.ent",
+			"type": "escorteeTarget",
+			"energy": 0,
+			"strength": 0,
+			"resistance": 0,
+			"description": "shows where to send escortee",
+			"firstStateAt": 0,
+			"states": [],
+			"drawOnCanvas": "ground",
+			"x": 150,
+			"y": 193,
+			"dx": 0,
+			"dy": 0,
+			"path": -1,
+			"pathEnd": "loop",
+			"pathStep": 1,
+			"pathIdx": 0,
+			"UP": "",
+			"LEFT": "",
+			"DEFAULT": "destination-marker-50x50.sprt",
+			"RIGHT": "",
+			"DOWN": "",
+			"APPEAR": "",
+			"DISAPPEAR": "",
+			"PUNCHED": "",
+			"rotateForOrientation": false,
+			"spriteFacingUp": true,
+			"bounceHorizontally": false,
+			"bounceVertically": false,
+			"outOfHorizontalBoundaryRemove": false,
+			"outOfVerticalBoundaryRemove": false,
+			"collideWithPaddleRemove": false,
+			"collideWithPaddleBounce": false,
+			"BounceBallVertically": false,
+			"BounceBallHorizontally": false,
+			"collideBallRemoveBall": false,
+			"collideBallAttacksBall": false,
+			"collideBallLoseEnergy": false
+		},
+		"description": "shows where to send escortee",
+		"collection": "entities",
+		"id": 254
+	},
+	{
+		"name": "fish2.brickwall",
+		"object": {
+			"brickwall_name": "fish2.brickwall",
+			"wallBrickMap": "[-1,-1,-1,11,11,11,-1,-1,-1,-1,-1,11,11,11,-1,-1,-1,11,-1,-1,11,11,11,-1,-1,11,11,-1,11,12,11,11,11,11,11,-1,11,11,11,11,11,11,11,11,-1,-1,11,11,11,11,11,11,11,-1,-1,-1,11,11,11,11,-1,11,11,-1,-1,-1,11,11,11,-1,-1,11,-1,-1,-1,-1,11,11,11,-1,-1]",
+			"wallBrickMapEnergy": "[0,0,0,1,1,1,0,0,0,0,0,1,1,1,0,0,0,1,0,0,1,1,1,0,0,1,1,0,1,-1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,0,0,0,1,1,1,1,0,1,1,0,0,0,1,1,1,0,0,1,0,0,0,0,1,1,1,0,0]",
+			"description": "",
+			"brickWidth": 40,
+			"brickHeight": 22,
+			"brickRowCount": 9,
+			"brickColumnCount": 9,
+			"brickPadding": "",
+			"bricksFillStyle": "",
+			"brickWallSkin": "color",
+			"bricksEqualTiles": "same",
+			"brickWallImage": "",
+			"tileWidth": 40,
+			"tileHeight": 22,
+			"mapRows": 9,
+			"mapColumns": 9,
+			"sourceWidth": 360,
+			"sourceHeight": 200
+		},
+		"description": "",
+		"collection": "brickwalls",
+		"id": 255
+	},
+	{
+		"name": "palmtree1.ent",
+		"object": {
+			"destination_dir": "game_assets/entities",
+			"name": "palmtree1.ent",
+			"type": "bumper",
+			"energy": 0,
+			"strength": 0,
+			"resistance": 0,
+			"description": "",
+			"firstStateAt": 0,
+			"states": [],
+			"drawOnCanvas": "ground",
+			"x": 134,
+			"y": 226,
+			"dx": 0,
+			"dy": 0,
+			"path": -1,
+			"pathEnd": "loop",
+			"pathStep": 1,
+			"pathIdx": 0,
+			"UP": "",
+			"LEFT": "",
+			"DEFAULT": "palmtree-1.sprt",
+			"RIGHT": "",
+			"DOWN": "",
+			"APPEAR": "",
+			"DISAPPEAR": "",
+			"PUNCHED": "",
+			"rotateForOrientation": false,
+			"spriteFacingUp": true,
+			"bounceHorizontally": false,
+			"bounceVertically": false,
+			"outOfHorizontalBoundaryRemove": false,
+			"outOfVerticalBoundaryRemove": false,
+			"collideWithPaddleRemove": false,
+			"collideWithPaddleBounce": false,
+			"BounceBallVertically": true,
+			"BounceBallHorizontally": true,
+			"collideBallRemoveBall": false,
+			"collideBallAttacksBall": false,
+			"collideBallLoseEnergy": false,
+			"collidePaddleLoseEnergy": false,
+			"collideWithBWRemove": false,
+			"collideWithBWBounce": false
+		},
+		"description": "",
+		"collection": "entities",
+		"id": 256
+	},
+	{
+		"name": "speedChangerArrow-UP.ent",
+		"object": {
+			"destination_dir": "game_assets/entities",
+			"name": "speedChangerArrow-UP.ent",
+			"type": "speedChanger",
+			"energy": 0,
+			"strength": 0,
+			"resistance": 0,
+			"description": "Arrow changes ball direction & speed - UP - speed: 5px",
+			"firstStateAt": 0,
+			"states": [],
+			"drawOnCanvas": "ground",
+			"x": 185,
+			"y": 264,
+			"dx": 0,
+			"dy": -5,
+			"path": -1,
+			"pathEnd": "loop",
+			"pathStep": 1,
+			"pathIdx": 0,
+			"UP": "",
+			"LEFT": "",
+			"DEFAULT": "speedChangerArrow.sprt",
+			"RIGHT": "",
+			"DOWN": "",
+			"APPEAR": "",
+			"DISAPPEAR": "",
+			"PUNCHED": "",
+			"rotateForOrientation": true,
+			"spriteFacingUp": true,
+			"bounceHorizontally": false,
+			"bounceVertically": false,
+			"outOfHorizontalBoundaryRemove": false,
+			"outOfVerticalBoundaryRemove": false,
+			"collideWithPaddleRemove": false,
+			"collideWithPaddleBounce": false,
+			"BounceBallVertically": false,
+			"BounceBallHorizontally": false,
+			"collideBallRemoveBall": false,
+			"collideBallAttacksBall": false,
+			"collideBallLoseEnergy": false,
+			"collidePaddleLoseEnergy": false,
+			"collideWithBWRemove": false,
+			"collideWithBWBounce": false
+		},
+		"description": "Arrow changes ball direction & speed - UP - speed: 5px",
+		"collection": "entities",
+		"id": 257
+	},
+	{
+		"name": "speedChangerArrow-DR",
+		"object": {
+			"destination_dir": "game_assets/entities",
+			"name": "speedChangerArrow-DR",
+			"type": "speedChanger",
+			"energy": 0,
+			"strength": 0,
+			"resistance": 0,
+			"description": "Arrow changes ball direction & speed - DR - speed: 5px",
+			"firstStateAt": 0,
+			"states": [],
+			"drawOnCanvas": "ground",
+			"x": 185,
+			"y": 264,
+			"dx": 5,
+			"dy": 5,
+			"path": -1,
+			"pathEnd": "loop",
+			"pathStep": 1,
+			"pathIdx": 0,
+			"UP": "",
+			"LEFT": "",
+			"DEFAULT": "speedChangerArrow.sprt",
+			"RIGHT": "",
+			"DOWN": "",
+			"APPEAR": "",
+			"DISAPPEAR": "",
+			"PUNCHED": "",
+			"rotateForOrientation": true,
+			"spriteFacingUp": true,
+			"bounceHorizontally": false,
+			"bounceVertically": false,
+			"outOfHorizontalBoundaryRemove": false,
+			"outOfVerticalBoundaryRemove": false,
+			"collideWithPaddleRemove": false,
+			"collideWithPaddleBounce": false,
+			"BounceBallVertically": false,
+			"BounceBallHorizontally": false,
+			"collideBallRemoveBall": false,
+			"collideBallAttacksBall": false,
+			"collideBallLoseEnergy": false,
+			"collidePaddleLoseEnergy": false,
+			"collideWithBWRemove": false,
+			"collideWithBWBounce": false
+		},
+		"description": "Arrow changes ball direction & speed - DR - speed: 5px",
+		"collection": "entities",
+		"id": 258
+	},
+	{
+		"name": "beach-rock.ent",
+		"object": {
+			"destination_dir": "game_assets/entities",
+			"name": "beach-rock.ent",
+			"type": "graphic",
+			"energy": 0,
+			"strength": 0,
+			"resistance": 0,
+			"description": "beach rock",
+			"firstStateAt": 0,
+			"states": [],
+			"drawOnCanvas": "aboveGround",
+			"x": 146,
+			"y": 175,
+			"dx": 0,
+			"dy": 0,
+			"path": -1,
+			"pathEnd": "loop",
+			"pathStep": 1,
+			"pathIdx": 0,
+			"UP": "",
+			"LEFT": "",
+			"DEFAULT": "beach-rock.sprt",
+			"RIGHT": "",
+			"DOWN": "",
+			"APPEAR": "",
+			"DISAPPEAR": "",
+			"PUNCHED": "",
+			"bounceHorizontally": false,
+			"bounceVertically": false,
+			"outOfHorizontalBoundaryRemove": false,
+			"outOfVerticalBoundaryRemove": false,
+			"collideWithPaddleRemove": false,
+			"collideWithPaddleBounce": false,
+			"BounceBallVertically": false,
+			"BounceBallHorizontally": false,
+			"collideBallRemoveBall": false,
+			"collideBallAttacksBall": false,
+			"collideBallLoseEnergy": false,
+			"collidePaddleLoseEnergy": false,
+			"collideWithBWRemove": false,
+			"collideWithBWBounce": false
+		},
+		"description": "beach rock",
+		"collection": "entities",
+		"id": 259
+	},
+	{
+		"name": "beachball.ent",
+		"object": {
+			"destination_dir": "game_assets/entities",
+			"name": "beachball.ent",
+			"type": "ball",
+			"energy": 2,
+			"strength": 4,
+			"resistance": 100,
+			"description": "beachball",
+			"firstStateAt": 0,
+			"states": [],
+			"drawOnCanvas": "sky",
+			"x": 171,
+			"y": 444,
+			"dx": 0,
+			"dy": 0,
+			"path": -1,
+			"pathEnd": "loop",
+			"pathStep": 1,
+			"pathIdx": 0,
+			"UP": "beachball-top.sprt",
+			"LEFT": "beachball-left.sprt",
+			"DEFAULT": "beachball-bottom.sprt",
+			"RIGHT": "beachball-right.sprt",
+			"DOWN": "beachball-bottom.sprt",
+			"APPEAR": "",
+			"DISAPPEAR": "",
+			"PUNCHED": "",
+			"bounceHorizontally": true,
+			"bounceVertically": true,
+			"outOfHorizontalBoundaryRemove": false,
+			"outOfVerticalBoundaryRemove": false,
+			"collideWithPaddleRemove": false,
+			"collideWithPaddleBounce": true,
+			"BounceBallVertically": false,
+			"BounceBallHorizontally": false,
+			"collideBallRemoveBall": false,
+			"collideBallAttacksBall": false,
+			"collideBallLoseEnergy": false,
+			"collidePaddleLoseEnergy": false,
+			"collideWithBWRemove": false,
+			"collideWithBWBounce": true
+		},
+		"description": "beachball",
+		"collection": "entities",
+		"id": 260
+	},
+	{
+		"name": "shark-64x30-attack-left.ent",
+		"object": {
+			"destination_dir": "game_assets/entities",
+			"name": "shark-64x30-attack-left.ent",
+			"type": "enemy",
+			"energy": 20,
+			"strength": 3,
+			"resistance": 3,
+			"description": "shark attacking left",
+			"firstStateAt": 20,
+			"states": [
+				{
+					"next": "20",
+					"dx": "1",
+					"dy": "0"
+				},
+				{
+					"next": "20",
+					"dy": "0",
+					"dx": "-1"
+				}
+			],
+			"drawOnCanvas": "aboveGround",
+			"x": 360,
+			"y": 247,
+			"dx": -1,
+			"dy": 0,
+			"path": -1,
+			"pathEnd": "loop",
+			"pathStep": 0,
+			"pathIdx": 0,
+			"UP": "shark-30x64-attack-up.sprt",
+			"LEFT": "shark-64x30-attack-left.sprt",
+			"DEFAULT": "shark-64x30-attack-left.sprt",
+			"RIGHT": "shark-64x30-attack-right.sprt",
+			"DOWN": "shark-30x64-attack-down.sprt",
+			"APPEAR": "",
+			"DISAPPEAR": "",
+			"PUNCHED": "shark-64x30-groggy.sprt",
+			"bounceHorizontally": true,
+			"bounceVertically": true,
+			"outOfHorizontalBoundaryRemove": false,
+			"outOfVerticalBoundaryRemove": false,
+			"collideWithPaddleRemove": false,
+			"collideWithPaddleBounce": false,
+			"BounceBallVertically": true,
+			"BounceBallHorizontally": true,
+			"collideBallRemoveBall": false,
+			"collideBallAttacksBall": false,
+			"collideBallLoseEnergy": true,
+			"collidePaddleLoseEnergy": true,
+			"collideWithBWRemove": true,
+			"collideWithBWBounce": true
+		},
+		"description": "shark attacking left",
+		"collection": "entities",
+		"id": 261
+	},
+	{
+		"name": "shark-64x30-attack-right.ent",
+		"object": {
+			"destination_dir": "game_assets/entities",
+			"name": "shark-64x30-attack-right.ent",
+			"type": "enemy",
+			"energy": 20,
+			"strength": 3,
+			"resistance": 3,
+			"description": "little shark attacking to the right",
+			"firstStateAt": 20,
+			"states": [
+				{
+					"next": "20",
+					"dy": "0",
+					"dx": "-1"
+				},
+				{
+					"next": "20",
+					"dy": "0",
+					"dx": "1"
+				}
+			],
+			"drawOnCanvas": "aboveGround",
+			"x": -64,
+			"y": 313,
+			"dx": 1,
+			"dy": 0,
+			"path": -1,
+			"pathEnd": "loop",
+			"pathStep": 1,
+			"pathIdx": 0,
+			"UP": "shark-30x64-attack-up.sprt",
+			"LEFT": "shark-64x30-attack-left.sprt",
+			"DEFAULT": "shark-64x30-attack-right.sprt",
+			"RIGHT": "shark-64x30-attack-right.sprt",
+			"DOWN": "shark-30x64-attack-down.sprt",
+			"APPEAR": "",
+			"DISAPPEAR": "",
+			"PUNCHED": "shark-64x30-groggy.sprt",
+			"bounceHorizontally": true,
+			"bounceVertically": true,
+			"outOfHorizontalBoundaryRemove": false,
+			"outOfVerticalBoundaryRemove": false,
+			"collideWithPaddleRemove": false,
+			"collideWithPaddleBounce": false,
+			"BounceBallVertically": true,
+			"BounceBallHorizontally": true,
+			"collideBallRemoveBall": false,
+			"collideBallAttacksBall": true,
+			"collideBallLoseEnergy": true,
+			"collidePaddleLoseEnergy": true,
+			"collideWithBWRemove": true,
+			"collideWithBWBounce": true
+		},
+		"description": "little shark attacking to the right",
+		"collection": "entities",
+		"id": 262
+	},
+	{
+		"name": "shark-64x30-move-right.ent",
+		"object": {
+			"destination_dir": "game_assets/entities",
+			"name": "shark-64x30-move-right.ent",
+			"type": "graphic",
+			"energy": 0,
+			"strength": 0,
+			"resistance": 0,
+			"description": "little shark moving to the left",
+			"firstStateAt": 15,
+			"states": [
+				{
+					"next": "1",
+					"action": {
+						"name": "spawn",
+						"params": {
+							"name": "shark-64x30-attack-right.ent"
+						}
+					}
+				},
+				{
+					"next": "0",
+					"action": {
+						"name": "removeSelf",
+						"params": {
+							"name": ""
+						}
+					}
+				}
+			],
+			"drawOnCanvas": "aboveGround",
+			"x": -1,
+			"y": 281,
+			"dx": 1,
+			"dy": 0,
+			"path": -1,
+			"pathEnd": "loop",
+			"pathStep": 1,
+			"pathIdx": 0,
+			"UP": "",
+			"LEFT": "",
+			"DEFAULT": "shark-64x30-move-right.sprt",
+			"RIGHT": "shark-64x30-move-right.sprt",
+			"DOWN": "",
+			"APPEAR": "",
+			"DISAPPEAR": "",
+			"bounceHorizontally": false,
+			"bounceVertically": false,
+			"outOfHorizontalBoundaryRemove": false,
+			"outOfVerticalBoundaryRemove": false,
+			"collideWithPaddleRemove": false,
+			"collideWithPaddleBounce": false,
+			"BounceBallVertically": false,
+			"BounceBallHorizontally": false,
+			"collideBallRemoveBall": false,
+			"collideBallAttacksBall": false,
+			"collideBallLoseEnergy": false,
+			"collidePaddleLoseEnergy": false,
+			"collideWithBWRemove": false,
+			"collideWithBWBounce": false
+		},
+		"description": "little shark moving to the left",
+		"collection": "entities",
+		"id": 263
+	},
+	{
+		"name": "shark-64x30-move-left.ent",
+		"object": {
+			"destination_dir": "game_assets/entities",
+			"name": "shark-64x30-move-left.ent",
+			"type": "graphic",
+			"energy": 0,
+			"strength": 0,
+			"resistance": 0,
+			"description": "little shark moving to the left",
+			"firstStateAt": 15,
+			"states": [
+				{
+					"next": "0",
+					"action": {
+						"name": "spawn",
+						"params": {
+							"name": "shark-64x30-attack-left.ent"
+						}
+					},
+					"drawOnCanvas": "aboveGround"
+				},
+				{
+					"next": "0",
+					"action": {
+						"name": "removeSelf",
+						"params": {
+							"name": ""
+						}
+					}
+				}
+			],
+			"drawOnCanvas": "aboveGround",
+			"x": 296,
+			"y": 285,
+			"dx": -1,
+			"dy": 0,
+			"path": -1,
+			"pathEnd": "loop",
+			"pathStep": 1,
+			"pathIdx": 0,
+			"UP": "",
+			"LEFT": "shark-64x30-move-left.sprt",
+			"DEFAULT": "shark-64x30-move-left.sprt",
+			"RIGHT": "",
+			"DOWN": "",
+			"APPEAR": "",
+			"DISAPPEAR": "",
+			"bounceHorizontally": false,
+			"bounceVertically": false,
+			"outOfHorizontalBoundaryRemove": false,
+			"outOfVerticalBoundaryRemove": false,
+			"collideWithPaddleRemove": false,
+			"collideWithPaddleBounce": false,
+			"BounceBallVertically": false,
+			"BounceBallHorizontally": false,
+			"collideBallRemoveBall": false,
+			"collideBallAttacksBall": false,
+			"collideBallLoseEnergy": false,
+			"collidePaddleLoseEnergy": false,
+			"collideWithBWRemove": false,
+			"collideWithBWBounce": false
+		},
+		"description": "little shark moving to the left",
+		"collection": "entities",
+		"id": 264
+	},
+	{
+		"name": "teleportation.ent",
+		"object": {
+			"destination_dir": "game_assets/entities",
+			"name": "teleportation.ent",
+			"type": "graphic",
+			"energy": 0,
+			"strength": 0,
+			"resistance": 0,
+			"description": "teleportation animation for angels",
+			"firstStateAt": 9,
+			"states": [
+				{
+					"next": "0",
+					"action": {
+						"name": "removeSelf",
+						"params": {
+							"name": ""
+						}
+					}
+				}
+			],
+			"drawOnCanvas": "teleport",
+			"x": 131,
+			"y": 0,
+			"dx": 0,
+			"dy": 0,
+			"path": -1,
+			"pathEnd": "loop",
+			"pathStep": 1,
+			"pathIdx": 0,
+			"UP": "",
+			"LEFT": "",
+			"DEFAULT": "teleportation.sprt",
+			"RIGHT": "",
+			"DOWN": "",
+			"APPEAR": "",
+			"DISAPPEAR": "",
+			"bounceHorizontally": false,
+			"bounceVertically": false,
+			"outOfHorizontalBoundaryRemove": false,
+			"outOfVerticalBoundaryRemove": false,
+			"collideWithPaddleRemove": false,
+			"collideWithPaddleBounce": false,
+			"BounceBallVertically": false,
+			"BounceBallHorizontally": false,
+			"collideBallRemoveBall": false,
+			"collideBallAttacksBall": false,
+			"collideBallLoseEnergy": false,
+			"collidePaddleLoseEnergy": false,
+			"collideWithBWRemove": false,
+			"collideWithBWBounce": false
+		},
+		"description": "teleportation animation for angels",
+		"collection": "entities",
+		"id": 265
+	},
+	{
+		"name": "teleportation-back.ent",
+		"object": {
+			"destination_dir": "game_assets/entities",
+			"name": "teleportation-back.ent",
+			"type": "graphic",
+			"energy": 0,
+			"strength": 0,
+			"resistance": 0,
+			"description": "teleportation animation for angels going back to HQ",
+			"firstStateAt": 9,
+			"states": [
+				{
+					"next": "0",
+					"action": {
+						"name": "removeSelf",
+						"params": {
+							"name": ""
+						}
+					}
+				}
+			],
+			"drawOnCanvas": "teleport",
+			"x": 131,
+			"y": 0,
+			"dx": 0,
+			"dy": 0,
+			"path": -1,
+			"pathEnd": "loop",
+			"pathStep": 1,
+			"pathIdx": 0,
+			"UP": "",
+			"LEFT": "",
+			"DEFAULT": "teleportation-back.sprt",
+			"RIGHT": "",
+			"DOWN": "",
+			"APPEAR": "",
+			"DISAPPEAR": "",
+			"bounceHorizontally": false,
+			"bounceVertically": false,
+			"outOfHorizontalBoundaryRemove": false,
+			"outOfVerticalBoundaryRemove": false,
+			"collideWithPaddleRemove": false,
+			"collideWithPaddleBounce": false,
+			"BounceBallVertically": false,
+			"BounceBallHorizontally": false,
+			"collideBallRemoveBall": false,
+			"collideBallAttacksBall": false,
+			"collideBallLoseEnergy": false,
+			"collidePaddleLoseEnergy": false,
+			"collideWithBWRemove": false,
+			"collideWithBWBounce": false
+		},
+		"description": "teleportation animation for angels going back to HQ",
+		"collection": "entities",
+		"id": 266
+	},
+	{
+		"name": "shark-in-water-right.ent",
+		"object": {
+			"destination_dir": "game_assets/entities",
+			"name": "shark-in-water-right.ent",
+			"type": "enemy",
+			"energy": 100,
+			"strength": 50,
+			"resistance": 50,
+			"description": "SHARK SWIMMING DISAPPEAR AND INSTANCIANTE SHARK ATTACK - NO COLLISION",
+			"firstStateAt": 40,
+			"states": [],
+			"drawOnCanvas": "midAir",
+			"x": 136,
+			"y": 70,
+			"dx": 0,
+			"dy": 0,
+			"path": -1,
+			"pathEnd": "loop",
+			"pathStep": 1,
+			"pathIdx": 0,
+			"UP": "great-white-attack-up.sprt",
+			"LEFT": "shark-in-water-left.sprt",
+			"DEFAULT": "shark-groggy.sprt",
+			"RIGHT": "shark-in-water-right.sprt",
+			"DOWN": "great-white-attack-down.sprt",
+			"APPEAR": "",
+			"DISAPPEAR": "",
+			"PUNCHED": "",
+			"rotateForOrientation": false,
+			"spriteFacingUp": false,
+			"bounceHorizontally": true,
+			"bounceVertically": true,
+			"outOfHorizontalBoundaryRemove": false,
+			"outOfVerticalBoundaryRemove": false,
+			"collideWithPaddleRemove": false,
+			"collideWithPaddleBounce": false,
+			"BounceBallVertically": true,
+			"BounceBallHorizontally": true,
+			"collideBallRemoveBall": false,
+			"collideBallAttacksBall": true,
+			"collideBallLoseEnergy": true,
+			"collidePaddleLoseEnergy": false,
+			"collideWithBWRemove": false,
+			"collideWithBWBounce": true
+		},
+		"description": "SHARK SWIMMING DISAPPEAR AND INSTANCIANTE SHARK ATTACK - NO COLLISION",
+		"collection": "entities",
+		"id": 267
+	},
+	{
+		"name": "ocean-waves-360x650.ent",
+		"object": {
+			"destination_dir": "game_assets/entities",
+			"name": "ocean-waves-360x650.ent",
+			"type": "graphic",
+			"energy": 0,
+			"strength": 0,
+			"resistance": 0,
+			"description": "ocean waves background",
+			"firstStateAt": 0,
+			"states": [],
+			"drawOnCanvas": "groundScrolling",
+			"x": 0,
+			"y": 0,
+			"dx": 0,
+			"dy": 0,
+			"path": -1,
+			"pathEnd": "loop",
+			"pathStep": 1,
+			"pathIdx": 0,
+			"UP": "",
+			"LEFT": "",
+			"DEFAULT": "ocean-waves-360x650.sprt",
+			"RIGHT": "",
+			"DOWN": "",
+			"APPEAR": "",
+			"DISAPPEAR": "",
+			"bounceHorizontally": false,
+			"bounceVertically": false,
+			"outOfHorizontalBoundaryRemove": false,
+			"outOfVerticalBoundaryRemove": false,
+			"collideWithPaddleRemove": false,
+			"collideWithPaddleBounce": false,
+			"BounceBallVertically": false,
+			"BounceBallHorizontally": false,
+			"collideBallRemoveBall": false,
+			"collideBallAttacksBall": false,
+			"collideBallLoseEnergy": false,
+			"collidePaddleLoseEnergy": false,
+			"collideWithBWRemove": false,
+			"collideWithBWBounce": false
+		},
+		"description": "ocean waves background",
+		"collection": "entities",
+		"id": 268
+	},
+	{
+		"name": "splash-140x250.ent",
+		"object": {
+			"destination_dir": "game_assets/entities",
+			"name": "splash-140x250.ent",
+			"type": "graphic",
+			"energy": 0,
+			"strength": 0,
+			"resistance": 0,
+			"description": "splash animation for big sprite diving or emerging in water",
+			"firstStateAt": 0,
+			"states": [
+				{
+					"next": "15",
+					"drawOnCanvas": "aboveGround"
+				},
+				{
+					"next": "0",
+					"action": {
+						"name": "removeSelf",
+						"params": {
+							"name": ""
+						}
+					}
+				}
+			],
+			"drawOnCanvas": "aboveGround",
+			"x": 108,
+			"y": 141,
+			"dx": 0,
+			"dy": 0,
+			"path": -1,
+			"pathEnd": "loop",
+			"pathStep": 1,
+			"pathIdx": 0,
+			"UP": "",
+			"LEFT": "",
+			"DEFAULT": "splash-140x250.sprt",
+			"RIGHT": "",
+			"DOWN": "",
+			"APPEAR": "",
+			"DISAPPEAR": "",
+			"bounceHorizontally": false,
+			"bounceVertically": false,
+			"outOfHorizontalBoundaryRemove": false,
+			"outOfVerticalBoundaryRemove": false,
+			"collideWithPaddleRemove": false,
+			"collideWithPaddleBounce": false,
+			"BounceBallVertically": false,
+			"BounceBallHorizontally": false,
+			"collideBallRemoveBall": false,
+			"collideBallAttacksBall": false,
+			"collideBallLoseEnergy": false,
+			"collidePaddleLoseEnergy": false,
+			"collideWithBWRemove": false,
+			"collideWithBWBounce": false
+		},
+		"description": "splash animation for big sprite diving or emerging in water",
+		"collection": "entities",
+		"id": 269
+	},
+	{
+		"name": "crab-walk.ent",
+		"object": {
+			"destination_dir": "game_assets/entities",
+			"name": "crab-walk.ent",
+			"type": "enemy",
+			"energy": 5,
+			"strength": 2,
+			"resistance": 1,
+			"description": "crab walks sideways",
+			"firstStateAt": 0,
+			"states": [],
+			"drawOnCanvas": "ground",
+			"x": 0,
+			"y": 0,
+			"dx": 0,
+			"dy": 0,
+			"path": -1,
+			"pathEnd": "loop",
+			"pathStep": 1,
+			"pathIdx": 0,
+			"UP": "",
+			"LEFT": "",
+			"DEFAULT": "crab-walk-192x32.sprt",
+			"RIGHT": "",
+			"DOWN": "",
+			"APPEAR": "",
+			"DISAPPEAR": "",
+			"PUNCHED": "",
+			"rotateForOrientation": true,
+			"spriteFacingUp": true,
+			"bounceHorizontally": true,
+			"bounceVertically": false,
+			"outOfHorizontalBoundaryRemove": false,
+			"outOfVerticalBoundaryRemove": true,
+			"collideWithPaddleRemove": false,
+			"collideWithPaddleBounce": true,
+			"BounceBallVertically": false,
+			"BounceBallHorizontally": false,
+			"collideBallRemoveBall": false,
+			"collideBallAttacksBall": true,
+			"collideBallLoseEnergy": true,
+			"collidePaddleLoseEnergy": false,
+			"collideWithBWRemove": true,
+			"collideWithBWBounce": true
+		},
+		"description": "crab walks sideways",
+		"collection": "entities",
+		"id": 270
+	},
+	{
+		"name": "snake-crawl-down.ent",
+		"object": {
+			"destination_dir": "game_assets/entities",
+			"name": "snake-crawl-down.ent",
+			"type": "enemy",
+			"energy": 5,
+			"strength": 5,
+			"resistance": 2,
+			"description": "SNAKE CRAWLING DOWN",
+			"firstStateAt": 0,
+			"states": [],
+			"drawOnCanvas": "aboveGroundScrolling",
+			"x": 147,
+			"y": 105,
+			"dx": 0,
+			"dy": 1,
+			"path": -1,
+			"pathEnd": "loop",
+			"pathStep": 1,
+			"pathIdx": 0,
+			"UP": "",
+			"LEFT": "",
+			"DEFAULT": "snake-crawl-down.sprt",
+			"RIGHT": "",
+			"DOWN": "snake-crawl-down.sprt",
+			"APPEAR": "",
+			"DISAPPEAR": "",
+			"PUNCHED": "",
+			"bounceHorizontally": false,
+			"bounceVertically": false,
+			"outOfHorizontalBoundaryRemove": true,
+			"outOfVerticalBoundaryRemove": true,
+			"collideWithPaddleRemove": false,
+			"collideWithPaddleBounce": false,
+			"BounceBallVertically": true,
+			"BounceBallHorizontally": true,
+			"collideBallRemoveBall": false,
+			"collideBallAttacksBall": true,
+			"collideBallLoseEnergy": false,
+			"collidePaddleLoseEnergy": true,
+			"collideWithBWRemove": true,
+			"collideWithBWBounce": true
+		},
+		"description": "SNAKE CRAWLING DOWN",
+		"collection": "entities",
+		"id": 271
+	},
+	{
+		"name": "great-white-attack-up-down.ent",
+		"object": {
+			"destination_dir": "game_assets/entities",
+			"name": "great-white-attack-up-down.ent",
+			"type": "enemy",
+			"energy": 100,
+			"strength": 50,
+			"resistance": 1,
+			"description": "GREAT WHITE SHARK ATTACKS UP AND DOWN",
+			"firstStateAt": 36,
+			"states": [
+				{
+					"next": "6",
+					"dy": "1"
+				},
+				{
+					"next": "36",
+					"dy": "2"
+				},
+				{
+					"next": "0",
+					"action": {
+						"name": "removeSelf",
+						"params": {
+							"name": ""
+						}
+					}
+				}
+			],
+			"drawOnCanvas": "ground",
+			"x": 100,
+			"y": 43,
+			"dx": 0,
+			"dy": -2,
+			"path": -1,
+			"pathEnd": "loop",
+			"pathStep": 1,
+			"pathIdx": 0,
+			"UP": "great-white-attack-up.sprt",
+			"LEFT": "",
+			"DEFAULT": "great-white-attack-up.sprt",
+			"RIGHT": "",
+			"DOWN": "great-white-attack-down.sprt",
+			"APPEAR": "",
+			"DISAPPEAR": "",
+			"PUNCHED": "",
+			"rotateForOrientation": false,
+			"spriteFacingUp": false,
+			"bounceHorizontally": true,
+			"bounceVertically": true,
+			"outOfHorizontalBoundaryRemove": false,
+			"outOfVerticalBoundaryRemove": false,
+			"collideWithPaddleRemove": false,
+			"collideWithPaddleBounce": false,
+			"BounceBallVertically": true,
+			"BounceBallHorizontally": true,
+			"collideBallRemoveBall": false,
+			"collideBallAttacksBall": true,
+			"collideBallLoseEnergy": true,
+			"collidePaddleLoseEnergy": false,
+			"collideWithBWRemove": true,
+			"collideWithBWBounce": true
+		},
+		"description": "GREAT WHITE SHARK ATTACKS UP AND DOWN",
+		"collection": "entities",
+		"id": 272
+	},
+	{
+		"name": "crocodile-rush-down.ent",
+		"object": {
+			"destination_dir": "game_assets/entities",
+			"name": "crocodile-rush-down.ent",
+			"type": "enemy",
+			"energy": 40,
+			"strength": 2,
+			"resistance": 2,
+			"description": "CROCODILE RUSHES DOWN ATTACKING",
+			"firstStateAt": 0,
+			"states": [],
+			"drawOnCanvas": "aboveGround",
+			"x": 166,
+			"y": 115,
+			"dx": 0,
+			"dy": 0,
+			"path": -1,
+			"pathEnd": "loop",
+			"pathStep": 1,
+			"pathIdx": 0,
+			"UP": "crocodile-rush-down-75x186.sprt",
+			"LEFT": "crocodile-rush-down-75x186.sprt",
+			"DEFAULT": "crocodile-rush-down-75x186.sprt",
+			"RIGHT": "crocodile-rush-down-75x186.sprt",
+			"DOWN": "crocodile-rush-down-75x186.sprt",
+			"APPEAR": "",
+			"DISAPPEAR": "",
+			"PUNCHED": "crocodile-rush-down-75x186.sprt",
+			"rotateForOrientation": true,
+			"spriteFacingUp": false,
+			"bounceHorizontally": true,
+			"bounceVertically": true,
+			"outOfHorizontalBoundaryRemove": false,
+			"outOfVerticalBoundaryRemove": false,
+			"collideWithPaddleRemove": false,
+			"collideWithPaddleBounce": false,
+			"BounceBallVertically": true,
+			"BounceBallHorizontally": true,
+			"collideBallRemoveBall": false,
+			"collideBallAttacksBall": true,
+			"collideBallLoseEnergy": true,
+			"collidePaddleLoseEnergy": false,
+			"collideWithBWRemove": true,
+			"collideWithBWBounce": true
+		},
+		"description": "CROCODILE RUSHES DOWN ATTACKING",
+		"collection": "entities",
+		"id": 273
+	},
+	{
+		"name": "snake.ent",
+		"object": {
+			"destination_dir": "game_assets/entities",
+			"name": "snake.ent",
+			"type": "enemy",
+			"energy": 5,
+			"strength": 2,
+			"resistance": 2,
+			"description": "SNAKE STATIC",
+			"firstStateAt": 0,
+			"states": [],
+			"drawOnCanvas": "aboveGroundScrolling",
+			"x": 147,
+			"y": 105,
+			"dx": 0,
+			"dy": 0,
+			"path": -1,
+			"pathEnd": "loop",
+			"pathStep": 1,
+			"pathIdx": 0,
+			"UP": "",
+			"LEFT": "",
+			"DEFAULT": "snake-static.sprt",
+			"RIGHT": "",
+			"DOWN": "snake-crawl-down.sprt",
+			"APPEAR": "",
+			"DISAPPEAR": "",
+			"bounceHorizontally": true,
+			"bounceVertically": false,
+			"outOfHorizontalBoundaryRemove": false,
+			"outOfVerticalBoundaryRemove": true,
+			"collideWithPaddleRemove": false,
+			"collideWithPaddleBounce": false,
+			"BounceBallVertically": true,
+			"BounceBallHorizontally": true,
+			"collideBallRemoveBall": false,
+			"collideBallAttacksBall": true,
+			"collideBallLoseEnergy": true,
+			"collidePaddleLoseEnergy": false,
+			"collideWithBWRemove": true,
+			"collideWithBWBounce": true
+		},
+		"description": "SNAKE STATIC",
+		"collection": "entities",
+		"id": 274
+	},
+	{
+		"name": "sand-360x600.ent",
+		"object": {
+			"destination_dir": "game_assets/entities",
+			"name": "sand-360x600.ent",
+			"type": "graphic",
+			"energy": 0,
+			"strength": 0,
+			"resistance": 0,
+			"description": "sand background 360x600 ",
+			"firstStateAt": 0,
+			"states": [],
+			"drawOnCanvas": "ground",
+			"x": 0,
+			"y": 0,
+			"dx": 0,
+			"dy": 0,
+			"path": -1,
+			"pathEnd": "loop",
+			"pathStep": 1,
+			"pathIdx": 0,
+			"UP": "",
+			"LEFT": "",
+			"DEFAULT": "sand-360x600.sprt",
+			"RIGHT": "",
+			"DOWN": "",
+			"APPEAR": "",
+			"DISAPPEAR": "",
+			"bounceHorizontally": false,
+			"bounceVertically": false,
+			"outOfHorizontalBoundaryRemove": false,
+			"outOfVerticalBoundaryRemove": false,
+			"collideWithPaddleRemove": false,
+			"collideWithPaddleBounce": false,
+			"BounceBallVertically": false,
+			"BounceBallHorizontally": false,
+			"collideBallRemoveBall": false,
+			"collideBallAttacksBall": false,
+			"collideBallLoseEnergy": false,
+			"collidePaddleLoseEnergy": false,
+			"collideWithBWRemove": false,
+			"collideWithBWBounce": false
+		},
+		"description": "sand background 360x600 ",
+		"collection": "entities",
+		"id": 275
+	},
+	{
+		"name": "angel-portal-powerup.ent",
+		"object": {
+			"name": "angel-portal-powerup.ent",
+			"type": "powerup",
+			"energy": 0,
+			"strength": 0,
+			"description": "powerup that geenrates a portal which will spawn angels during a limited amount of time before disappearing",
+			"firstStateAt": 0,
+			"states": [],
+			"drawOnCanvas": "sky",
+			"x": 129,
+			"y": 264,
+			"dx": 0,
+			"dy": 0,
+			"path": -1,
+			"pathEnd": "loop",
+			"pathStep": 1,
+			"pathIdx": 0,
+			"UP": "",
+			"LEFT": "",
+			"DEFAULT": "angel-portal.sprt",
+			"RIGHT": "",
+			"DOWN": "",
+			"APPEAR": "",
+			"DISAPPEAR": "",
+			"bounceHorizontally": false,
+			"bounceVertically": false,
+			"outOfHorizontalBoundaryRemove": true,
+			"outOfVerticalBoundaryRemove": true,
+			"collideWithPaddleRemove": false,
+			"collideWithPaddleBounce": false,
+			"BounceBallVertically": false,
+			"BounceBallHorizontally": false,
+			"collideBallRemoveBall": false,
+			"collideBallAttacksBall": false,
+			"collideBallLoseEnergy": false,
+			"collidePaddleLoseEnergy": false,
+			"collideWithBWRemove": false,
+			"collideWithBWBounce": false
+		},
+		"description": "powerup that geenrates a portal which will spawn angels during a limited amount of time before disappearing",
+		"collection": "entities",
+		"id": 276
+	},
+	{
+		"name": "gold-coin-12.5x13.ent",
+		"object": {
+			"destination_dir": "game_assets/entities",
+			"name": "gold-coin-12.5x13.ent",
+			"type": "powerup",
+			"energy": 0,
+			"strength": 0,
+			"description": "gold coin 12.5x13",
+			"firstStateAt": 5000,
+			"states": [
+				{
+					"next": "0",
+					"action": {
+						"name": "removeSelf",
+						"params": {
+							"name": ""
+						}
+					}
+				}
+			],
+			"drawOnCanvas": "comboStar",
+			"x": 158,
+			"y": 192,
+			"dx": 0,
+			"dy": 0,
+			"path": -1,
+			"pathEnd": "loop",
+			"pathStep": 1,
+			"pathIdx": 0,
+			"UP": "",
+			"LEFT": "",
+			"DEFAULT": "gold-coin-12.5x13.sprt",
+			"RIGHT": "",
+			"DOWN": "",
+			"APPEAR": "",
+			"DISAPPEAR": "",
+			"bounceHorizontally": false,
+			"bounceVertically": false,
+			"outOfHorizontalBoundaryRemove": true,
+			"outOfVerticalBoundaryRemove": true,
+			"collideWithPaddleRemove": false,
+			"collideWithPaddleBounce": false,
+			"BounceBallVertically": false,
+			"BounceBallHorizontally": false,
+			"collideBallRemoveBall": false,
+			"collideBallAttacksBall": false,
+			"collideBallLoseEnergy": false,
+			"collidePaddleLoseEnergy": false,
+			"collideWithBWRemove": false,
+			"collideWithBWBounce": false
+		},
+		"description": "gold coin 12.5x13",
+		"collection": "entities",
+		"id": 277
+	},
+	{
+		"name": "gold-coin-16x16.ent",
+		"object": {
+			"destination_dir": "game_assets/entities",
+			"name": "gold-coin-16x16.ent",
+			"type": "powerup",
+			"energy": 0,
+			"strength": 0,
+			"description": "gold coin 16x16",
+			"firstStateAt": 5000,
+			"states": [
+				{
+					"next": "0",
+					"action": {
+						"name": "removeSelf",
+						"params": {
+							"name": ""
+						}
+					}
+				}
+			],
+			"drawOnCanvas": "comboStar",
+			"x": 158,
+			"y": 192,
+			"dx": 0,
+			"dy": 0,
+			"path": -1,
+			"pathEnd": "loop",
+			"pathStep": 1,
+			"pathIdx": 0,
+			"UP": "",
+			"LEFT": "",
+			"DEFAULT": "collision-16x16.sprt",
+			"RIGHT": "",
+			"DOWN": "",
+			"APPEAR": "",
+			"DISAPPEAR": "",
+			"bounceHorizontally": false,
+			"bounceVertically": false,
+			"outOfHorizontalBoundaryRemove": true,
+			"outOfVerticalBoundaryRemove": true,
+			"collideWithPaddleRemove": true,
+			"collideWithPaddleBounce": false,
+			"BounceBallVertically": false,
+			"BounceBallHorizontally": false,
+			"collideBallRemoveBall": false,
+			"collideBallAttacksBall": false,
+			"collideBallLoseEnergy": false,
+			"collidePaddleLoseEnergy": false,
+			"collideWithBWRemove": false,
+			"collideWithBWBounce": false
+		},
+		"description": "gold coin 16x16",
+		"collection": "entities",
+		"id": 278
+	},
+	{
+		"name": "sword-shield-powerup.ent",
+		"object": {
+			"destination_dir": "game_assets/entities",
+			"name": "sword-shield-powerup.ent",
+			"type": "powerup",
+			"energy": 0,
+			"strength": 2,
+			"resistance": 20,
+			"description": "power up that gives angel the boxing gloves",
+			"firstStateAt": 0,
+			"states": [],
+			"drawOnCanvas": "ground",
+			"x": 161,
+			"y": 202,
+			"dx": 0,
+			"dy": 0,
+			"path": -1,
+			"pathEnd": "loop",
+			"pathStep": 1,
+			"pathIdx": 0,
+			"UP": "",
+			"LEFT": "",
+			"DEFAULT": "sword-shield-powerup.sprt",
+			"RIGHT": "",
+			"DOWN": "",
+			"APPEAR": "",
+			"DISAPPEAR": "",
+			"bounceHorizontally": false,
+			"bounceVertically": false,
+			"outOfHorizontalBoundaryRemove": true,
+			"outOfVerticalBoundaryRemove": true,
+			"collideWithPaddleRemove": false,
+			"collideWithPaddleBounce": false,
+			"BounceBallVertically": false,
+			"BounceBallHorizontally": false,
+			"collideBallRemoveBall": false,
+			"collideBallAttacksBall": false,
+			"collideBallLoseEnergy": false,
+			"collidePaddleLoseEnergy": false,
+			"collideWithBWRemove": false,
+			"collideWithBWBounce": false
+		},
+		"description": "power up that gives angel the boxing gloves",
+		"collection": "entities",
+		"id": 279
+	},
+	{
+		"name": "grass_river.BG.ent",
+		"object": {
+			"destination_dir": "game_assets/entities",
+			"name": "grass_river.BG.ent",
+			"type": "graphic",
+			"energy": 0,
+			"strength": 0,
+			"resistance": 0,
+			"description": "",
+			"firstStateAt": 0,
+			"states": [],
+			"drawOnCanvas": "ground",
+			"x": 0,
+			"y": 0,
+			"dx": 0,
+			"dy": 0,
+			"path": -1,
+			"pathEnd": "loop",
+			"pathStep": 1,
+			"pathIdx": 0,
+			"UP": "",
+			"LEFT": "",
+			"DEFAULT": "grass_river.BG.sprt",
+			"RIGHT": "",
+			"DOWN": "",
+			"APPEAR": "",
+			"DISAPPEAR": "",
+			"bounceHorizontally": false,
+			"bounceVertically": false,
+			"outOfHorizontalBoundaryRemove": false,
+			"outOfVerticalBoundaryRemove": false,
+			"collideWithPaddleRemove": false,
+			"collideWithPaddleBounce": false,
+			"BounceBallVertically": false,
+			"BounceBallHorizontally": false,
+			"collideBallRemoveBall": false,
+			"collideBallAttacksBall": false,
+			"collideBallLoseEnergy": false,
+			"collidePaddleLoseEnergy": false,
+			"collideWithBWRemove": false,
+			"collideWithBWBounce": false
+		},
+		"description": "",
+		"collection": "entities",
+		"id": 280
+	},
+	{
+		"name": "ball.entity",
+		"object": {
+			"destination_dir": "game_assets/entities",
+			"name": "ball.entity",
+			"type": "ball",
+			"energy": 20,
+			"strength": 1,
+			"resistance": 1,
+			"description": "ball entity",
+			"firstStateAt": 0,
+			"states": [],
+			"drawOnCanvas": "aboveGround",
+			"x": 171,
+			"y": 548,
+			"dx": 0,
+			"dy": 0,
+			"path": -1,
+			"pathEnd": "loop",
+			"pathStep": 0,
+			"pathIdx": 0,
+			"UP": "boyWalkUp",
+			"LEFT": "boyWalkLeft",
+			"DEFAULT": "boyWalkUp",
+			"RIGHT": "boyWalkRight",
+			"DOWN": "boyWalkDown",
+			"APPEAR": "",
+			"DISAPPEAR": "",
+			"PUNCHED": "",
+			"bounceHorizontally": true,
+			"bounceVertically": true,
+			"outOfHorizontalBoundaryRemove": false,
+			"outOfVerticalBoundaryRemove": false,
+			"collideWithPaddleRemove": false,
+			"collideWithPaddleBounce": true,
+			"BounceBallVertically": false,
+			"BounceBallHorizontally": false,
+			"collideBallRemoveBall": false,
+			"collideBallAttacksBall": false,
+			"collideBallLoseEnergy": false,
+			"collidePaddleLoseEnergy": false,
+			"collideWithBWRemove": false,
+			"collideWithBWBounce": true
+		},
+		"description": "ball entity",
+		"collection": "entities",
+		"id": 281
+	},
+	{
+		"name": "force-field-50x50.ent",
+		"object": {
+			"destination_dir": "game_assets/entities",
+			"name": "force-field-50x50.ent",
+			"type": "ball",
+			"energy": 0,
+			"strength": 0,
+			"description": "wraps a ball char when spawned for a limited amount of time",
+			"firstStateAt": 5000,
+			"states": [],
+			"drawOnCanvas": "sky",
+			"x": 152,
+			"y": 181,
+			"dx": 0,
+			"dy": 0,
+			"path": -1,
+			"pathEnd": "loop",
+			"pathStep": 0,
+			"pathIdx": 0,
+			"UP": "",
+			"LEFT": "",
+			"DEFAULT": "force-field-50x50.sprt",
+			"RIGHT": "",
+			"DOWN": "",
+			"APPEAR": "",
+			"DISAPPEAR": "",
+			"bounceHorizontally": false,
+			"bounceVertically": false,
+			"outOfHorizontalBoundaryRemove": false,
+			"outOfVerticalBoundaryRemove": false,
+			"collideWithPaddleRemove": false,
+			"collideWithPaddleBounce": false,
+			"BounceBallVertically": false,
+			"BounceBallHorizontally": false,
+			"collideBallRemoveBall": false,
+			"collideBallAttacksBall": false,
+			"collideBallLoseEnergy": false,
+			"collidePaddleLoseEnergy": false,
+			"collideWithBWRemove": false
+		},
+		"description": "wraps a ball char when spawned for a limited amount of time",
+		"collection": "entities",
+		"id": 282
+	},
+	{
+		"name": "arrow.ent",
+		"object": {
+			"destination_dir": "game_assets/entities",
+			"name": "arrow.ent",
+			"type": "ball",
+			"energy": 0,
+			"strength": 3,
+			"resistance": 0,
+			"description": "an arrow shot by paddle",
+			"firstStateAt": 10,
+			"states": [
+				{
+					"next": "0",
+					"action": {
+						"name": "removeSelf",
+						"params": {
+							"name": ""
+						}
+					}
+				}
+			],
+			"drawOnCanvas": "aboveGround",
+			"x": 177,
+			"y": 259,
+			"dx": 0,
+			"dy": -10,
+			"path": -1,
+			"pathEnd": "loop",
+			"pathStep": 1,
+			"pathIdx": 0,
+			"UP": "",
+			"LEFT": "",
+			"DEFAULT": "arrow.sprt",
+			"RIGHT": "",
+			"DOWN": "",
+			"APPEAR": "",
+			"DISAPPEAR": "",
+			"bounceHorizontally": false,
+			"bounceVertically": false,
+			"outOfHorizontalBoundaryRemove": true,
+			"outOfVerticalBoundaryRemove": true,
+			"collideWithPaddleRemove": false,
+			"collideWithPaddleBounce": false,
+			"BounceBallVertically": false,
+			"BounceBallHorizontally": false,
+			"collideBallRemoveBall": false,
+			"collideBallAttacksBall": false,
+			"collideBallLoseEnergy": false,
+			"collidePaddleLoseEnergy": false,
+			"collideWithBWRemove": true,
+			"collideWithBWBounce": false
+		},
+		"description": "an arrow shot by paddle",
+		"collection": "entities",
+		"id": 283
+	},
+	{
+		"name": "redcarr",
+		"object": {
+			"destination_dir": "game_assets/entities",
+			"name": "redcarr",
+			"type": "enemy",
+			"energy": 100,
+			"strength": 12,
+			"resistance": 2,
+			"description": "a red car",
+			"firstStateAt": "",
+			"states": [
+				{
+					"next": "50",
+					"dx": "1"
+				},
+				{
+					"next": "0",
+					"action": {
+						"name": "spawn",
+						"params": {
+							"name": "flower2"
+						}
+					}
+				},
+				{
+					"next": "0",
+					"action": {
+						"name": "removeSelf",
+						"params": {
+							"name": ""
+						}
+					}
+				}
+			],
+			"drawOnCanvas": "aboveGround",
+			"x": 360,
+			"y": 418,
+			"dx": -1,
+			"dy": 0,
+			"path": -1,
+			"pathEnd": "reverseLoop",
+			"pathStep": 1,
+			"pathIdx": 0,
+			"UP": "",
+			"LEFT": "",
+			"DEFAULT": "car",
+			"RIGHT": "",
+			"DOWN": "",
+			"APPEAR": "",
+			"DISAPPEAR": "",
+			"PUNCHED": "",
+			"bounceHorizontally": false,
+			"bounceVertically": false,
+			"outOfHorizontalBoundaryRemove": false,
+			"outOfVerticalBoundaryRemove": false,
+			"collideWithPaddleRemove": false,
+			"collideWithPaddleBounce": false,
+			"BounceBallVertically": true,
+			"BounceBallHorizontally": true,
+			"collideBallRemoveBall": false,
+			"collideBallAttacksBall": true,
+			"collideBallLoseEnergy": true,
+			"collidePaddleLoseEnergy": false,
+			"collideWithBWRemove": true,
+			"collideWithBWBounce": false
+		},
+		"description": "a red car",
+		"collection": "entities",
+		"id": 284
+	},
+	{
+		"name": "skeletonWalksRight.entity",
+		"object": {
+			"destination_dir": "game_assets/entities",
+			"name": "skeletonWalksRight.entity",
+			"type": "enemy",
+			"energy": 60,
+			"strength": 2,
+			"resistance": 2,
+			"description": "Skeleton walks from the left border to the right border of stage then disappears",
+			"firstStateAt": 0,
+			"states": [],
+			"drawOnCanvas": "ground",
+			"x": -31,
+			"y": 285,
+			"dx": 1,
+			"dy": 0,
+			"path": -1,
+			"pathEnd": "stop",
+			"pathStep": 1,
+			"pathIdx": 0,
+			"UP": "",
+			"LEFT": "",
+			"DEFAULT": "skeletonWalksRight.sprite",
+			"RIGHT": "",
+			"DOWN": "",
+			"APPEAR": "",
+			"DISAPPEAR": "",
+			"PUNCHED": "",
+			"bounceHorizontally": false,
+			"bounceVertically": false,
+			"outOfHorizontalBoundaryRemove": true,
+			"outOfVerticalBoundaryRemove": true,
+			"collideWithPaddleRemove": false,
+			"collideWithPaddleBounce": true,
+			"BounceBallVertically": true,
+			"BounceBallHorizontally": true,
+			"collideBallRemoveBall": false,
+			"collideBallAttacksBall": true,
+			"collideBallLoseEnergy": true,
+			"collidePaddleLoseEnergy": false,
+			"collideWithBWRemove": false,
+			"collideWithBWBounce": true
+		},
+		"description": "Skeleton walks from the left border to the right border of stage then disappears",
+		"collection": "entities",
+		"id": 285
+	},
+	{
+		"name": "angel-portal.ent",
+		"object": {
+			"name": "angel-portal.ent",
+			"type": "ball",
+			"energy": -1,
+			"strength": -1,
+			"description": "entity that spawns angels",
+			"firstStateAt": 50,
+			"states": [
+				{
+					"next": "0",
+					"action": {
+						"name": "removeSelf",
+						"params": {
+							"name": ""
+						}
+					}
+				}
+			],
+			"drawOnCanvas": "sky",
+			"x": 129,
+			"y": 264,
+			"dx": 0,
+			"dy": 0,
+			"path": -1,
+			"pathEnd": "loop",
+			"pathStep": 1,
+			"pathIdx": 0,
+			"UP": "",
+			"LEFT": "",
+			"DEFAULT": "angel-portal.sprt",
+			"RIGHT": "",
+			"DOWN": "",
+			"APPEAR": "",
+			"DISAPPEAR": "",
+			"bounceHorizontally": false,
+			"bounceVertically": false,
+			"outOfHorizontalBoundaryRemove": false,
+			"outOfVerticalBoundaryRemove": false,
+			"collideWithPaddleRemove": false,
+			"collideWithPaddleBounce": false,
+			"BounceBallVertically": false,
+			"BounceBallHorizontally": false,
+			"collideBallRemoveBall": false,
+			"collideBallAttacksBall": false,
+			"collideBallLoseEnergy": false,
+			"collidePaddleLoseEnergy": false,
+			"collideWithBWRemove": false,
+			"collideWithBWBounce": false
+		},
+		"description": "entity that spawns angels",
+		"collection": "entities",
+		"id": 286
+	},
+	{
+		"name": "forest2.ent",
+		"object": {
+			"name": "forest2.ent",
+			"type": "graphic",
+			"energy": "",
+			"strength": "",
+			"description": "",
+			"firstStateAt": 120,
+			"states": [
+				{
+					"next": "0",
+					"action": {
+						"name": "removeSelf",
+						"params": {
+							"name": ""
+						}
+					}
+				}
+			],
+			"drawOnCanvas": "ground",
+			"x": 0,
+			"y": 0,
+			"dx": 0,
+			"dy": 0,
+			"path": -1,
+			"pathEnd": "loop",
+			"pathStep": 0,
+			"pathIdx": 0,
+			"UP": "",
+			"LEFT": "",
+			"DEFAULT": "forest2.sprt",
+			"RIGHT": "",
+			"DOWN": "",
+			"APPEAR": "",
+			"DISAPPEAR": "",
+			"bounceHorizontally": false,
+			"bounceVertically": false,
+			"outOfHorizontalBoundaryRemove": false,
+			"outOfVerticalBoundaryRemove": false,
+			"collideWithPaddleRemove": false,
+			"collideWithPaddleBounce": false,
+			"BounceBallVertically": false,
+			"BounceBallHorizontally": false,
+			"collideBallRemoveBall": false,
+			"collideBallAttacksBall": false,
+			"collideBallLoseEnergy": false,
+			"collidePaddleLoseEnergy": false,
+			"collideWithBWRemove": false,
+			"collideWithBWBounce": false
+		},
+		"description": "",
+		"collection": "entities",
+		"id": 287
+	},
+	{
+		"name": "angel.ball.ent",
+		"object": {
+			"destination_dir": "game_assets/entities",
+			"name": "angel.ball.ent",
+			"type": "ball",
+			"energy": 20,
+			"strength": 3,
+			"resistance": 5,
+			"description": "ball entity",
+			"firstStateAt": "",
+			"states": [],
+			"drawOnCanvas": "sky",
+			"x": 161,
+			"y": 429,
+			"dx": "",
+			"dy": -2,
+			"path": -1,
+			"pathEnd": "loop",
+			"pathStep": 0,
+			"pathIdx": 0,
+			"UP": "angel-flying-up.sprt",
+			"LEFT": "angel-flying-left.sprt",
+			"DEFAULT": "angel-flying-up.sprt",
+			"RIGHT": "angel-flying-right.sprt",
+			"DOWN": "angel-flying-down.sprt",
+			"APPEAR": "",
+			"DISAPPEAR": "",
+			"bounceHorizontally": true,
+			"bounceVertically": true,
+			"outOfHorizontalBoundaryRemove": false,
+			"outOfVerticalBoundaryRemove": false,
+			"collideWithPaddleRemove": false,
+			"collideWithPaddleBounce": true,
+			"BounceBallVertically": false,
+			"BounceBallHorizontally": false,
+			"collideBallRemoveBall": false,
+			"collideBallAttacksBall": false,
+			"collideBallLoseEnergy": false,
+			"collidePaddleLoseEnergy": false,
+			"collideWithBWRemove": false,
+			"collideWithBWBounce": true
+		},
+		"description": "ball entity",
+		"collection": "entities",
+		"id": 288
+	},
+	{
+		"name": "starbucks2.ent",
+		"object": {
+			"destination_dir": "game_assets/entities",
+			"name": "starbucks2.ent",
+			"type": "enemy",
+			"energy": 100,
+			"strength": 4,
+			"resistance": 2,
+			"description": "keeps patrolling in a square every 5 seconds",
+			"firstStateAt": 0,
+			"states": [
+				{
+					"next": "20",
+					"path": "-1",
+					"dx": "1",
+					"dy": "0"
+				},
+				{
+					"next": "20",
+					"dx": "0",
+					"dy": "1"
+				},
+				{
+					"next": "20",
+					"dx": "-1",
+					"dy": "0"
+				},
+				{
+					"next": "20",
+					"dx": "0",
+					"dy": "-1"
+				}
+			],
+			"drawOnCanvas": "combo",
+			"x": 52,
+			"y": 126,
+			"dx": 0,
+			"dy": 0,
+			"path": -1,
+			"pathEnd": "reverseLoop",
+			"pathStep": 1,
+			"pathIdx": 0,
+			"UP": "",
+			"LEFT": "",
+			"DEFAULT": "starbucks",
+			"RIGHT": "",
+			"DOWN": "",
+			"APPEAR": "",
+			"DISAPPEAR": "",
+			"bounceHorizontally": true,
+			"bounceVertically": true,
+			"outOfHorizontalBoundaryRemove": false,
+			"outOfVerticalBoundaryRemove": false,
+			"collideWithPaddleRemove": false,
+			"collideWithPaddleBounce": true,
+			"BounceBallVertically": true,
+			"BounceBallHorizontally": true,
+			"collideBallRemoveBall": false,
+			"collideBallAttacksBall": true,
+			"collideBallLoseEnergy": true,
+			"collidePaddleLoseEnergy": false,
+			"collideWithBWRemove": false,
+			"collideWithBWBounce": true
+		},
+		"description": "keeps patrolling in a square every 5 seconds",
+		"collection": "entities",
+		"id": 289
+	},
+	{
+		"name": "runningeye.ent",
+		"object": {
+			"destination_dir": "game_assets/entities",
+			"name": "runningeye.ent",
+			"type": "enemy",
+			"energy": 20,
+			"strength": 3,
+			"resistance": 2,
+			"description": "eye running from left to right",
+			"firstStateAt": 0,
+			"states": [],
+			"drawOnCanvas": "ground",
+			"x": 93,
+			"y": 260,
+			"dx": 0,
+			"dy": 0,
+			"path": -1,
+			"pathEnd": "loop",
+			"pathStep": 1,
+			"pathIdx": 0,
+			"UP": "",
+			"LEFT": "",
+			"DEFAULT": "runningeyeright.sprt",
+			"RIGHT": "",
+			"DOWN": "",
+			"APPEAR": "",
+			"DISAPPEAR": "",
+			"bounceHorizontally": true,
+			"bounceVertically": true,
+			"outOfHorizontalBoundaryRemove": false,
+			"outOfVerticalBoundaryRemove": false,
+			"collideWithPaddleRemove": false,
+			"collideWithPaddleBounce": true,
+			"BounceBallVertically": true,
+			"BounceBallHorizontally": true,
+			"collideBallRemoveBall": true,
+			"collideBallAttacksBall": true,
+			"collideBallLoseEnergy": true,
+			"collidePaddleLoseEnergy": false,
+			"collideWithBWRemove": false,
+			"collideWithBWBounce": true
+		},
+		"description": "eye running from left to right",
+		"collection": "entities",
+		"id": 290
+	},
+	{
+		"name": "disappear-600x100.ent",
+		"object": {
+			"name": "disappear-600x100.ent",
+			"type": "graphic",
+			"energy": 0,
+			"strength": 0,
+			"description": "dissipation FX - can be used to show an enemy disappeared",
+			"firstStateAt": 6,
+			"states": [
+				{
+					"next": "0",
+					"action": {
+						"name": "removeSelf",
+						"params": {
+							"name": ""
+						}
+					}
+				}
+			],
+			"drawOnCanvas": "sky",
+			"x": 127,
+			"y": 145,
+			"dx": 0,
+			"dy": 0,
+			"path": -1,
+			"pathEnd": "loop",
+			"pathStep": 1,
+			"pathIdx": 0,
+			"UP": "",
+			"LEFT": "",
+			"DEFAULT": "disappear-600x100.sprt",
+			"RIGHT": "",
+			"DOWN": "",
+			"APPEAR": "",
+			"DISAPPEAR": "",
+			"bounceHorizontally": false,
+			"bounceVertically": false,
+			"outOfHorizontalBoundaryRemove": true,
+			"outOfVerticalBoundaryRemove": true,
+			"collideWithPaddleRemove": false,
+			"collideWithPaddleBounce": false,
+			"BounceBallVertically": false,
+			"BounceBallHorizontally": false,
+			"collideBallRemoveBall": false,
+			"collideBallAttacksBall": false,
+			"collideBallLoseEnergy": false,
+			"collidePaddleLoseEnergy": false,
+			"collideWithBWBounce": false
+		},
+		"description": "dissipation FX - can be used to show an enemy disappeared",
+		"collection": "entities",
+		"id": 291
+	},
+	{
+		"name": "forest1.ent",
+		"object": {
+			"name": "forest1.ent",
+			"type": "graphic",
+			"energy": "",
+			"strength": "",
+			"description": "",
+			"firstStateAt": 0,
+			"states": [],
+			"drawOnCanvas": "ground",
+			"x": 0,
+			"y": 0,
+			"dx": 0,
+			"dy": 0,
+			"path": -1,
+			"pathEnd": "loop",
+			"pathStep": 0,
+			"pathIdx": 0,
+			"UP": "",
+			"LEFT": "",
+			"DEFAULT": "forest1.sprt",
+			"RIGHT": "",
+			"DOWN": "",
+			"APPEAR": "",
+			"DISAPPEAR": "",
+			"bounceHorizontally": false,
+			"bounceVertically": false,
+			"outOfHorizontalBoundaryRemove": false,
+			"outOfVerticalBoundaryRemove": false,
+			"collideWithPaddleRemove": false,
+			"collideWithPaddleBounce": false,
+			"BounceBallVertically": false,
+			"BounceBallHorizontally": false,
+			"collideBallRemoveBall": false,
+			"collideBallAttacksBall": false,
+			"collideBallLoseEnergy": false,
+			"collidePaddleLoseEnergy": false,
+			"collideWithBWRemove": false,
+			"collideWithBWBounce": false
+		},
+		"description": "",
+		"collection": "entities",
+		"id": 292
+	},
+	{
+		"name": "bow-arrow-powerup.ent",
+		"object": {
+			"name": "bow-arrow-powerup.ent",
+			"type": "powerup",
+			"energy": 0,
+			"strength": 0,
+			"description": "",
+			"firstStateAt": 0,
+			"states": [],
+			"drawOnCanvas": "ground",
+			"x": 168,
+			"y": 244,
+			"dx": 0,
+			"dy": 0,
+			"path": "",
+			"pathEnd": "loop",
+			"pathStep": 1,
+			"pathIdx": 0,
+			"UP": "",
+			"LEFT": "",
+			"DEFAULT": "bow-arrow-powerup.sprt",
+			"RIGHT": "",
+			"DOWN": "",
+			"APPEAR": "",
+			"DISAPPEAR": "",
+			"bounceHorizontally": false,
+			"bounceVertically": false,
+			"outOfHorizontalBoundaryRemove": true,
+			"outOfVerticalBoundaryRemove": true,
+			"collideWithPaddleRemove": false,
+			"collideWithPaddleBounce": false,
+			"BounceBallVertically": false,
+			"BounceBallHorizontally": false,
+			"collideBallRemoveBall": false,
+			"collideBallAttacksBall": false,
+			"collideBallLoseEnergy": false,
+			"collidePaddleLoseEnergy": false,
+			"collideWithBWRemove": false,
+			"collideWithBWBounce": false
+		},
+		"description": "",
+		"collection": "entities",
+		"id": 293
+	},
+	{
+		"name": "boxing-gloves-powerup.ent",
+		"object": {
+			"destination_dir": "game_assets/entities",
+			"name": "boxing-gloves-powerup.ent",
+			"type": "powerup",
+			"energy": 0,
+			"strength": 2,
+			"resistance": 0,
+			"description": "power up that gives angel the boxing gloves",
+			"firstStateAt": 0,
+			"states": [],
+			"drawOnCanvas": "ground",
+			"x": 184,
+			"y": 239,
+			"dx": 0,
+			"dy": 0,
+			"path": -1,
+			"pathEnd": "loop",
+			"pathStep": 1,
+			"pathIdx": 0,
+			"UP": "",
+			"LEFT": "",
+			"DEFAULT": "boxing-gloves-powerup.sprt",
+			"RIGHT": "",
+			"DOWN": "",
+			"APPEAR": "",
+			"DISAPPEAR": "",
+			"PUNCHED": "",
+			"bounceHorizontally": false,
+			"bounceVertically": false,
+			"outOfHorizontalBoundaryRemove": true,
+			"outOfVerticalBoundaryRemove": true,
+			"collideWithPaddleRemove": false,
+			"collideWithPaddleBounce": false,
+			"BounceBallVertically": false,
+			"BounceBallHorizontally": false,
+			"collideBallRemoveBall": false,
+			"collideBallAttacksBall": false,
+			"collideBallLoseEnergy": false,
+			"collidePaddleLoseEnergy": false,
+			"collideWithBWRemove": false,
+			"collideWithBWBounce": false
+		},
+		"description": "power up that gives angel the boxing gloves",
+		"collection": "entities",
+		"id": 294
+	},
+	{
+		"name": "doubleZ.rel",
+		"object": {
+			"path_name": "doubleZ.rel",
+			"pathMode": "relative",
+			"description": "",
+			"path_coords": "[[0,0],[4,-2],[9,-2],[9,0],[10,0],[11,0],[9,4],[12,2],[10,4],[8,2],[6,3],[7,4],[4,2],[3,3],[2,0],[0,3],[0,5],[-1,6],[-5,8],[-3,7],[-10,8],[-8,7],[-9,8],[-14,11],[-8,5],[-5,4],[-3,2],[-2,3],[0,3],[0,4],[0,3],[4,1],[7,4],[11,2],[18,2],[33,4],[23,3],[19,1],[17,4],[18,4],[10,3],[4,1],[2,0],[-1,3],[-3,1],[-9,7],[-9,5],[-11,7],[-16,7],[-16,9],[-17,10],[-17,10],[-18,9],[-13,8],[-9,8],[-5,4],[-2,4],[-2,2],[0,2],[0,2],[1,2],[6,4],[8,5],[14,5],[14,6],[13,3],[11,1],[11,0],[9,0],[15,2],[7,1],[3,0],[4,0],[2,0],[2,0],[1,0],[1,0]]"
+		},
+		"description": "",
+		"collection": "paths",
+		"id": 295
+	},
+	{
+		"name": "anotherTest.abs",
+		"object": {
+			"path_name": "anotherTest.abs",
+			"pathMode": "absolute",
+			"description": "This is a long description sample description sample description sample description sample ",
+			"path_coords": "[[217,69],[217,75],[217,76],[217,80],[216,84],[216,87],[216,91],[216,93],[215,96],[215,97],[214,100],[214,103],[214,105],[214,110],[214,112],[214,116],[214,119],[214,121],[212,124],[212,127],[211,131],[210,134],[210,138],[210,140],[210,143],[209,145],[208,148],[208,152],[208,156],[207,160],[206,164],[206,171],[205,175],[205,178],[204,183],[203,186],[203,190],[202,193],[202,197],[202,201],[202,205],[202,209],[202,214],[202,221],[202,227],[202,233],[202,237],[202,243],[202,247],[202,251],[202,254],[202,258],[202,264],[202,270],[202,276],[202,284],[202,288],[202,294],[202,299],[202,304],[202,309],[202,315],[202,320],[202,324],[202,327],[202,332],[202,336],[202,344],[202,347],[202,351],[202,356],[202,360],[202,364],[203,369],[203,376],[204,380],[205,384],[205,387],[206,389],[206,390],[206,391],[206,391],[208,390],[210,388],[211,387],[213,382],[214,379],[216,369],[218,362],[219,356],[220,349],[221,342],[222,333],[224,325],[227,314],[229,305],[231,296],[234,288],[237,278],[239,269],[241,260],[244,252],[246,245],[247,236],[249,227],[251,217],[252,208],[253,203],[254,198],[254,192],[254,188],[254,182],[254,177],[254,172],[254,168],[255,163],[255,156],[255,149],[255,140],[255,134],[255,130],[255,124],[256,118],[256,113],[256,108],[256,104],[256,100],[256,96],[256,92],[256,88],[256,84],[256,83],[256,81],[255,80],[255,80],[254,80],[254,79],[254,78],[253,78],[252,78],[252,77],[251,76],[250,76],[250,76],[250,76],[250,75],[250,74],[250,72],[249,72],[249,72],[249,71],[249,70],[249,69],[249,68]]"
+		},
+		"description": "This is a long description sample description sample description sample description sample ",
+		"collection": "paths",
+		"id": 296
+	},
+	{
+		"name": "anotherPastTest.rel",
+		"object": {
+			"path_name": "anotherPastTest.rel",
+			"pathMode": "relative",
+			"description": "A long relative path that leads its entity to many different places",
+			"path_coords": "[[147,130],[153,132],[159,135],[168,140],[176,147],[184,160],[194,179],[197,191],[197,199],[197,208],[194,217],[190,226],[184,235],[174,242],[166,247],[162,248],[160,248],[154,248],[140,238],[138,230],[138,221],[143,214],[150,211],[158,210],[167,210],[182,213],[195,222],[204,230],[210,245],[212,259],[212,284],[206,301],[198,316],[191,324],[184,330],[178,331],[172,331],[162,330],[142,321],[124,309],[113,297],[110,291],[122,290],[138,290],[155,295],[171,300],[183,312],[192,326],[198,345],[199,359],[196,372],[191,383],[185,391],[174,401],[165,405],[154,405],[139,404],[114,392],[76,366],[57,345],[54,336],[61,333],[78,330],[95,330],[114,330],[130,330],[158,342],[170,354],[178,368],[182,385],[182,400],[182,415],[176,427],[171,434],[162,440],[151,444],[138,445],[124,446],[99,435],[90,430],[87,425],[86,418],[91,415],[102,414],[127,418],[151,422],[175,432],[195,441],[211,447],[216,449],[219,449],[223,448],[229,434],[242,393],[243,325],[226,254],[210,198],[204,174],[204,166],[205,162],[206,159],[206,158]]"
+		},
+		"description": "A long relative path that leads its entity to many different places",
+		"collection": "paths",
+		"id": 297
+	},
+	{
+		"name": "v.abs",
+		"object": {
+			"path_name": "v.abs",
+			"pathMode": "absolute",
+			"description": "V path",
+			"path_coords": "[[142,334],[160,414],[181,481],[200,528],[209,548],[213,559],[214,562],[214,562],[218,568],[226,580],[275,572],[282,550],[285,520],[285,479],[285,389],[285,320],[287,247],[294,192],[302,167],[310,157],[313,154],[313,153]]"
+		},
+		"description": "V path",
+		"collection": "paths",
+		"id": 298
+	},
+	{
+		"name": "complexe.abs",
+		"object": {
+			"path_name": "complexe.abs",
+			"pathMode": "absolute",
+			"description": "Still another desription",
+			"path_coords": "[[82,184],[94,176],[109,164],[121,156],[126,152],[128,170],[134,184],[138,192],[141,196],[142,196],[148,195],[160,189],[175,182],[189,173],[199,169],[202,166],[203,166],[205,171],[208,177],[211,184],[214,188],[217,190],[218,191],[220,191],[226,191],[238,190],[255,186],[274,182],[278,180],[282,190],[286,204],[292,218],[295,227],[298,232],[299,238],[301,243],[301,246],[300,247],[298,248],[295,248],[293,248],[292,248],[290,248],[286,252],[280,263],[274,273],[263,286],[258,289],[256,290],[255,290],[254,290],[249,285],[243,278],[239,273],[236,269],[234,270],[229,277],[218,286],[209,294],[202,300],[196,302],[193,302],[192,302],[190,301],[184,292],[177,280],[171,269],[166,260],[162,263],[154,274],[139,288],[126,297],[118,304],[114,306],[114,307],[114,306],[111,299],[110,292],[108,282],[107,279],[104,283],[96,296],[89,309],[84,316],[83,320],[83,320],[86,320],[93,319],[99,317],[106,316],[108,316],[110,316],[112,316],[116,320],[122,323],[130,325],[137,326],[142,327],[146,327],[153,324],[156,324],[158,324],[158,336],[162,353],[165,370],[168,383],[172,391],[176,392],[187,388],[206,377],[234,356],[250,345],[255,343],[255,342],[255,347],[254,356],[254,364],[258,372],[263,380],[270,385],[276,387],[284,387],[298,384],[307,380],[312,373],[316,372],[317,372],[316,373],[315,383],[314,394],[314,400],[314,404],[315,406],[315,407],[316,407],[317,407],[318,407],[321,405],[324,402],[327,396],[334,382],[339,361],[341,338],[340,316],[338,294],[334,274],[333,255],[332,244],[332,232],[333,225],[334,223],[334,220],[334,219],[334,218],[333,218],[333,217],[331,216],[330,212],[326,207],[324,203],[322,200],[322,196],[318,192],[316,187],[314,182],[312,176],[310,170],[310,164],[308,160],[307,158],[307,157],[304,157],[299,157],[294,157],[286,157],[278,156],[270,155],[260,153],[246,150],[234,147],[219,144],[211,143],[198,141],[190,141],[182,141],[176,140],[171,140],[167,140],[162,140],[157,140],[150,140],[146,140],[144,140],[142,140],[140,140],[127,144],[118,151],[114,155],[112,158],[111,161],[110,169],[110,174],[111,179],[116,184],[124,188],[135,194],[151,200],[172,203],[194,204],[213,203],[224,203],[232,201],[238,201],[242,201],[248,206],[259,221],[272,245],[283,280],[293,319],[298,340],[298,348],[298,350],[294,350],[287,351],[274,351],[246,345],[229,341],[215,337],[209,334],[202,327],[198,316],[197,302],[199,285],[208,274],[221,264],[234,254],[249,244],[255,240],[256,240]]"
+		},
+		"description": "Still another desription",
+		"collection": "paths",
+		"id": 299
+	},
+	{
+		"name": "sharkPath.pth",
+		"object": {
+			"destination_dir": "game_assets/paths",
+			"path_name": "sharkPath.pth",
+			"pathMode": "relative",
+			"description": "the path followed by the shark boss",
+			"path_coords": "[[-2,0],[-5,0],[-20,0],[-14,0],[-14,0],[-11,0],[-8,0],[-5,0],[-4,0],[-7,0],[-5,0],[-8,0],[-5,0],[-7,0],[-8,0],[-6,1],[-10,2],[-9,1],[-9,2],[-6,1],[-5,1],[-3,1],[-4,2],[-4,1],[-7,2],[-4,1],[-7,1],[-2,2],[-4,2],[-3,3],[-4,1],[-4,3],[-5,4],[-3,4],[-3,3],[-2,5],[-3,4],[-1,3],[0,3],[0,2],[0,4],[0,4],[0,6],[2,4],[2,3],[4,5],[3,4],[4,3],[4,4],[7,3],[9,5],[9,3],[12,3],[12,1],[14,1],[15,0],[11,0],[10,0],[9,0],[5,0],[4,0],[3,0],[3,0],[4,0],[6,0],[7,0],[9,2],[8,2],[4,0],[6,1],[7,2],[5,1],[3,2],[4,1],[6,4],[5,4],[3,2],[1,4],[4,6],[5,8],[3,5],[3,5],[2,4],[2,5],[1,5],[0,2],[-3,10],[-3,4],[-6,7],[-9,5],[-9,3],[-12,3],[-13,3],[-13,2],[-12,3],[-12,2],[-9,3],[-7,1],[-7,1],[-6,2],[-6,1],[-7,1],[-8,2],[-6,1],[-6,1],[-4,1],[-5,2],[-3,0],[-5,0],[-5,1],[-6,3],[-3,0],[-3,2],[-2,1],[-2,1],[-3,2],[-4,2],[-3,3],[-4,2],[-2,3],[-4,1],[-3,3],[-3,4],[-2,4],[-1,3],[-1,4],[0,1],[0,4],[0,4],[0,2],[1,3],[1,2],[1,1],[3,3],[4,4],[5,2],[5,4],[4,3],[6,4],[5,3],[6,3],[7,3],[6,3],[6,2],[5,2],[5,2],[6,2],[4,0],[2,1],[6,1],[5,1],[6,0],[7,0],[8,0],[7,0],[6,0],[7,0],[5,0],[6,0],[5,-1],[4,-1],[4,-1],[3,0],[2,0],[3,0],[3,0],[5,0],[3,2],[3,1],[3,1],[7,5],[6,3],[5,4],[4,4],[4,8],[2,1],[3,3],[1,4],[3,4],[1,4],[0,5],[-1,7],[0,7],[-3,5],[-3,4],[-6,5],[-6,3],[-7,5],[-7,4],[-7,5],[-8,3],[-8,4],[-14,5],[-7,2],[-5,1],[-3,0],[-4,2],[-4,1],[-4,0],[-8,1],[-6,0],[-6,0],[-4,0],[-6,0],[-2,0],[-1,0],[-2,0],[-1,0],[0,0],[-1,0],[-1,0],[-2,0],[0,0],[-2,0],[-2,0],[-4,0],[-4,0],[-3,0],[-4,0],[-3,0],[-6,2],[-2,1],[-2,0],[-1,0],[-1,0],[-1,0],[-1,0],[0,0],[0,0],[-1,0],[0,0],[1,0],[0,-1],[1,0]]"
+		},
+		"description": "the path followed by the shark boss",
+		"collection": "paths",
+		"id": 300
+	}
+]

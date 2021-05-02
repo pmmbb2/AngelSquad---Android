@@ -1,0 +1,1980 @@
+*{
+  margin:0;
+  padding: 0;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-family: Tw Cen MT;/*Magneto Mistral,,Lucida Handwriting,Lucinda Console,Consolas,, */
+  list-style: none;
+  text-shadow: 0 0 1px #fff, 0 0 1px #fff, 0 0 1px #fff, 0 0 1px #fff;
+  font-weight: bold;
+  font-size: 1.05em;
+}
+
+body{
+  overflow-x: hidden
+}
+
+.screenTitle{
+  text-align: center;
+  /*! line-height: 5em; */
+  /*! height: 20%; */  
+  font-size: 40px;
+  color: #fff;
+  
+ /* text-shadow: 0 0 1px #87e7ff, 0 0 1px #87e7ff, 0 0 1px #87e7ff, 0 0 1px #87e7ff;  */
+  text-shadow: 0 0 1px #000, 0 0 1px #000, 0 0 1px #000, 0 0 1px #000;
+}
+
+#homeScreen{
+  background-color: #09f; 
+  display: none;
+}
+
+#stageSelection{
+  /* background-color: #09f; */
+  display: none;
+}
+
+#campaignSelection{
+  background-color: #09f; 
+  display: none;
+}
+
+
+#UI_wrapper{
+ display: none;
+ z-index: 101;/* ABOVE #UI canvas*/
+ height: 20%;
+ height: 60px;/* WILL BE CHNAGE LATER FOR INGAME TOP AD BANNER */
+ background-color: rgba(254,254,254,0.5);
+ border-bottom-left-radius: 1em;
+ border-bottom-right-radius: 1em;
+}
+
+#characterSelection{
+  display: none;
+}
+
+#pauseScreen{
+  display: none;
+  /* background-color: rgba(128,128,128,0.5 ); */
+  background-color: rgba(254,254,254,0.3 );
+}
+
+#UI_wrapper,
+#homeScreen ul,
+/*#stageSelectionHeader,
+#stageSelectionFooter,*/
+#stagesList,
+#stageDetails,
+#endStage,
+#pauseScreen,
+#characterSelection,
+#weaponsSelector,
+#characterDetails,
+#inventory,
+#stagePayToContinue,
+.footer,
+.header{
+  position: fixed;
+  width: 360px;
+  left: 50%;
+  margin-left: -180px;
+  overflow: hidden;
+  /* background-color: magenta; */
+}
+
+#homeScreen ul{
+  height: 100%;
+  display: block;
+}
+
+#homeScreen ul li{
+  height: 70%;
+  display: block;
+  font-size: 8em;
+  color: #fff;
+  text-align: center;
+}
+
+#homeScreen ul li+li{
+  height: 30%;
+ background-color: #fff;
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+  line-height: 2em;
+}
+
+/*#stageSelectionHeader*/
+.header{
+   top: 0;
+   height: 20%;
+}
+
+#stageSelectionFooter{
+  /* background-color: #fff */
+}
+
+#stageSelectionFooter ul{
+  display: block;
+  margin: 5px auto;
+  text-align: center;
+}
+
+#stageSelectionFooter ul li{
+   vertical-align: top;
+   display: inline-block; 
+   width: 30%;
+  /*float: left;*/
+}
+
+#stageSelectionFooter a.navigation.goldenBtn {
+    height: 2.7em
+}
+
+/*#stageSelectionFooter*/
+.footer{
+   top: 90%;
+   height: 10%;
+}
+
+
+#stagesList,
+#stageDetails,
+#endStage{
+  /*height: 700px;
+  height: 70%;
+  top: 20%;*/
+  background-color: #09f;  
+  display: none;  
+}
+
+#stageDetails,
+#endStage{  
+  height: 100%;
+  top: 0px;
+}
+
+#stagesList{
+  height: 70%;
+  top: 20%;
+}
+
+#pauseScreen ul{
+  display: block;
+  height: 100%;
+  width: 100%;
+  margin-top: 50%; 
+}
+/*
+#pauseScreen ul li{
+  display: inline-block;
+  float: left;
+  width: 50%;
+  height: 80%;
+  line-height: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+
+#pauseScreen ul li a{
+  display: block;  
+  color: #fff;
+  line-height: 20em;  
+  text-align: center;
+  font-variant: all-small-caps;
+  font-size: 2em;
+}
+*/
+
+
+#pauseScreen ul li{
+  display: inline-block;
+  float: left;
+  width: calc( 50% - 1px);
+  /*height: 80%;*/
+  line-height: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+
+#pauseScreen ul li+li{  border-left: 1px solid #fff}
+
+#pauseScreen ul li a{
+  display: block !important;
+  color: #fff;
+  line-height: 4em;
+  height: 4em;
+  /*padding: 0.5em;
+  margin: 0.25em;*/
+  text-align: center;
+  font-variant: all-small-caps;
+  font-size: 3em;
+  width: 100% !important;
+}
+
+
+
+
+
+#stagesList ul{
+  background-color: cyan;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  display: block;
+  border-radius: 0.5em;
+}
+
+#stagesList ul li{  
+  
+  width: 20%;
+  height: 4em;
+  display: inline-block; 
+  margin: 2.5% 2.5%;  
+  /*! float: left; */
+}
+
+#stagesList ul li a{
+  color: #fff;
+  width: 72px;
+  /*! height: 4em !important; */
+  text-align: center;
+  font-family: Lucida Console !important;
+  border-radius: 0.5em;
+  border: 2px outset #04f;
+  display: block;
+  padding-top: 2px;
+  background-color: #fff;
+}
+
+#stagesList ul li a span.missionId,
+#stagesList ul li a span.title{  
+  border-radius: 0.5em;
+  display: block;    
+  text-align: center;
+  width: 69px;
+  height: 22px; 
+  margin: 0 auto;
+  font-weight: normal;  
+  font-size: 12px;
+  line-height: 22px;  
+  color: #04f;
+  overflow: hidden;
+  text-shadow: none
+}
+
+#stagesList ul li a span.missionId{
+  font-size: 14px;
+  background-color: #04f;
+  color: #fff;
+}
+
+#stagesList ul li a span.missionId:before{
+  content: 'mission '
+}
+
+#stagesList ul li a *{
+  pointer-events: none !important; 
+}
+
+/*
+	FOOTER OF: 
+		#stageDetails
+		#endStage	
+*/
+.stageDetailsControls{
+  /*position: fixed;
+  bottom: 15%;
+  width: 360px;
+  height: 10%;*/
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  /*! background: url(./UI-PARTS/UI-360x700-SUCCESS.png); */
+  width: 360px;
+  height: 100%;
+  display: block;
+}
+
+/* BUTTON [PLAY] */
+#stageDetails .stageDetailsControls a.stage_play,
+#endStage .stageDetailsControls .stage_next,
+#endStage .stageDetailsControls .stage_replay{
+  display: block; 
+  position: absolute;
+  top: 537px;
+  left: 50%;
+  width: 272px;
+  margin-left: -139px;  
+}
+
+/* BUTTON [CLOSE] (stage seletion) */
+.stageDetailsControls .navigation.sprite.ui-stage-close-btn-47x47 {
+    left: 309px;
+    top: 4px;
+    position: absolute;
+    bottom: 570px;
+}
+
+#endStage .stageDetailsControls .stage_replay.ui-stage-buttons-replay{
+    left: 3px;
+    margin-left:0;
+    height: 48px;
+    top: 3px; 
+    width: 48px;
+}
+
+
+.gold{
+  /*! background-color: gold; */
+  float: right;
+}
+
+/*
+      END STAGE -- begin
+*/
+
+
+  .objectiveMark.success,
+  .objectiveMark.failure,
+  .objectiveDescription,
+  .objectiveCount{   
+    display: inline-block;
+   }
+
+  .objectiveDescription{
+    width: 80%;  
+   }
+ 
+  .objectiveCount{
+    width: 15%;  
+   }
+
+  .objectiveMark.success,
+  .objectiveMark.failure{
+    width: 5%;   
+   }
+  
+
+  .objectiveMark.success:after{
+    content:'\2714'
+  }
+
+  .objectiveMark.failure:after{
+    content:'\2716'  
+   }
+
+
+/*
+      END STAGE -- end
+*/
+
+
+
+/*
+	ADD THIS CLASS TO DISPLAY AN ELEMENT IN FULL SCREEN
+*/
+.fullScreenPage{
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block !important;
+}
+
+.fullScreenPage > *{
+  display: block !important;
+}	
+
+.hidden{
+  /* display: none !important; */
+  opacity: 0;
+}
+
+.hiddenUIBtn{
+  display: none !important;  
+}
+
+
+
+/* OBJECTIVES LIST */
+ul.objectivesList{
+  position: absolute;
+  top: 290px;
+  left: 50%;
+  width: calc( 360px - 44px );
+  height: 126px;
+  margin-left: -158px
+}
+
+ul.objectivesList > li:not(.timer){
+  position: relative;
+  /*! top: 290px; */
+  /*! left: 44px; */
+  vertical-align: top;
+  width: 100px;
+  margin-left: 1px;
+  margin-right: 1px;
+  padding-left: 1px;
+  padding-right: 1px;
+  height: 126px;
+  display: inline-block;
+  /* background-color: pink; */
+}
+
+ul.objectivesList > li:not(.timer){
+    border-right: 1px solid #fff  
+}
+
+ul.objectivesList > li+li+li{
+    border-right: none
+}
+
+
+ul.objectivesList > li:not(.timer) .description{
+  position: absolute;
+  left: 50%;
+  margin-left: -44px; 
+  top: 76px;
+  width: 88px;
+  height: 36px;
+  overflow: hidden;
+  display: block;
+}
+
+ul.objectivesList > li.timer{
+  position: absolute;
+  left: 50%;
+  margin-left: -50px; 
+  top: 130px;
+  width: 100px;
+  display: inline-block;
+}
+
+
+ul.objectivesList > li.timer .description{  
+  /*! display: inline-block; */
+  font-size: 26px;
+}
+
+li.destroyBW img{
+  /*max-height: 38px;
+  max-width: 80%;*/
+  width: 60px;
+  margin: 0 auto;
+  display: block;
+}
+
+li.targets img{
+  max-height: 38px;
+  max-width: 35px;
+}
+
+span.valueHolder{
+  display: inline-block;  
+  width: 45px;
+  height: 22px;
+  background-color: #3399ff;
+  text-align: center;
+  line-height: 22px;
+  border-radius: 0.5em;
+  border: 1px solid #f6e000;
+  /*color: #fff;*/
+  margin-left: 0.5em;
+  font-weight: thin;
+  text-shadow: 0 0 1px #fff, 0 0 1px #fff, 0 0 1px #fff, 0 0 1px #fff;  
+ /* color: #fff;*/
+}
+
+/* MOVE THE TARGETS AFTER THE FIRST ONE */
+.targets ul li+li{
+  margin-top: 1em
+}
+
+.targets ul li span.valueHolder{
+  position: absolute;
+  right: 0.2em;
+  top: initial;
+  color: #fff;
+  text-shadow: none;
+}
+
+.sprite.ui-stage-minCombos,
+.targets ul li img{
+  margin-left: 0.2em;
+}
+
+.sprite.ui-stage-minCombos,
+.targets ul li img,
+span.valueHolder
+{
+  vertical-align: top; 
+}
+
+.valueHolder .over,
+.valueHolder .below{  
+  text-shadow: none !important;
+  font-size: 10px;
+  background-color: #fff;
+  padding: 0.2em;
+  border-radius: 0.5em;
+  position: relative;
+  top: -1.5em;
+  color: #000
+}
+
+/*
+  
+*/
+.objectivesList li .UI-stage-marks-39x39-success,
+.objectivesList li .UI-stage-marks-39x39-failure{
+  position: absolute;
+  left: 50%;  
+  margin-left: -19px;
+  top: 10em;
+}
+
+
+/*
+  OBJECTIVES : minCombos
+*/
+.valueHolder .over{
+  color: #090 !important; 
+}
+.valueHolder .over:before{
+  content: '\002B'
+}
+
+.valueHolder .below{
+  color: #f00 !important; 
+}
+.valueHolder .below:before{
+  content: '\002D'
+}
+
+
+/*
+  WINGS & HALO
+*/
+.sprite.ui-stage-wings-halo-360x75{
+  position: absolute;
+  top: 52px;
+  /*! z-index: 1; */
+}
+
+/*
+  STARS -- begin
+*/
+.UI-stage-3-stars-360x160{
+  position: absolute;
+  top: 70px;
+}
+
+/*
+  STATUS
+*/
+.status{
+  font-size: 50px;  
+  position: absolute;
+  top: 222px;
+  left: 50%;
+  margin-left: -107px;
+  width: 214px;  
+  display: block;
+  text-align: center;
+  font-variant: all-small-caps;
+}
+
+.status.success{
+  color: #33ca00
+}
+
+.status.failure{
+  color: #ff0000
+}
+
+
+/*
+  SCORE-GOLD
+*/
+.score-gold{
+  position: absolute;
+  top: 486px;
+ /* background-color: red;*/
+  /*! width: 100%; */
+  border-top: 2px outset #09f;
+  padding-top: 6px;
+}
+
+.score-gold .scoreLbl, .score-gold .score {
+  position: absolute;
+  margin-top: -6px;
+  left: 26px;
+  font-size: 24px;
+  font-variant: all-small-caps;
+  color: #3399ff;
+}
+
+.score-gold .score{     
+  left: 87px;
+  margin-top: -1px;
+  font-size: 18px;
+  color: #000; 
+  width: 100px;  
+}
+
+
+.score-gold .ui-stage-gold-coin,
+.score-gold .gold
+{
+  position: absolute;
+  margin-top: -6px;  
+  left: 230px;
+  font-variant: all-small-caps;
+  color: #3399ff;    
+}
+
+.shop,
+.character,
+.mission{
+  z-index: 2;	
+  position: absolute;  
+  left: 240px; 
+}
+
+
+.mission{ 
+  left: 36px; 
+}
+
+
+#stageDetails .shop,
+#stageDetails .character{
+  top: 426px;
+}
+
+#stageDetails .character{
+  left: 30px
+}
+
+.shop:before{
+  content: ''
+}
+
+
+.goldenBtn{
+  font-size: 22px;
+  color: #000;
+  /* height: 30px; */
+  line-height: 30px;
+  text-align: center;
+  background-color: gold;
+  border-radius: 0.5em;
+  border: 2px solid #09f;
+  width: 80px;
+  display:inline-block;
+}
+
+.score-gold .gold{     
+  left: 256px;
+  margin-top: -1px;
+  font-size: 18px;
+  color: #000; 
+  width: 87px;
+  background-color: none !important;
+  overflow: hidden;
+}
+
+/*
+    CHARACTER SELECTION -- begin
+*/
+.char{
+  display: none;
+}
+
+.char.selected{
+  display: block;
+  color: #000;
+  background-color: #0ff;
+  /* height: 100%; */
+  position: relative;
+  top: -2.5em;
+  padding-top: 1em;
+  padding-bottom: 6em;
+}
+
+#characterSelection ul{
+  
+  height: 65%;
+  width: 360px;
+   margin-top: 30%;
+}
+
+#characterSelection > ul >  li{
+}
+
+#characterSelectionHeader, #stageSelectionHeader{
+   height: 15%;
+   font-size: 4em;
+   text-align: center;
+   line-height: 1.5;
+   color: #fff;
+   text-shadow: 0 0 1px #000, 0 0 1px #000, 0 0 1px #000, 0 0 1px #000;
+   background-color: #0ff;
+}
+
+#charDescriptions{
+  height: 10%;
+  /* background-color: #000; */
+}
+
+
+.charDesc {
+    position: absolute;
+    z-index: 10000000;
+    background-color: rgba(254,254,254,1);
+    width: 96%;
+    height: 1em;
+    font-size: 2em;
+    /* margin-top: -2.7em; */
+    margin: -1.5em 0 0 -49.5%;
+    text-align: center;
+    border: 2px outset #999;
+    border-radius: 0.5em;
+    padding: 0.1em;
+    left: 50%;
+    /* padding-bottom: 2em; */
+}
+
+#characterSelectionFooter{
+   height: 20%;
+}
+
+
+#charList{
+  display: block;
+  white-space: nowrap;
+  /*! min-width: 100%; */
+  overflow-y: hidden;
+  overflow-x: scroll !important;
+}
+
+#charList li{
+    display: inline-block; 
+    /*! float: left; */
+    width: 33%;
+    height: 100%;
+    margin: 0.16%;
+    background-color: #09f;
+    white-space: normal;
+    text-align: center;
+    font-size: larger;
+    padding-top: -8em;
+    background-color: cornflowerblue;
+}
+
+#charList li.selected{
+  background-color: #0ff; 
+  background-color: red; 
+  background-image: linear-gradient(#fff, #0ff);
+}
+
+#charList li > span{
+  position: relative;
+  top: -52%;
+  z-index: 1;
+}
+
+
+#charList li > span:before{
+  content:attr(data-title);
+  color: #fff;
+  text-shadow: 0 0 1px #000, 0 0 1px #000, 0 0 1px #000, 0 0 1px #000; 
+}
+
+#charList li.selected > span:before{
+  content:attr(data-title);
+  color: #000;
+  text-shadow: 0 0 1px #fff, 0 0 1px #fff, 0 0 1px #fff, 0 0 1px #fff; 
+}
+/*
+.fullStar{
+  color: orange !important;
+}
+.emptyStar{
+  color: white !important;
+}
+.fullStar:after{
+  content: '\2605';  
+}
+.emptyStar:after{
+  content: '\2605'
+}
+*/
+
+.fullRectangle, .emptyRectangle{
+  display: inline-block;
+  width: 0.5em;
+  height: 1em;
+  border-right: 1px solid #000;
+  /*border-left: 2px solid #000; */
+}
+
+#charList li > span+span+span+span .fullRectangle,
+#charList li > span+span+span+span .emptyRectangle{
+  width: 1px;
+  border: none;
+}
+
+.c1{background-color:#f90}
+.c2{background-color:goldenrod}
+.c3{background-color:gold}
+.c4{background-color:yellow}
+
+.emptyRectangle{
+  background-color: white;
+}
+
+
+li#lives .fullRectangle.c1,
+li#lives .fullRectangle.c2,
+li#lives .fullRectangle.c3,
+li#lives .fullRectangle.c4,
+li#lives .emptyRectangle{
+  background-color: transparent !important;
+  border: none;
+  width: 1em;
+  margin: 0 1px;
+  overflow: visible;
+}
+
+
+li#lives .fullRectangle:after{
+  content:'\2764';  
+  color: #f00
+}
+
+li#lives .emptyRectangle:after{
+   content:'\2764';  
+   color: #fff
+}
+
+
+a.characterDetails{
+  position: relative;
+  z-index: 2;
+  display: block;
+  text-align: center;
+  width: 100%;
+  height: 100% 
+}
+
+#charList li .charName{
+  padding-top: 1em;
+  font-size: 1.5em;
+}
+
+#charList li.selected .charName{
+  background-color: #ff0;
+  vertical-align: top;
+  display: inline-block
+}
+
+#charList li:not(.selected) .charName{
+  text-shadow: none;
+  color: #fff
+}
+
+
+a.characterDetails img{
+  padding-top: 3em;
+  pointer-events: none
+}
+
+a.characterSelect{
+  /* position: absolute; */
+  margin: 27px auto;
+  display: block;
+  text-align: center;
+  width: 55%;
+  /* height: 14%; */
+  font-size: 4em;
+  line-height: 2em;
+  color: #09f;
+  background-color: #ff0;
+  z-index: 1;
+  border-radius: 0.5em;
+  /* border: 4px outset #f90; */
+  /* padding-bottom: 2em; */
+}
+
+a.characterSelect:after{
+  /* content: ' \2714' */
+}
+
+/*
+  STAGE SELECTION STARS -- begin
+*/
+
+.stage_select .stars{
+  background-image: url('stageSelectionStarsSpritesheet.png');
+  background-position: 0px 0px;
+  height: 22px;
+  width: 66px;
+  margin: 0 auto;
+  display: block;
+  
+}
+
+.stage_select .stars.s1{
+  background-position: 0px 66px
+}
+
+.stage_select .stars.s2{
+  background-position: 0px 44px
+}
+
+.stage_select .stars.s3{
+  background-position: 0px 22px
+}
+
+/*
+  STAGE SELECTION STARS -- end
+*/
+
+/*
+  STAGE WEAPONS SELECTION -- begin
+*/
+
+div#weaponsSelector {
+  background-color: rgba(254,254,254,0.5);
+  z-index: 10;
+  bottom: 0;
+}
+
+
+#weaponsSelector ul#weaponsList li{
+  display: inline-block;
+  width: 33%;
+}
+
+#weaponsSelector ul#weaponsList li a{
+  width: 50px;
+  height: 50px;
+  display: block;
+  background-color: #fff !important;
+  margin: 0 auto;
+   border-radius: 50px;
+}
+
+#weaponsSelector ul#weaponsList li a:after{
+  position: relative;
+  left: 50px;
+  content: attr(count);
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 0.5em;
+  width: 1em;
+  display: inline-block;
+  text-align: center  
+}
+
+/*
+  STAGE WEAPONS SELECTION -- end
+*/
+
+
+/*
+	CHARACTER DETAILS UI -- begin
+*/
+#charAttributesList{
+  /*! margin-top: -6%; */
+  margin-top: 6%;
+  overflow: visible;
+}
+
+
+#charAttributesList > li > div{
+  width:  width: calc( 50% - 6em );
+  display: inline-block;
+  text-align: left;
+}
+
+/*
+	ENSURE THERE CAN BE LOTS OF .FULLRECTANGLEs
+	WITHOUT ALTERING THE LAYOUT
+*/
+#charAttributesList > li > div:not(.description){
+  max-width: 30%;
+  line-height: 1;
+  vertical-align: middle;
+  /*! margin-top: 6px; */
+  overflow: visible;
+}
+
+#charAttributesList li{
+   line-height: 6em;
+}
+
+#charAttributesList li{
+   /*! background-color: #0ff; */
+   border-bottom: 2px outset #09f;
+   cursor: pointer;
+   overflow: visible;
+}
+
+#charAttributesList li.selected{
+  background-color: yellowgreen;
+}
+
+#charAttributesList li > span{
+  position: relative;
+  top: -45%;
+  z-index: 1;
+}
+
+#charAttributesList li:before{
+  text-align: right;
+  margin-right: 0.8em;
+  display: inline-block;
+  width: calc( 57% - 8em );
+  content: attr(data-title);
+  color: #05f;
+  text-shadow: 0 0 2px #fff, 0 0 2px #fff, 0 0 2px #fff, 0 0 2px #fff; 
+  font-size: 1.2em;
+}
+
+#charAttributesList li:after{     
+  content: '\003F';
+  background-color: #fff;
+  border-radius: 1em;
+  /*! border: 1px solid #000; */
+  font-size: 0.8em;  
+  width: 1em;
+  line-height: 1;
+  text-align: center;
+  display: inline-block;
+  vertical-align: top;
+  float: left;  
+  position: relative;
+  top: 1em;  
+  left: 7.5em;
+  padding: 0.1em;
+}
+
+
+
+
+#charAttributesList li.selected > span:before{
+  content: attr(data-title);
+  color: #000;
+  text-shadow: 0 0 1px #fff, 0 0 1px #fff, 0 0 1px #fff, 0 0 1px #fff; 
+}
+
+#energy div span{
+  width: 1px !important;
+  border: none;
+}
+
+.charEnhanceAttributeBtn{
+  display: inline-block; 
+  margin-right: 0.5em;
+  line-height: 1.5em;
+  background-color: #999;
+  border: 0.25em inset #09f;
+  text-align: center;
+  color: #09f;
+  border-radius: 1.5em;
+  overflow: hidden;
+  vertical-align: middle;
+  border: 0.25em inset #a0c2d9ed;
+}
+
+.charEnhanceAttributeBtn:before{
+  content: attr(cost);
+  display: inline-block; 
+  vertical-align: middle;
+  width: 70px;
+  height: 24px;
+  background-image: url('./UI-PARTS/ui-stage-gold-coin.png');
+  background-repeat: no-repeat;
+  background-position: 0px 1px;
+  margin: 0 1.5em 0 0.2em;
+  text-indent: 1em;
+  line-height: 1.2em;
+  font-size: 1.5em;
+  color: #fff;
+  text-shadow: none;
+}
+
+.charEnhanceAttributeBtn:after{
+  content: '+';
+  width: 1.2em;
+  line-height: 1.2em;
+  font-size: 1.5em;
+  display: inline-block;
+  vertical-align: middle;
+  color: yellow;
+  text-shadow: none;
+  background-color: #09f;
+  border-radius: 1em;
+  border: 2px outset #fff;
+}
+
+.description{  
+  width: 100%;
+}
+/*
+.description:after{
+  content: attr(txt);
+  text-align: left;
+  text-indent: calc( 50% - 5em );
+  width: 100%;
+  display: block;
+}
+*/
+#characterDetails{
+  /* background-color: #0ff; */
+  display: none;
+  /* background-color: #09f; */
+  /* background-color: gold; */
+  background-color: rgba(0,128,254,0.5);
+}
+
+#characterDetails .header{  
+  /*! background-color: #0ff; */  
+  height: 30%;
+  /*! border-bottom: 5px solid #09f; */
+   /*! text-align: center; */
+}
+
+#characterDetails .header .angelName,
+#inventory .header .screenTitle{
+ /*splay: inline-block;
+ text-align: center;
+ width: 100%;
+  line-height: 1;  
+  border-bottom: 2px solid #09f;
+  margin-bottom: 0.55em;
+  padding-bottom: 0.2em;*/
+  display: inline-block;
+  width: 54%;
+  text-align: center;
+  background-color: gold;
+  line-height: 1.2;
+  border-bottom: 2px solid #09f;
+  margin-bottom: 0.25em;
+  padding-bottom: 0.2em;
+  border-radius: 1em;
+  margin-top: 0.15em;
+  margin-left: 0.2em;
+}
+
+#characterDetails .profileGold{
+ /* width: 50%;
+  margin-left: 3em;
+  display: inline-block; 
+  line-height: 1.5em;
+  background-color: #09f;
+  border: calc( 0.25em + 2px) inset #09f;
+  text-align: center;
+  color: #09f;
+  border-radius: 1.5em;
+  text-align: left;
+  padding-left: 0.5em;*/
+  
+  
+  width: 50%;
+  margin-left: 0.5em;
+  display: inline-block;
+  margin-right: 1em;
+  line-height: 1.5em;
+  background-color: #09f;
+  border: calc( 0.25em + 2px) inset #09f;
+  text-align: center;
+  color: #09f;
+  border-radius: 1.5em;
+  text-align: left;
+  padding-left: 0.5em;
+  
+}
+
+#characterDetails .header .gold,
+#characterDetails .header .ui-stage-gold-coin{
+  display: inline-block;  
+  font-size: 1.5em !important;  
+  line-height: 1;    
+  float: none;
+  vertical-align: middle;
+  color: #fff;
+  text-shadow: none;
+}
+
+#characterDetails .footer{
+  /*! font-size: 5em !important; */
+  text-align: center;
+  /*! background-color: #0ff; */  
+  line-height: 2.5;
+  /*! border-top: 5px solid #09f; */
+  /*! top: 71.5%; */
+  height: 28%;
+  position: relative;
+}
+
+/*
+	CHARACTER DETAILS UI -- end
+*/
+
+
+
+
+/*
+	INVENTORY DETAILS UI -- begin
+*/
+#itemsList{
+  margin-top: -6%;
+}
+
+
+#itemsList > li > div{
+  width:  calc( 50% - 6em );
+  display: inline-block;
+  text-align: left;
+}
+
+/*
+	ENSURE THERE CAN BE LOTS OF .FULLRECTANGLEs
+	WITHOUT ALTERING THE LAYOUT
+*/
+#itemsList > li > div:not(.description){
+  max-width: 30%;
+  line-height: 1;
+  vertical-align: top;
+  margin-top: 6px
+}
+
+#itemsList li{
+   /*! background-color: #0ff; */
+  border-bottom: 2px outset #09f;
+}
+
+#itemsList li:before{
+  text-align: right;
+  margin-right: 0.8em;
+  display: inline-block;
+  width: calc( 60% - 8em );
+  content: attr(data-title);
+  color: #05f;
+  text-shadow: 0 0 2px #fff, 0 0 2px #fff, 0 0 2px #fff, 0 0 2px #fff; 
+  font-size: 1.2em;
+}
+
+#inventoryItems li:after{
+ content: attr(data-quantity);
+  vertical-align: top;
+  /*padding: 0.25em;*/
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  text-align: center;
+  display: inline-block;
+  margin: 5px -8px;
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 1em;
+}
+
+
+.purchaseBtn{
+  display: inline-block;  
+  line-height: 1.5em;
+  background-color: #09f;
+  border: 0.25em inset #a0c2d9ed;
+  text-align: center;
+  color: #09f;
+  border-radius: 1.5em;
+  overflow: hidden;
+  background-color: #999;
+}
+
+.purchaseBtn:before{
+  content: attr(cost);
+  display: inline-block; 
+  vertical-align: middle;
+  width: 70px;
+  height: 24px;
+  background-image: url('./UI-PARTS/ui-stage-gold-coin.png');
+  background-repeat: no-repeat;
+  background-position: 0px 1px;
+  margin: 0 1.5em 0 0.2em;
+  text-indent: 0.5em;
+  line-height: 1.2em;
+  font-size: 1.5em;
+  color: #fff;
+  text-shadow: none;
+}
+
+.purchaseBtn:after{
+  content: '+';
+  width: 1.2em;
+  line-height: 1.2em;
+  font-size: 1.5em;
+  display: inline-block;
+  vertical-align: middle;
+  color: yellow;
+  text-shadow: none;
+  background-color: #09f;
+  border-radius: 1em;
+  border: 2px outset #fff;
+}
+
+#inventory .header .description,
+#characterDetails .header .description
+{  
+  width: calc( 100% - 2em);  
+  line-height: 3;
+  margin: 0.25em auto 1em; 
+  border-radius: 1em;  
+  background-color: #09f;
+  border: 4px inset #09f;  
+  background-color: yellowgreen;
+  border: 4px inset yellowgreen;
+  height: 6em;
+}
+
+#inventory .header .description .title,
+#inventory .header .description .details,
+#characterDetails .header .description .title,
+#characterDetails .header .description .details{ 
+  display: inline-block;
+  line-height: 2em;
+  margin-top: 0.2em;
+}
+
+#inventory .header .description .title,
+#characterDetails .header .description .title{ 
+  width: calc(25% - 1em);
+  text-align: right;  
+  padding-right: 1em;
+}
+
+#inventory .header .description .details,
+#characterDetails .header .description .details{   
+  width: 75%;
+  text-indent: 1em;
+  background-color: #fff;
+  border-radius: 0.5em;
+}
+
+#characterDetails .header .description .details{   
+  vertical-align: top;
+}
+
+#characterDetails .header .description .details{   
+  margin-top: 7px;
+}
+
+
+#inventory .header,
+#characterDetails .header{
+  padding-bottom: 2em;
+  border-bottom-left-radius: 30px; 
+  border-bottom-right-radius: 30px; 
+}
+
+/*
+  SCROLLBAR IS HIDDEN
+*/
+ul#inventoryItems{  
+  /*! height: 100px; */
+  width: calc( 100% + 17px);
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding-right: 17px; /* Increase/decrease this value for cross-browser compatibility */
+  box-sizing: content-box; /* So the width will be 100% + 17px */
+  position: relative;
+  top: 1em;
+}
+
+ul#inventoryItems li{
+  /* background-color: #09f; */
+  border-bottom: 1px solid #fff;
+  cursor: pointer;
+}
+
+ul#inventoryItems li.selected{  
+  background-color: rgba(0,0,0,0.2);  
+  background-color: gold;
+  background-color: yellowgreen;
+}
+
+/*/
+ul#inventoryItems li:before{     
+  content: '\003F';
+  background-color: #fff;
+  font-size: 1em;
+  vertical-align: middle;
+  width: 0.8em;
+  text-align: center;
+  display: inline-block;
+  border-radius: 1em;
+}*/
+
+ul#inventoryItems li > *{  
+  vertical-align: middle;   
+}
+
+ul#inventoryItems li > *:not(a):not(.slot){    
+  pointer-events: none !important; 
+}
+
+ul#inventoryItems li > span:not(.slot){
+  width: 60px;
+  height: 60px;
+  display: inline-block;   
+  background-color: #fff;
+  border-radius: 1em;
+  margin: 1em 0.25em;
+}
+
+
+ul#inventoryItems li > span:not(.slot):after{     
+  content: '\003F';
+  background-color: #09f;
+  border: 1px solid #fff;
+  font-size: 0.8em;
+  vertical-align: top;
+  width: 1em;
+  text-align: center;
+  display: inline-block;
+  border-radius: 1em;
+  float: right;
+  position: relative;
+  top: -100%;
+  right: 0.2em;
+}
+
+ul#inventoryItems li > span.slot{
+  width: 32px;
+  height: 32px;
+  display: inline-block;   
+  /*! background-color: #fff; */
+  border-radius: 1em;
+  margin: 0.2em;
+  cursor: pointer;
+  border: inset 3px;
+  background-color: #999;
+}
+
+ul#inventoryItems li > span.slot.selected{  
+  background-color: #f90;
+  border: outset;
+  background: #ff0;
+}
+
+ul#inventoryItems li > span img{  
+  display: block;
+  margin: 12.5% auto;  
+}
+
+#inventory{
+  background-color: #09f;
+  display: none;
+  /* background-color: GOLD; */
+  background-color: rgba(0,128,254,0.5);
+}
+
+#inventory .header,
+#characterDetails .header{
+  background-color: #0ff;
+  height: 25%;
+  border-bottom: 5px outset #fff;
+   /*! text-align: center; */
+}
+
+
+#inventory .header .screenTitle{
+/*  display: inline-block;
+  width: 54%;
+  text-align: center;
+  line-height: 1;  
+  border-bottom: 2px solid #09f;
+  margin-bottom: 0.25em;
+  padding-bottom: 0.2em;*/
+   display: inline-block;
+  width: 54%;
+  text-align: center;
+  background-color: gold;
+  line-height: 1.2;
+  border-bottom: 2px solid #09f;
+  margin-bottom: 0.25em;
+  padding-bottom: 0.2em;
+  border-radius: 1em;
+  margin-top: 0.15em;
+  margin-left: 0.2em;
+}
+
+#inventory .profileGold{
+  width: 50%;
+  margin-left: 0.5em;
+  display: inline-block; 
+  /*! margin-right: 1em; */
+  line-height: 1.5em;
+  background-color: #09f;
+  border: calc( 0.25em + 2px) inset #09f;
+  text-align: center;
+  color: #09f;
+  border-radius: 1.5em;
+  text-align: left;
+  padding-left: 0.5em;
+}
+
+#inventory .header .gold,
+#inventory .header .ui-stage-gold-coin{
+  display: inline-block;  
+  font-size: 1.5em !important;  
+  line-height: 1;    
+  float: none;
+  vertical-align: middle;
+  color: #fff;
+  text-shadow: none;
+}
+
+#inventory .footer{
+  /*! font-size: 5em !important; */
+  text-align: center;
+  /*! background-color: #0ff; */  
+  line-height: 2.5;
+  /*! border-top: 5px solid #09f; */
+  /*! top: 71.5%; */
+  height: 28%;
+  position: relative;
+}
+
+#inventorySlotsHeader {
+	border: 1px outset gold;
+	width: 90px;
+	margin-left: 229px;
+	height: 1em;
+	top: 211px;
+	position: absolute;
+	text-align: center;
+	/*! margin-bottom: 1em; */
+	border-bottom-left-radius: 1em;
+	border-bottom-right-radius: 1em;
+	background: yellow;
+	
+	z-index: 10000000000000000000;
+	/*! color: #fff; */
+	font-size: 1em;
+}
+
+/*
+	INVENTORY DETAILS UI -- end
+*/
+
+
+
+
+
+
+/*
+  #stagePayToContinue -- begin
+*/
+
+#stagePayToContinue{  
+ background-color: rgba(0,0,0,0.5);
+ background-color: rgba(255,255,255,0.2);
+ z-index: 102;
+}
+
+#stagePayToContinue .screenTitle{
+  position: absolute;
+  display: block;  
+  width: 100%;  
+  top: 20%;
+  background-color: rgba(0,0,0,0.5);
+}
+
+#stagePayToContinue .screenTitle:after{
+  content:'Use gold to continue?';
+  position: relative;
+  display: block;  
+  width: 100%;
+  top: 20%;
+  font-size: 0.5em;
+  padding-bottom: 0.5em
+}
+
+
+#stagePayToContinue .profileGold{
+  position: absolute;
+  top: 1%;
+  width: 50%;
+  margin-left: 1em;
+  display: inline-block;
+  line-height: 1.5em;
+  background-color: goldenrod;
+  border: calc( 0.25em + 2px) inset #fff; 
+  color: #09f;
+  border-radius: 1.5em;
+  text-align: left;
+  padding-left: 0.5em;    
+}
+
+
+#stagePayToContinue .profileGold .ui-stage-gold-coin{  
+  vertical-align: middle;   
+}
+
+
+#stagePayToContinue .profileGold .gold{
+  text-shadow: 0 0 1px #000, 0 0 1px #000, 0 0 1px #000, 0 0 1px #000;
+  font-size: 24px;
+  height: 1.5em;
+  line-height: 1.5em;
+  float: none;
+  vertical-align: middle; 
+  color: #fff;
+  
+}
+
+#stagePayToContinue .stageDetailsControls{  
+  display: block;  
+}
+
+
+#stagePayToContinue .sprite.ui-stage-wings-halo-360x75{
+  top: calc( 50% - 80px)
+}
+
+#stagePayToContinue a.pay_to_continue{  
+  position: absolute;
+  top: 47.5%;
+  left: 50%;  
+  width: 120px;
+  height: 80px;
+  padding-top: 10px;
+  margin-left: -62px;
+  display: block;
+  background-color: goldenrod;
+  text-align: center;
+  border-radius: 2em;
+  border: 2px outset #fff; 
+  color: #fff; 
+}
+
+#stagePayToContinue a.pay_to_continue .sprite.ui-stage-gold-coin,
+#stagePayToContinue a.pay_to_continue .amount{
+  display: inline-block; 
+}
+
+#stagePayToContinue a.pay_to_continue .amount,
+#stagePayToContinue a.pay_to_continue .continue{
+  text-shadow: 0 0 1px #000, 0 0 1px #000, 0 0 1px #000, 0 0 1px #000;
+  font-size: 24px;
+}
+
+#stagePayToContinue a.pay_to_continue .continue{
+  margin-top: 0.1em;
+  display: block;
+  font-size: 2.2em
+}
+
+.stageDetailsControls .pay_to_continue span{
+	pointer-events: none;			
+}
+
+.end_game{
+  left: 309px;
+  top: 4px;
+  position: absolute;
+  bottom: 570px;
+}
+
+
+/*
+  #stagePayToContinue -- end
+*/
+
+/**{
+  cursor: url('../game_assets/images/arrow.png'), auto
+}
+*/
+#UI{cursor:none;}
+
+.charImg{
+  max-width: 115px;
+  max-height: 100px;
+}
+
+#characterDetails .header .charImg,
+#inventory .header .charImg{
+  /*float: right*/
+  position: absolute;
+  right: 0;
+  padding-right: 1.5em;
+  margin-top: 0.225em;
+}
+
+
+/*
+    INGAME OBJECTIVE INTERFACE
+*/
+
+.pauseBtn{
+  float: left !important;
+  width: 30% !important;
+  /* background-color: magenta; */
+  font-size: 1.8em;
+  text-transform: uppercase;
+  font-variant: all-small-caps;
+  color: #000;
+}
+
+#score{
+  float: left !important;
+  /* background-color: yellow; */
+  width: 48% !important;
+  line-height: 24px;
+  font-size: 1.8em;
+}
+
+#timer{
+    /* background-color: cyan; */
+    /* text-align: center !important; */
+    /*! margin-top: 50px !important; */
+    font-size: 1.8em !important;
+    /* clear: both !important; */
+    display: inline-block !important;
+    width: 20%;
+    margin: 0 auto;
+}
+
+#bricks,#combos,#targets{
+    /* background-color: #fff; */
+    width: 30%;
+    font-size: 1.8em;
+    height: 20px;
+    display: block;
+    float: left;
+    line-height: 1em;
+}
+
+#combos{
+  width: 25%;
+  /* background-color: cyan; */
+}
+
+
+#targets{
+   display: inline-block;
+   float: right;
+   width: 45%;
+   /* background-color: purple; */
+}
+
+#targets > *{
+  /* width: 144px !important; */
+  /* height: 0px; */
+  /* vertical-align: top; */
+  /* padding-left: 5px; */
+  /* padding-right: 5px; */
+  /* clear: none; */
+  /* background: red; */
+  float: left;
+}
+
+#targets div > *{
+  max-width: 20px;
+  max-height: 20px;
+  line-height: 30px;
+  text-align: left;
+  /* float: none !important; */
+}
+
+#targets div{
+  /* width: 45px; */
+  height: 20px;
+  line-height: 30px;
+  /* display: inline-block; */
+  float:  right;
+  /* background: aliceblue; */
+  font-size: 0.8em !important;
+  color: #000;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+#targets div > img{
+  max-width: 30px;
+  /* max-height: 30px; */
+  /* line-height: 30px; */
+}
+
+
+#UI_wrapper #livesStock{
+   margin-top: -20px;
+   float: none;
+   max-width: 100px;
+   position: fixed;
+   bottom: 60px;
+   font-size: 1.8em;
+}
+
+#UI_wrapper .gold{
+   margin-top: -23px;
+   float: none;
+   position: fixed;
+   bottom: 60px;
+   /* left: calc(100% - 200px); */
+   margin-left: 280px;
+   width: 80px;
+   /* background-color: #fff; */
+   text-align: right;
+   font-size: 1.8em;
+}
+
+/*
+#score:after, 
+#bricks:after,
+#combos:after,
+#targets:after{
+    width: 20px;
+    height: 20px;
+    display: block;
+    float: left
+}*/
+
+#UI_wrapper a.pauseBtn:before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: inline-block;   
+    background: url(UI-PARTS/UIIngameSpritesheet.png) -40px;    
+    position: relative;
+    left: 0px;
+}
+
+#UI_wrapper #bricks:before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background: url(UI-PARTS/UIIngameSpritesheet.png) -60px;
+    position: relative;
+    left: 0px;
+}
+
+#UI_wrapper #combos:before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: inline-block;   
+    background: url(UI-PARTS/UIIngameSpritesheet.png) -120px;  
+    position: relative;
+    left: 0px;
+}
+
+#UI_wrapper #livesStock:before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background:url(UI-PARTS/UIIngameSpritesheet.png) -140px;
+    position: relative;
+    left: 0px;
+}
+
+#UI_wrapper .gold:after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background: url(UI-PARTS/UIIngameSpritesheet.png) -100px;
+    position: relative;
+    /* left: -20px; */
+}
+
+ #UI_wrapper #timer:before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: inline-block;   
+    background:url(UI-PARTS/UIIngameSpritesheet.png) 40px;
+    position: relative;
+    left: 0px;
+}
+
+/*
+    MISSION SELECT BEGIN
+*/
+#stageSelectionHeader > *{
+  float: left;
+  line-height: 1em;
+}
+
+div#totalScore{
+  margin-top: 0.25em;
+  font-size: 18px;
+  color: #000;
+  width: 100px;
+  margin-left: 1em;
+}
+
+#stageSelectionHeader .scoreLbl {
+  
+  font-size: 24px;
+  font-variant: all-small-caps;
+  color: #3399ff;
+  text-align: left;
+  text-indent: 1.5em;
+}
+
+.score-gold .score{     
+  left: 87px;
+  margin-top: -1px;
+  font-size: 18px;
+  color: #000; 
+  width: 100px;  
+}
+/*
+    MISSION SELECT END
+*/
+
+
+/*
+    MISSION MODAL -- begin
+*/
+#modal{
+  position: fixed;
+  width: 360px;
+  top: 100px;
+  left: 50%;
+  margin-left: -180px;
+  overflow: hidden;
+    /*background-color: rgba(255,255,255,0.2); */
+}
+
+#modal .message{
+    position: absolute;
+    background-color: rgba(0,0,0,0.25);
+    background-color: rgba(254,254,254,0.25);
+    top: 120px;
+    left: calc(50% - 0.25em);
+    width: 300px;
+    height: 100px;
+    margin: 0 -150px;
+    /*padding-top: 80px;   */
+    text-align: center;
+    font-size: 2em;
+    border: 0.25em solid #fff;
+    border-radius: 100px;
+    color: #fff;
+    text-shadow: none    
+}
+/*
+    MISSION MODAL -- end
+*/

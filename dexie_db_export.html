@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+	
+	<link href='css/dexie_db_export.css'  type="text/css" rel="stylesheet" />
+	
+	<style>
+	
+	</style>
+	
+	<script type="text/javascript" src="js/dexie.min.js"></script>
+	<script type="text/javascript" src="js/download.min.js"></script> 
+	<script type='text/javascript' src="js/dexie_export.js"></script>
+	
+</head>
+<body>
+	<legend>
+			
+	
+	</legend>
+
+
+	<h1>Populate 'assets' table / exporting 'XXX.exp.json' file</h1>
+	
+	<h3>Populate 'assets' from .cmp.json file</h3>
+	<label>file name - e.g.: XXX.cmp</label><input type='text' id='cmpFileName' />	
+	<div id='selectCmp' class='hovermenu'></div>
+	<br />
+	<a href='#' id='populateBtn' class='btnStyle'>populate assets table</a><br />
+	
+	<label>.cmp import loading status</label>
+	<span id='loadingStatus'></span>
+	<div id='importLog'></div>
+	<br />
+	
+	<hr />
+	
+	<h3>Export assets to .exp.json file</h3>
+	<label>file name - e.g.: XXX.exp</label><input type='text' id='fileName' />
+	<div id='selectCmpExp' class='hovermenu'></div>
+	<br />
+	<a href='#' id='exportLink' class='btnStyle'>generate XXX.exp.json file</a><br />
+	
+</body>
+</html>

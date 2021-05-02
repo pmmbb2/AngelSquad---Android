@@ -1,0 +1,26 @@
+{
+    "destination_dir": "game_assets/campaignStageMenus",
+    "name": "stages-menu-select-demo-campaign.cmp",
+    "stages": [
+        {
+            "name": "waterToIsland2.stg",
+            "description": "Save the swimmers from the sharks."
+        },
+        {
+            "name": "islandVolcano.stg",
+            "description": ""
+        },
+        {
+            "name": "boyCrossDesert.stg",
+            "description": "Escort the boy through the island desert"
+        },
+        {
+            "name": "turtleShell.stg",
+            "description": "Destroy the turtle shell and kill 5 crabs."
+        },
+        {
+            "name": "sharkBoss.stg",
+            "description": "Rescue the swimmers and defeat the boss!"
+        }
+    ]
+}

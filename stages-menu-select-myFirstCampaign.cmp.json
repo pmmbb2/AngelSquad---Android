@@ -1,0 +1,30 @@
+{
+    "destination_dir": "game_assets/campaignStageMenus",
+    "name": "stages-menu-select-myFirstCampaign.cmp",
+    "stages": [
+        {
+            "name": "myStage3.stg",
+            "description": "myStage3.stg"
+        },
+        {
+            "name": "myFourthStage.stg",
+            "description": ""
+        },
+        {
+            "name": "mySixthStage.stg",
+            "description": ""
+        },
+        {
+            "name": "myFirstStage.stg",
+            "description": ""
+        },
+        {
+            "name": "myStage5.stg",
+            "description": "Destroy the turtle shell and kill 5 crabs.  Protect the boy!"
+        },
+        {
+            "name": "myStage7.stg",
+            "description": "Protect the swimmers and defeat the boss!"
+        }
+    ]
+}

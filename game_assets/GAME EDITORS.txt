@@ -1,0 +1,42 @@
+GAME EDITORS
+
+game dev workflow: 
+	create game engine
+	create game editors
+	create game assets and data
+	test
+
+SPRITES EDITOR
+ sprite = array of animation sequences using one spritesheet
+ create sprites
+ export sprites to ./sprites/spritename.json
+
+PATHS EDITOR
+ path = array of location[x,y] on canvas
+ create paths
+ export paths to ./paths/pathname.json
+
+SOUND SPRITES EDITOR
+ sound sprite = extract from a sound file
+ CRUD sound sprites
+ export sound sprites to ./sounds/soundspritename.json
+
+ENTITY EDITOR
+ entity = sprites,behaviour,spawning time, path, misc attributes...
+ CRUD paths
+ export paths to ./entities/entityname.json
+
+STAGE EDITOR
+ stage = objectives,entities,brickwall,music loop,background,timeline...
+ CRUD stages
+ export stages to ./stages/stagename.json
+
+LEVEL EDITOR
+ level = list of stages
+ CRUD levels
+ export levels to ./levels/levelname.json
+
+CAMPAIGN EDITOR
+ campaign = list of levels
+ CRUD campaigns
+ export campaigns to ./campaigns/campaignname.json

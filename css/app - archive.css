@@ -1,0 +1,2778 @@
+*{
+  margin:0;
+  padding: 0;
+  text-decoration: none;
+  /*text-transform: capitalize;*/
+  font-family: Tw Cen MT;/*Magneto Mistral,,Lucida Handwriting,Lucinda Console,Consolas,, */
+  list-style: none;
+  text-shadow: 0 0 1px #fff, 0 0 1px #fff, 0 0 1px #fff, 0 0 1px #fff;
+  font-weight: bold;
+  font-size: 1.05em;
+  /* font-variant: all-small-caps; */
+  text-transform: lowercase;
+}
+
+
+
+body{
+  overflow-x: hidden
+}
+
+.screenTitle{
+  text-align: center;
+  /*! line-height: 5em; */
+  /*! height: 20%; */  
+  font-size: 40px;
+  color: #fff;
+  
+ /* text-shadow: 0 0 1px #87e7ff, 0 0 1px #87e7ff, 0 0 1px #87e7ff, 0 0 1px #87e7ff;  */
+  text-shadow: 0 0 1px #000, 0 0 1px #000, 0 0 1px #000, 0 0 1px #000;
+}
+
+#homeScreen{
+  background-color: #09f; 
+  display: none;
+}
+
+#stageSelection{
+  /* background-color: #09f; */
+  display: none;
+}
+
+#campaignSelection{
+  /*background-color: #09f; */
+  display: none;
+}
+
+
+#UI_wrapper{
+ display: none;
+ z-index: 101;/* ABOVE #UI canvas*/
+ height: 20%;
+ height: 60px;/* WILL BE CHNAGE LATER FOR INGAME TOP AD BANNER */
+ background-color: rgba(254,254,254,0.5);
+ border-bottom-left-radius: 1em;
+ border-bottom-right-radius: 1em;
+}
+
+#characterSelection{
+  display: none;
+}
+
+#pauseScreen{
+  display: none;
+  /* background-color: rgba(128,128,128,0.5 ); */
+  background-color: rgba(254,254,254,0.3 );
+}
+
+#UI_wrapper,
+#homeScreen ul,
+/*#stageSelectionHeader,
+#stageSelectionFooter,*/
+#stagesList,
+#campaignSelectionList,
+#stageDetails,
+#endStage,
+#pauseScreen,
+#characterSelection,
+#weaponsSelector,
+#characterDetails,
+#inventory,
+#stagePayToContinue,
+.footer,
+.header{
+  position: fixed;
+  width: 360px;
+  left: 50%;
+  margin-left: -180px;
+  overflow: hidden;
+  /* background-color: magenta; */
+}
+
+#UI_wrapper{
+	 pointer-events: none;
+	background-color: rgba(128,128,128,0.2)
+}
+
+#homeScreen ul{
+  height: 100%;
+  display: block;
+}
+
+#homeScreen ul li{
+  height: 70%;
+  display: block;
+  font-size: 8em;
+  color: #fff;
+  text-align: center;
+}
+
+#homeScreen ul li+li{
+  height: 30%;
+ background-color: #fff;
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+  line-height: 2em;
+}
+
+/*#stageSelectionHeader*/
+.header{
+   top: 0;
+   height: 20%;
+}
+
+#stageSelectionFooter{
+  background-color: #fff;
+}
+
+
+#stageSelectionFooter ul,
+#campaignSelectionFooter ul,
+#characterSelectionFooter ul{
+  display: block;
+  margin: 3px auto;
+  text-align: center;
+}
+
+#stageSelectionFooter ul li,
+#campaignSelectionFooter ul li,
+#characterSelectionFooter ul li{
+   vertical-align: top;
+   display: inline-block;
+   width: 32%;
+   /* float: left; */
+   /* width: auto; */
+}
+
+
+
+#stageSelectionFooter a.navigation.goldenBtn,
+#campaignSelectionFooter a.navigation.goldenBtn{
+    height: 2.7em
+}
+
+/*#stageSelectionFooter*/
+.footer{
+   top: 90%;
+   height: 10%;
+}
+
+#characterSelectionFooter.footer{
+   position: absolute;
+   top: unset !important;
+   bottom: 0em !important;
+   height: 25%;
+   /* display: none !important; */
+   background-color: #04ecfe;
+}
+
+
+
+#stagesList,
+#stageDetails,
+#endStage{
+  /*height: 700px;
+  height: 70%;
+  top: 20%;*/
+  background-color: #09f;
+  display: none;
+}
+
+#stageDetails,
+#endStage{  
+  height: 100%;
+  top: 0px;
+}
+
+#stagesList,
+#campaignSelectionList
+{
+  height: 70%;
+  top: 20%;
+}
+
+#pauseScreen ul{
+  display: block;
+  height: 100%;
+  width: 100%;
+  margin-top: 50%; 
+}
+/*
+#pauseScreen ul li{
+  display: inline-block;
+  float: left;
+  width: 50%;
+  height: 80%;
+  line-height: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+
+#pauseScreen ul li a{
+  display: block;  
+  color: #fff;
+  line-height: 20em;  
+  text-align: center;
+  font-variant: all-small-caps;
+  font-size: 2em;
+}
+*/
+
+
+#pauseScreen ul li{
+  display: inline-block;
+  float: left;
+  width: calc( 50% - 1px);
+  /*height: 80%;*/
+  line-height: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+
+#pauseScreen ul li+li{  border-left: 1px solid #fff}
+
+#pauseScreen ul li a{
+  display: block !important;
+  color: #fff;
+  line-height: 4em;
+  height: 4em;
+  /*padding: 0.5em;
+  margin: 0.25em;*/
+  text-align: center;
+  font-variant: all-small-caps;
+  font-size: 3em;
+  width: 100% !important;
+}
+
+
+
+
+
+#stagesList ul,
+#campaignSelectionList ul{
+  /* background-color: cyan; */
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  display: block;
+  border-radius: 0.5em;
+  /*
+    HIDE MISSION SELECTION SCROLLBAR - FF & IE/EDGE
+  */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE 10+ */
+  background: linear-gradient(180deg, #0ff, transparent);
+}
+
+/*
+  HIDE MISSION SELECTION SCROLLBAR - Chrome
+*/
+#stagesList ul::-webkit-scrollbar
+{
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+
+#stagesList ul li{
+  width: 20%;
+  height: 6em; /* 4em for a square*/
+  display: inline-block;
+  margin: 2.5% 2.5%;  
+  /*! float: left; */
+}
+
+#stagesList ul li a{
+  color: #fff;
+  width: 72px;
+  height: 6em; /* 4em for a square*/
+  text-align: center;
+  font-family: Lucida Console !important;
+  border-radius: 0.5em;
+  border: 2px outset #04f;
+  display: block;
+  padding-top: 2px;
+  background-color: #fff;
+}
+
+#stagesList ul li a span.missionId,
+#stagesList ul li a span.title{
+  border-radius: 0.5em;
+  display: block;
+  text-align: center;
+  width: 69px;
+  height: 22px;/* height: 1.5em; for a square */  
+  margin: 0 auto;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 22px;
+  color: #04f;
+  overflow: hidden;
+  text-shadow: none;
+}
+
+/* diable for a square */
+#stagesList ul li a span.title{ 
+  text-align: left;
+  height: 45%;
+  margin-top: 0.25em;
+  line-height: 1em;
+  font-size: 0.7em;
+}
+
+
+#stagesList ul li a span.missionId{
+  font-size: 14px;
+  background-color: #04f;
+  color: #fff;
+}
+
+#stagesList ul li a span.missionId:before{
+  content: 'mission '
+}
+
+#stagesList ul li a *{
+  pointer-events: none !important; 
+}
+
+
+/*
+  UNSELECTABLE STAGE - begin
+*/
+
+
+#stagesList ul li a.stage_select.unselectable{
+  color: #fff;
+  background-color: #a7a7a7 !important;
+  border: 2px outset #666;
+}
+
+#stagesList ul li a.stage_select.unselectable span.missionId{
+  font-size: 14px;
+  background-color: #888;
+  color: #fff;
+}
+
+
+#stagesList ul li a.stage_select.unselectable span.title{
+  color: transparent
+}
+
+/*
+	FOOTER OF: 
+		#stageDetails
+		#endStage	
+*/
+.stageDetailsControls{
+  /*position: fixed;
+  bottom: 15%;
+  width: 360px;
+  height: 10%;*/
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  /*! background: url(./UI-PARTS/UI-360x700-SUCCESS.png); */
+  width: 360px;
+  height: 100%;
+  display: block;
+}
+
+/* BUTTON [PLAY] */
+#stageDetails .stageDetailsControls a.stage_play,
+#endStage .stageDetailsControls .stage_next,
+#endStage .stageDetailsControls .stage_replay{
+  display: block;
+  position: absolute;
+  top: 537px;
+  left: 50%;
+  width: 272px;
+  margin-left: -139px;
+}
+
+/* BUTTON [CLOSE] (stage seletion) */
+.stageDetailsControls .navigation.sprite.ui-stage-close-btn-47x47 {
+    left: 309px;
+    top: 4px;
+    position: absolute;
+    bottom: 570px;
+}
+
+#endStage .stageDetailsControls .stage_replay.ui-stage-buttons-replay{
+    left: 3px;
+    margin-left:0;
+    height: 48px;
+    top: 3px; 
+    width: 48px;
+}
+
+
+.gold{
+  /*! background-color: gold; */
+  float: right;
+}
+
+/*
+      END STAGE -- begin
+*/
+
+
+  .objectiveMark.success,
+  .objectiveMark.failure,
+  .objectiveDescription,
+  .objectiveCount{   
+    display: inline-block;
+   }
+
+  .objectiveDescription{
+    width: 80%;  
+   }
+ 
+  .objectiveCount{
+    width: 15%;  
+   }
+
+  .objectiveMark.success,
+  .objectiveMark.failure{
+    width: 5%;   
+   }
+  
+
+  .objectiveMark.success:after{
+    content:'\2714'
+  }
+
+  .objectiveMark.failure:after{
+    content:'\2716'  
+   }
+
+
+/*
+      END STAGE -- end
+*/
+
+
+
+/*
+	ADD THIS CLASS TO DISPLAY AN ELEMENT IN FULL SCREEN
+*/
+.fullScreenPage{
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block !important;
+}
+
+.fullScreenPage > *{
+  display: block !important;
+}	
+
+.hidden{
+  /* display: none !important; */
+  opacity: 0;
+}
+
+.hiddenUIBtn{
+  display: none !important;  
+}
+
+
+
+/* OBJECTIVES LIST */
+ul.objectivesList{
+  position: absolute;
+  top: 290px;
+  left: 50%;
+  width: calc( 360px - 44px );
+  height: 126px;
+  margin-left: -158px;
+}
+
+ul.objectivesList > li:not(.timer){
+  position: relative;
+  /*! top: 290px; */
+  /*! left: 44px; */
+  vertical-align: top;
+  width: 100px;
+  margin-left: 1px;
+  margin-right: 1px;
+  padding-left: 1px;
+  padding-right: 1px;
+  height: 140px;
+  display: inline-block;
+  /* background-color: pink; */
+}
+
+ul.objectivesList > li:not(.timer){
+    border-right: 1px solid #fff  
+}
+
+ul.objectivesList > li:not(.timer) ul{
+  min-height: 3em;
+}
+
+ul.objectivesList > li+li+li{
+    border-right: none
+}
+
+
+ul.objectivesList > li:not(.timer) .description{
+  position: relative;
+  left: 50%;
+  margin-left: -44px;
+  /* top: 76px; */
+  width: 88px;
+  /* height: 36px; */
+  overflow: hidden;
+  display: block;
+}
+
+ul.objectivesList > li.timer{
+  position: absolute;
+  left: 50%;
+  margin-left: -50px;
+  top: 144px;
+  width: 100px;
+  display: inline-block;
+}
+
+
+ul.objectivesList > li.timer .description{  
+  /*! display: inline-block; */
+  font-size: 26px;
+}
+
+li.destroyBW img{
+  /*max-height: 38px;
+  max-width: 80%;*/
+  width: 60px;
+  margin: 0 auto;
+  display: block;
+}
+
+li.targets img{
+  max-height: 38px;
+  max-width: 35px;
+}
+
+li.escortees img{
+  max-height: 38px;
+  max-width: 25px;
+  max-height: 25px;
+}
+
+span.valueHolder{
+  display: inline-block;
+  width: 57px;
+  height: 1em;
+  background-color: #3399ff;
+  text-align: center;
+  /* line-height: 22px; */
+  border-radius: 0.5em;
+  border: 1px solid #f6e000;
+  color: #fff;
+  margin-left: 0.125em;
+  /* text-shadow: 0 0 1px #fff, 0 0 1px #fff, 0 0 1px #fff, 0 0 1px #fff; */
+  font-size: 1.8em;
+  text-shadow: none;
+  font-size: 1.4em;
+}
+
+/* MOVE THE TARGETS AFTER THE FIRST ONE */
+.targets ul li+li,
+.escortees ul li+li{
+  /* margin-top: 1em */
+}
+
+.targets ul li span.valueHolder,
+.escortees ul li span.valueHolder{
+  position: absolute;
+  right: 0.2em;
+  top: initial;
+  color: #fff;
+  text-shadow: none;
+}
+
+.sprite.ui-stage-minCombos,
+.targets ul li img,
+.escortees ul li img
+{
+  margin-left: 0.2em;
+  /* width: 32px; */
+}
+
+.sprite.ui-stage-minCombos,
+.targets ul li img,
+.escortees ul li img,
+span.valueHolder
+{/* line-height: 1; */}
+
+.valueHolder .over,
+.valueHolder .below{  
+  text-shadow: none !important;
+  font-size: 10px;
+  background-color: #fff;
+  padding: 0.2em;
+  border-radius: 0.5em;
+  position: relative;
+  top: -1.5em;
+  color: #000
+}
+
+/*
+  
+*/
+.objectivesList li .UI-stage-marks-39x39-success,
+.objectivesList li .UI-stage-marks-39x39-failure{
+  position: absolute;
+  left: 50%;  
+  margin-left: -19px;
+  top: 10em;
+}
+
+
+/*
+  OBJECTIVES : minCombos
+*/
+.valueHolder .over{
+  color: #090 !important; 
+}
+.valueHolder .over:before{
+  content: '\002B'
+}
+
+.valueHolder .below{
+  color: #f00 !important; 
+}
+.valueHolder .below:before{
+  content: '\002D'
+}
+
+
+/*
+  WINGS & HALO
+*/
+.sprite.ui-stage-wings-halo-360x75{
+  position: absolute;
+  top: 52px;
+  /*! z-index: 1; */
+}
+
+/*
+  STARS -- begin
+*/
+.UI-stage-3-stars-360x160{
+  position: absolute;
+  top: 70px;
+}
+
+/*
+  STATUS
+*/
+.status{
+  font-size: 50px;  
+  position: absolute;
+  top: 222px;
+  left: 50%;
+  margin-left: -107px;
+  width: 214px;  
+  display: block;
+  text-align: center;
+  font-variant: all-small-caps;
+
+  font-size: 22px;
+  top: 235px;
+}
+
+.status.success{
+  color: #33ca00
+}
+
+.status.failure{
+  color: #ff0000
+}
+
+
+/*
+  SCORE-GOLD
+*/
+.score-gold{
+  position: absolute;
+  top: 486px;
+  /* background-color: red;*/
+  /*! width: 100%; */
+  border-top: 2px outset #09f;
+  padding-top: 6px;
+}
+
+.score-gold .scoreLbl, .score-gold .score {
+  position: absolute;
+  /* margin-top: -6px; */
+  left: 26px;
+  font-size: 18px;
+  font-variant: all-small-caps;
+  color: #3399ff;
+}
+
+.score-gold .score{     
+  left: 87px;
+  margin-top: -1px;
+  font-size: 18px;
+  color: #000; 
+  width: 100px;  
+}
+
+
+.score-gold .ui-stage-gold-coin,
+.score-gold .gold
+{
+  position: absolute;
+  margin-top: -6px;  
+  left: 230px;
+  font-variant: all-small-caps;
+  color: #3399ff;    
+}
+
+.shop,
+.character,
+.mission{
+  z-index: 2;
+  position: absolute;
+  left: 240px;
+}
+
+
+#inventory .character, #characterDetails .shop{ 
+  left: 36px; 
+}
+
+
+#stageDetails .shop,
+#stageDetails .character{
+  top: 440px;
+}
+
+#stageDetails .character{
+  left: 30px
+}
+
+.shop:before{
+  content: ''
+}
+
+
+.goldenBtn, a.btnShowBriefing{
+  font-size: 22px;
+  color: #000;
+  /* height: 30px; */
+  line-height: 30px;
+  text-align: center;
+  background-color: gold;
+  border-radius: 0.5em;
+  border: 2px solid #09f;
+  width: 80px;
+  display:inline-block;
+}
+
+.mission .goldenBtn{
+   background-color: #00ff00;
+   background-color: #09f;
+   color: #090;
+   color: #fff;
+   text-shadow: 0 0 1px #000, 0 0 1px #000, 0 0 1px #000, 0 0 1px #000;
+   border: 1px solid #fff
+}
+
+#stageSelectionFooter .goldenBtn,
+#campaignSelectionFooter .goldenBtn,
+#characterSelectionFooter .goldenBtn{
+  width: 100px;
+  height: 60px;
+}
+
+.score-gold .gold{     
+  left: 256px;
+  margin-top: -1px;
+  font-size: 18px;
+  color: #000; 
+  width: 87px;
+  background-color: none !important;
+  overflow: hidden;
+}
+
+/*
+    CHARACTER SELECTION -- begin
+*/
+.char{
+  display: none;
+}
+
+.char.selected{
+  display: block;
+  color: #000;
+  background-color: #0ff;
+  height: 100%;
+  position: relative;
+  top: -4.5em;
+  padding-top: 1em;
+  padding-bottom: 6em;
+  background: linear-gradient(180deg, #0ff, transparent);
+}
+
+#characterSelection ul{
+  height: 65%;
+  width: 360px;
+  padding-top: 29.5%;
+  /* position: fixed; */
+}
+
+#characterSelection > ul >  li{
+}
+
+#characterSelectionHeader, #stageSelectionHeader, #campaignSelectionHeader{
+   height: 15%;
+   font-size: 4em;
+   text-align: center;
+   line-height: 1.5;
+   color: #fff;
+   text-shadow: 0 0 1px #000, 0 0 1px #000, 0 0 1px #000, 0 0 1px #000;
+   /* background-color: #0ff; */
+   background: linear-gradient(360deg, #0ff, transparent);
+   border-radius: 0.25em;
+   /* color: #ff0; */
+}
+
+#campaignSelectionFooter{
+  background-color: #fff
+}
+
+#charDescriptions{
+  /* height: 10%; */
+  /* position: relative; */
+  /* z-index: 0; */
+  /* pointer-events: none; */
+}
+
+
+.charDesc {
+    position: absolute;
+    z-index: 10000000;
+    background-color: rgba(254,254,254,1);
+    width: 96%;
+    height: 1em;
+    font-size: 1.5em;
+    /* margin-top: -2.7em; */
+    margin: -1.5em 0 0 -49.5%;
+    text-align: center;
+    border: 2px outset #999;
+    border-radius: 0.5em;
+    padding: 0.1em;
+    left: 50%;
+    /* padding-bottom: 2em; */
+}
+
+
+
+#charList{
+  display: block;
+  white-space: nowrap;
+  /*! min-width: 100%; */
+  overflow-y: hidden;
+  overflow-x: scroll !important;
+}
+
+#charList li{
+    display: inline-block; 
+    /*! float: left; */
+    width: 33%;
+    height: 100%;
+    margin: 0.16%;
+   /* background-color: #09f;*/
+    white-space: normal;
+    text-align: center;
+    font-size: larger;
+    /*! margin-top: -450px; */
+   /* background-color: cornflowerblue;*/
+    padding-top: 30%;
+}
+
+#charList li.selected{
+  /* background-color: #0ff; */ 
+  /*! background-color: red; */
+  /*background-image: linear-gradient(#fff 130px, transparent 260px, #0ff 360px);*/
+  background: linear-gradient(0deg, rgba(2,0,36,0) 0%, rgba(255,255,255,1) 100%, rgba(0,255,255,1) 150%);
+  background-position-y: 130px;
+}
+
+#charList li > span{
+  position: relative;
+  top: -52%;
+  z-index: 1;
+}
+
+#strength2{
+  margin-top: 60%;
+}
+
+.charAttrContainer, .charAttrContainer * {
+    pointer-events: none;
+}
+
+.charAttrContainer {
+    position: relative;
+    top: -265px;
+    width: 116px;
+    background-color: rgba(254,254,254,0.5);
+    border: 2px inset #ccc;
+    border-radius: 0.5em;
+}
+
+
+#charList li > span:before,
+.charAttrContainer > span:before {
+  content:attr(data-title);
+  color: #fff;
+  text-shadow: 0 0 1px #000, 0 0 1px #000, 0 0 1px #000, 0 0 1px #000; 
+}
+
+#charList li.selected > span:before,
+#charList li.selected .charAttrContainer > span:before {
+  content:attr(data-title);
+  color: #000;
+  text-shadow: 0 0 1px #fff, 0 0 1px #fff, 0 0 1px #fff, 0 0 1px #fff; 
+}
+/*
+.fullStar{
+  color: orange !important;
+}
+.emptyStar{
+  color: white !important;
+}
+.fullStar:after{
+  content: '\2605';  
+}
+.emptyStar:after{
+  content: '\2605'
+}
+*/
+
+.fullRectangle, .emptyRectangle{
+  display: inline-block;
+  width: 0.5em;
+  height: 1em;
+  border-right: 1px solid #000;
+  /*border-left: 2px solid #000; */
+}
+
+#charList li > span+span+span+span .fullRectangle,
+#charList li > span+span+span+span .emptyRectangle,
+.charAttrContainer > span+span+span+span .fullRectangle,
+.charAttrContainer > span+span+span+span .emptyRectangle
+{
+  width: 1px;
+  border: none;
+}
+
+/*
+.c1{background-color:#f90}
+.c2{background-color:goldenrod}
+.c3{background-color:gold;}
+.c4{background-color:yellow}
+*/
+
+.c1{background-color:#f90}
+.c2{background-color:goldenrod}
+.c3{background-color:yellow;}
+.c4{background-color:lime}
+
+
+.emptyRectangle{
+  background-color: white;
+}
+
+
+li#lives .fullRectangle.c1,
+li#lives .fullRectangle.c2,
+li#lives .fullRectangle.c3,
+li#lives .fullRectangle.c4,
+li#lives .emptyRectangle{
+  background-color: transparent !important;
+  border: none;
+  width: 1em;
+  margin: 0 1px;
+  overflow: visible;
+}
+
+
+li#lives .fullRectangle:after{
+  content:'\2764';  
+  color: #f00
+}
+
+li#lives .emptyRectangle:after{
+   content:'\2764';  
+   color: #fff
+}
+
+
+a.characterDetails{
+  position: relative;
+  z-index: 1;
+  display: block;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  margin-top: -40px;
+}
+
+#charList li .charName{
+  /* padding-top: 0.5em; */
+  font-size: 1.5em;
+  line-height: 2em;
+  width: 100%;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+#charList li.selected .charName{
+  background-color: #ff0;
+  vertical-align: top;
+  display: inline-block;
+  border-radius: 0.5em;
+}
+
+#charList li:not(.selected) .charName{
+  text-shadow: none;
+  color: #fff
+}
+
+
+a.characterDetails img{
+  padding-top: 3em;
+  pointer-events: none
+}
+
+a.characterSelect{
+  position: absolute;
+  margin: 13px -28.5%;
+  display: block;
+  text-align: center;
+  width: 55%;
+  /* height: 14%; */
+  font-size: 4em;
+  /* line-height: 2em; */
+  color: #09f;
+  background-color: #ff0;
+  z-index: 1;
+  border-radius: 0.5em;
+  border: 4px outset gold;
+  padding-bottom: 0px;
+  vertical-align: middle;
+  left: 50%;
+}
+
+a.characterSelect:after{
+  /* content: ' \2714' */
+}
+
+/*
+  STAGE SELECTION STARS -- begin
+*/
+
+.stage_select .stars{
+  background-image: url('stageSelectionStarsSpritesheet.png');
+  background-position: 0px 0px;
+  height: 22px;
+  width: 66px;
+  margin: 0em auto;
+  display: block;
+}
+
+.stage_select .stars.s1{
+  background-position: 0px 66px
+}
+
+.stage_select .stars.s2{
+  background-position: 0px 44px
+}
+
+.stage_select .stars.s3{
+  background-position: 0px 22px
+}
+
+/*
+  STAGE SELECTION STARS -- end
+*/
+
+/*
+  STAGE WEAPONS SELECTION -- begin
+*/
+
+div#weaponsSelector {
+  /* z-index: 1000 !important; */
+  /* background-color: rgba(254,254,254,0.5); */
+  z-index: 10;
+  bottom: 0;
+}
+
+
+#weaponsSelector ul#weaponsList li{
+  display: inline-block;
+  width: 33%;
+}
+
+#weaponsSelector ul#weaponsList li a{
+  width: 50px;
+  height: 50px;
+  display: block;
+  background-color: #fff !important;
+  margin: 0 auto;
+   border-radius: 50px;
+}
+
+#weaponsSelector ul#weaponsList li a:after{
+  position: relative;
+  left: 50px;
+  content: attr(count);
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 0.5em;
+  width: 2em;
+  display: inline-block;
+  text-align: center;
+}
+
+#weaponsSelector.toFront ul#weaponsList li a:after{
+  width: 2em;
+  left: 40px;
+}
+
+
+/*
+  STAGE WEAPONS SELECTION -- end
+*/
+
+
+/*
+	CHARACTER DETAILS UI -- begin
+*/
+#charAttributesList{
+  /*! margin-top: -6%; */
+  margin-top: 6%;
+  overflow: visible;
+  height: 53%;
+  overflow: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE 10+ */
+}
+
+/*
+  HIDE MISSION SELECTION SCROLLBAR - Chrome
+*/
+#charAttributesList::-webkit-scrollbar
+{
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+
+
+
+
+#charAttributesList > li > div{
+  width:  width: calc( 50% - 6em );
+  display: inline-block;
+  text-align: left;
+}
+
+/*
+	ENSURE THERE CAN BE LOTS OF .FULLRECTANGLEs
+	WITHOUT ALTERING THE LAYOUT
+*/
+#charAttributesList > li > div:not(.description){
+  max-width: 30%;
+  line-height: 1;
+  vertical-align: middle;
+  /*! margin-top: 6px; */
+  overflow: visible;
+}
+
+#charAttributesList li{
+   line-height: 5em;
+}
+
+#charAttributesList li{
+   /*! background-color: #0ff; */
+   border-bottom: 2px outset #09f;
+   cursor: pointer;
+   overflow: visible;
+   background-color: hsl(172deg 100% 50% / 36%);
+}
+
+#charAttributesList li.selected{
+  background-color: gold;
+}
+
+#charAttributesList li > span{
+  position: relative;
+  top: -45%;
+  z-index: 1;
+}
+
+#charAttributesList li:before{
+  text-align: right;
+  margin-right: 0.8em;
+  display: inline-block;
+  width: calc( 57% - 8em );
+  content: attr(data-title);
+  color: #05f;
+  text-shadow: 0 0 2px #fff, 0 0 2px #fff, 0 0 2px #fff, 0 0 2px #fff;
+  font-size: 1.2em;
+}
+
+#charAttributesList li:after{     
+  content: '\003F';
+  background-color: #fff;
+  border-radius: 1em;
+  /*! border: 1px solid #000; */
+  font-size: 0.8em;  
+  width: 1em;
+  line-height: 1;
+  text-align: center;
+  display: inline-block;
+  vertical-align: top;
+  float: left;  
+  position: relative;
+  top: 1em;  
+  left: 7.5em;
+  padding: 0.1em;
+}
+
+
+
+
+#charAttributesList li.selected > span:before{
+  content: attr(data-title);
+  color: #000;
+  text-shadow: 0 0 1px #fff, 0 0 1px #fff, 0 0 1px #fff, 0 0 1px #fff; 
+}
+
+#energy div span{
+  width: 1px !important;
+  border: none;
+}
+
+.charEnhanceAttributeBtn{
+  display: inline-block; 
+  margin-right: 0.5em;
+  line-height: 1.5em;
+  background-color: #999;
+  border: 0.25em inset #09f;
+  text-align: center;
+  color: #09f;
+  border-radius: 1.5em;
+  overflow: hidden;
+  vertical-align: middle;
+  border: 0.25em inset #a0c2d9ed;
+}
+
+.charEnhanceAttributeBtn:before{
+  content: attr(cost);
+  display: inline-block; 
+  vertical-align: middle;
+  width: 70px;
+  height: 24px;
+  background-image: url('./UI-PARTS/ui-stage-gold-coin.png');
+  background-repeat: no-repeat;
+  background-position: 0px 1px;
+  margin: 0 1.5em 0 0.2em;
+  text-indent: 1em;
+  line-height: 1.2em;
+  font-size: 1.5em;
+  color: #fff;
+  text-shadow: none;
+}
+
+.charEnhanceAttributeBtn:after{
+  content: '+';
+  width: 1.2em;
+  line-height: 1.2em;
+  font-size: 1.5em;
+  display: inline-block;
+  vertical-align: middle;
+  color: yellow;
+  text-shadow: none;
+  background-color: #09f;
+  border-radius: 1em;
+  border: 2px outset #fff;
+}
+
+.description{  
+  width: 100%;
+}
+/*
+.description:after{
+  content: attr(txt);
+  text-align: left;
+  text-indent: calc( 50% - 5em );
+  width: 100%;
+  display: block;
+}
+*/
+#characterDetails{
+  /* background-color: #0ff; */
+  display: none;
+  /* background-color: #09f; */
+  /* background-color: gold; */
+  background-color: rgba(0,128,254,0);
+}
+
+#characterDetails .header{  
+  /*! background-color: #0ff; */  
+  height: 30%;
+  /*! border-bottom: 5px solid #09f; */
+   /*! text-align: center; */
+}
+
+#characterDetails .header .angelName,
+#inventory .header .screenTitle{
+ /*splay: inline-block;
+ text-align: center;
+ width: 100%;
+  line-height: 1;  
+  border-bottom: 2px solid #09f;
+  margin-bottom: 0.55em;
+  padding-bottom: 0.2em;*/
+  display: inline-block;
+  width: 54%;
+  text-align: center;
+  background-color: gold;
+  line-height: 1.2;
+  border-bottom: 2px solid #09f;
+  margin-bottom: 0.25em;
+  padding-bottom: 0.2em;
+  border-radius: 1em;
+  margin-top: 0.15em;
+  margin-left: 0.2em;
+}
+
+#characterDetails .profileGold{
+ /* width: 50%;
+  margin-left: 3em;
+  display: inline-block; 
+  line-height: 1.5em;
+  background-color: #09f;
+  border: calc( 0.25em + 2px) inset #09f;
+  text-align: center;
+  color: #09f;
+  border-radius: 1.5em;
+  text-align: left;
+  padding-left: 0.5em;*/
+  
+  
+  width: 50%;
+  margin-left: 0.5em;
+  display: inline-block;
+  margin-right: 1em;
+  line-height: 1.5em;
+  background-color: #09f;
+  border: calc( 0.25em + 2px) inset #09f;
+  text-align: center;
+  color: #09f;
+  border-radius: 1.5em;
+  text-align: left;
+  padding-left: 0.5em;
+  
+}
+
+#characterDetails .header .gold,
+#characterDetails .header .ui-stage-gold-coin{
+  display: inline-block;  
+  font-size: 1.5em !important;  
+  line-height: 1;    
+  float: none;
+  vertical-align: middle;
+  color: #fff;
+  text-shadow: none;
+}
+
+#characterDetails .footer{
+  /*! font-size: 5em !important; */
+  text-align: center;
+  /*! background-color: #0ff; */
+  line-height: 2.5;
+  /*! border-top: 5px solid #09f; */
+  /*! top: 71.5%; */
+  height: 28%;
+  position: relative;
+  top: 85%;
+}
+
+/*
+	CHARACTER DETAILS UI -- end
+*/
+
+
+
+
+/*
+	INVENTORY DETAILS UI -- begin
+*/
+#itemsList{
+  margin-top: -6%;
+}
+
+
+#itemsList > li > div{
+  width:  calc( 50% - 6em );
+  display: inline-block;
+  text-align: left;
+}
+
+/*
+	ENSURE THERE CAN BE LOTS OF .FULLRECTANGLEs
+	WITHOUT ALTERING THE LAYOUT
+*/
+#itemsList > li > div:not(.description){
+  max-width: 30%;
+  line-height: 1;
+  vertical-align: top;
+  margin-top: 6px
+}
+
+#itemsList li{
+   /*! background-color: #0ff; */
+  border-bottom: 2px outset #09f;
+}
+
+#itemsList li:before{
+  text-align: right;
+  margin-right: 0.8em;
+  display: inline-block;
+  width: calc( 60% - 8em );
+  content: attr(data-title);
+  color: #05f;
+  text-shadow: 0 0 2px #fff, 0 0 2px #fff, 0 0 2px #fff, 0 0 2px #fff; 
+  font-size: 1.2em;
+}
+
+#inventoryItems li:after{
+ content: attr(data-quantity);
+ vertical-align: top;
+ /* padding: 0.25em; */
+ width: 1.7em;
+ height: 1.7em;
+ line-height: 1.7em;
+ text-align: center;
+ display: inline-block;
+ margin: 5px -8px;
+ background-color: #fff;
+ border: 1px solid #000;
+ border-radius: 1em;
+}
+
+
+.purchaseBtn{
+  display: inline-block;  
+  line-height: 1.5em;
+  background-color: #09f;
+  border: 0.25em inset #a0c2d9ed;
+  text-align: center;
+  color: #09f;
+  border-radius: 1.5em;
+  overflow: hidden;
+  background-color: #999;
+}
+
+.purchaseBtn:before{
+  content: attr(cost);
+  display: inline-block; 
+  vertical-align: middle;
+  width: 70px;
+  height: 24px;
+  background-image: url('./UI-PARTS/ui-stage-gold-coin.png');
+  background-repeat: no-repeat;
+  background-position: 0px 1px;
+  margin: 0 1.5em 0 0.2em;
+  text-indent: 0.5em;
+  line-height: 1.2em;
+  font-size: 1.5em;
+  color: #fff;
+  text-shadow: none;
+}
+
+.purchaseBtn:after{
+  content: '+';
+  width: 1.2em;
+  line-height: 1.2em;
+  font-size: 1.5em;
+  display: inline-block;
+  vertical-align: middle;
+  color: yellow;
+  text-shadow: none;
+  background-color: #09f;
+  border-radius: 1em;
+  border: 2px outset #fff;
+}
+
+#inventory .header .description,
+#characterDetails .header .description
+{
+  width: calc( 100% - 2em);
+  line-height: 3;
+  margin: 0.25em auto 1em;
+  border-radius: 1em;
+  background-color: #09f;
+  border: 4px inset #09f;
+  background-color: yellowgreen;
+  border: 4px inset yellow;
+  height: 6em;
+  background-color: gold;
+}
+
+#inventory .header .description .title,
+#inventory .header .description .details,
+#characterDetails .header .description .title,
+#characterDetails .header .description .details{ 
+  display: inline-block;
+  line-height: 2em;
+  margin-top: 0.2em;
+}
+
+#inventory .header .description .title,
+#characterDetails .header .description .title{ 
+  width: calc(25% - 1em);
+  text-align: right;  
+  padding-right: 1em;
+}
+
+#inventory .header .description .details,
+#characterDetails .header .description .details{   
+  width: 75%;
+  text-indent: 1em;
+  background-color: #fff;
+  border-radius: 0.5em;
+}
+
+#characterDetails .header .description .details{   
+  vertical-align: top;
+}
+
+#characterDetails .header .description .details{   
+  margin-top: 7px;
+}
+
+
+#inventory .header,
+#characterDetails .header{
+  padding-bottom: 2em;
+  border-bottom-left-radius: 30px; 
+  border-bottom-right-radius: 30px; 
+}
+
+/*
+  SCROLLBAR IS HIDDEN
+*/
+ul#inventoryItems{  
+  /*! height: 100px; */
+  width: calc( 100% + 17px);
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding-right: 17px; /* Increase/decrease this value for cross-browser compatibility */
+  box-sizing: content-box; /* So the width will be 100% + 17px */
+  position: relative;
+  top: 1em;
+  height: 380px;
+}
+
+ul#inventoryItems li{
+  /* background-color: #09f; */
+  border-bottom: 1px solid #fff;
+  cursor: pointer;
+  /* line-height: 3em; */
+  background-color: hsl(172deg 100% 50% / 36%);
+}
+
+ul#inventoryItems li.selected{
+  background-color: rgba(0,0,0,0.2);
+  background-color: gold;
+  /* background-color: yellowgreen; */
+}
+
+
+.itemLi img{
+max-width: 50px;
+max-height: 50px;
+
+}
+/*/
+ul#inventoryItems li:before{     
+  content: '\003F';
+  background-color: #fff;
+  font-size: 1em;
+  vertical-align: middle;
+  width: 0.8em;
+  text-align: center;
+  display: inline-block;
+  border-radius: 1em;
+}*/
+
+ul#inventoryItems li > *{  
+  vertical-align: middle;   
+}
+
+ul#inventoryItems li > *:not(a):not(.slot){    
+  pointer-events: none !important; 
+}
+
+ul#inventoryItems li > span:not(.slot){
+  width: 60px;
+  height: 60px;
+  display: inline-block;
+  background-color: #fff;
+  border-radius: 1em;
+  margin: 0.5em 0.25em;
+}
+
+
+ul#inventoryItems li > span:not(.slot):after{
+  content: '\003F';
+  background-color: #09f;
+  border: 1px solid #000;
+  font-size: 0.8em;
+  vertical-align: top;
+  width: 1em;
+  text-align: center;
+  display: inline-block;
+  border-radius: 1em;
+  float: right;
+  position: relative;
+  top: -100%;
+  right: 0.2em;
+  background-color: #fc0;
+}
+
+ul#inventoryItems li > span.slot{
+  width: 32px;
+  height: 32px;
+  display: inline-block;   
+  /*! background-color: #fff; */
+  border-radius: 1em;
+  margin: 0.2em;
+  cursor: pointer;
+  border: inset 2px;
+  background-color: #999;
+}
+
+ul#inventoryItems li > span.slot.selected{
+  background-color: #f90;
+  border: outset 2px;
+  background: #ff0;
+}
+
+ul#inventoryItems li > span img{  
+  display: block;
+  margin: 12.5% auto;  
+}
+
+#inventory{
+  background-color: #09f;
+  display: none;
+  /* background-color: GOLD; */
+  background-color: rgba(0,128,254,0);
+}
+
+#inventory .header,
+#characterDetails .header{
+  background-color: #0ff;
+  height: 25%;
+  border-bottom: 5px outset #fff;
+   /*! text-align: center; */
+}
+
+
+#inventory .header .screenTitle{
+/*  display: inline-block;
+  width: 54%;
+  text-align: center;
+  line-height: 1;  
+  border-bottom: 2px solid #09f;
+  margin-bottom: 0.25em;
+  padding-bottom: 0.2em;*/
+   display: inline-block;
+  width: 54%;
+  text-align: center;
+  background-color: gold;
+  line-height: 1.2;
+  border-bottom: 2px solid #09f;
+  margin-bottom: 0.25em;
+  padding-bottom: 0.2em;
+  border-radius: 1em;
+  margin-top: 0.15em;
+  margin-left: 0.2em;
+}
+
+#inventory .profileGold{
+  width: 50%;
+  margin-left: 0.5em;
+  display: inline-block; 
+  /*! margin-right: 1em; */
+  line-height: 1.5em;
+  background-color: #09f;
+  border: calc( 0.25em + 2px) inset #09f;
+  text-align: center;
+  color: #09f;
+  border-radius: 1.5em;
+  text-align: left;
+  padding-left: 0.5em;
+}
+
+#inventory .header .gold,
+#inventory .header .ui-stage-gold-coin{
+  display: inline-block;  
+  font-size: 1.5em !important;  
+  line-height: 1;    
+  float: none;
+  vertical-align: middle;
+  color: #fff;
+  text-shadow: none;
+}
+
+#inventory .footer{
+  /*! font-size: 5em !important; */
+  text-align: center;
+  /*! background-color: #0ff; */
+  line-height: 2.5;
+  /*! border-top: 5px solid #09f; */
+  /*! top: 71.5%; */
+  height: 28%;
+  position: relative;
+  top: 85%;
+}
+
+#inventorySlotsHeader {
+	border: 1px outset gold;
+	width: 90px;
+	margin-left: 229px;
+	height: 1em;
+	top: 211px;
+	position: absolute;
+	text-align: center;
+	/*! margin-bottom: 1em; */
+	border-bottom-left-radius: 1em;
+	border-bottom-right-radius: 1em;
+	background: yellow;
+	
+	z-index: 10000000000000000000;
+	/*! color: #fff; */
+	font-size: 1em;
+}
+
+/*
+	INVENTORY DETAILS UI -- end
+*/
+
+
+
+
+
+
+/*
+  #stagePayToContinue -- begin
+*/
+
+#stagePayToContinue{  
+ background-color: rgba(0,0,0,0.5);
+ background-color: rgba(255,255,255,0.2);
+ z-index: 102;
+}
+
+#stagePayToContinue .screenTitle{
+  position: absolute;
+  display: block;  
+  width: 100%;  
+  top: 20%;
+  background-color: rgba(0,0,0,0.5);
+}
+
+#stagePayToContinue .screenTitle:after{
+  content:'Use gold to continue?';
+  position: relative;
+  display: block;  
+  width: 100%;
+  top: 20%;
+  font-size: 0.5em;
+  padding-bottom: 0.5em
+}
+
+
+#stagePayToContinue .profileGold{
+  position: absolute;
+  top: 1%;
+  width: 50%;
+  margin-left: 1em;
+  display: inline-block;
+  line-height: 1.5em;
+  background-color: goldenrod;
+  border: calc( 0.25em + 2px) inset #fff; 
+  color: #09f;
+  border-radius: 1.5em;
+  text-align: left;
+  padding-left: 0.5em;    
+}
+
+
+#stagePayToContinue .profileGold .ui-stage-gold-coin{  
+  vertical-align: middle;   
+}
+
+
+#stagePayToContinue .profileGold .gold{
+  text-shadow: 0 0 1px #000, 0 0 1px #000, 0 0 1px #000, 0 0 1px #000;
+  font-size: 24px;
+  height: 1.5em;
+  line-height: 1.5em;
+  float: none;
+  vertical-align: middle; 
+  color: #fff;
+  
+}
+
+#stagePayToContinue .stageDetailsControls{  
+  display: block;  
+}
+
+
+#stagePayToContinue .sprite.ui-stage-wings-halo-360x75{
+  top: calc( 50% - 80px)
+}
+
+#stagePayToContinue a.pay_to_continue{  
+  position: absolute;
+  top: 47.5%;
+  left: 50%;  
+  width: 120px;
+  height: 80px;
+  padding-top: 10px;
+  margin-left: -62px;
+  display: block;
+  background-color: goldenrod;
+  text-align: center;
+  border-radius: 2em;
+  border: 2px outset #fff; 
+  color: #fff; 
+}
+
+#stagePayToContinue a.pay_to_continue .sprite.ui-stage-gold-coin,
+#stagePayToContinue a.pay_to_continue .amount{
+  display: inline-block; 
+}
+
+#stagePayToContinue a.pay_to_continue .amount,
+#stagePayToContinue a.pay_to_continue .continue{
+  text-shadow: 0 0 1px #000, 0 0 1px #000, 0 0 1px #000, 0 0 1px #000;
+  font-size: 24px;
+}
+
+#stagePayToContinue a.pay_to_continue .continue{
+  margin-top: 0.1em;
+  display: block;
+  font-size: 2.2em
+}
+
+.stageDetailsControls .pay_to_continue span{
+	pointer-events: none;			
+}
+
+.end_game{
+  left: 309px;
+  top: 4px;
+  position: absolute;
+  bottom: 570px;
+}
+
+
+/*
+  #stagePayToContinue -- end
+*/
+
+/**{
+  cursor: url('../game_assets/images/arrow.png'), auto
+}
+*/
+#UI{cursor:none;}
+
+.charImg{
+  max-width: 115px;
+  max-height: 100px;
+}
+
+/* FOR CUPID
+#charLi3 .charImg{
+  max-width: 77px;
+  max-height: 67px;
+
+  max-width: 86.25px;
+  max-height: 75px;
+} */
+
+.cupidHeart {
+    z-index: 2000000000;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background: url(UI-PARTS/UIIngameSpritesheet.png) -160px;
+    position: absolute;
+    /* left: 80%; */
+    /* left: 85%; */
+    /* left: 75%; */
+    /* top: 34%; */
+}
+
+
+
+#characterDetails .header .charImg,
+#inventory .header .charImg{
+  /*float: right*/
+  position: absolute;
+  right: 0;
+  padding-right: 1.5em;
+  margin-top: 0.225em;
+}
+
+/*
+    INGAME OBJECTIVE INTERFACE
+*/
+/* .pauseBtn is outside #UI_wrapper  */
+.pauseBtn{ 
+  font-size: 1.8em;
+  text-transform: uppercase;
+  font-variant: all-small-caps;
+  color: #000;
+}
+
+#pauseScreen ul li .pauseBtn{
+  
+}
+
+body > .pauseBtn{
+    position: fixed;
+    z-index: 20000000;
+    left: 50%;
+    margin-left: -180px;
+    cursor: pointer;
+    display: none
+}
+
+body > .pauseBtn.visible{
+  display: block
+}
+
+#score{
+  float: left !important;
+  /* background-color: yellow; */
+  width: 42% !important;
+  /* line-height: 24px; */
+  font-size: 1.8em;
+  margin-left: 30%;
+}
+
+#timer{
+    /* background-color: cyan; */
+    /* text-align: center !important; */
+    /*! margin-top: 50px !important; */
+    font-size: 1.8em !important;
+    /* clear: both !important; */
+    display: inline-block !important;
+    width: 27%;
+    margin: 0 auto;
+}
+
+#bricks,#combos,#targets,#escortees{
+    /* background-color: #fff; */
+    width: 25%;
+    font-size: 1.8em;
+    height: 20px;
+    display: block;
+    float: left;
+    line-height: 1em;
+    height: 12px;
+}
+
+#bricks{
+  clear: both;
+  position: absolute;
+}
+
+#targets{
+ float: right
+}
+
+#combos{
+  width: 25%;  
+}
+
+#bricks{
+  clear: both;
+  position: absolute;
+}
+
+#targets, #escortees {
+    /*display: inline-block;*/
+    /* float: right; */
+    /*max-width: 45%;*/
+    /* background-color: purple; */
+    width: auto;
+}
+
+#targets{
+ float: right
+}
+
+
+#combos{
+  width: 25%;  
+}
+
+
+#targets > *,
+#escortees > *{ 
+  float: left;
+}
+
+#targets div > *,
+#escortees div > *{
+  max-width: 20px;
+  max-height: 20px;
+  line-height: 1em;
+  text-align: left;
+  /* float: none !important; */
+}
+
+#targets div,
+#escortees div{
+  /* width: 45px; */
+  height: 20px;
+  line-height: 1em;
+  display: inline-block;
+ /* float:  right;*/
+  /* background: aliceblue; */
+  font-size: 0.8em !important;
+  color: #000;
+  padding-left: 2px;
+  padding-right: 2px;
+  width: auto;
+}
+
+#targets div > img,
+#escortees div > img{
+  max-width: 30px;
+  /* max-height: 30px; */
+  /* line-height: 30px; */
+}
+
+
+#UI_wrapper #casualtiesContainer{
+   margin-top: -20px;
+   float: none;
+   width: 100px;
+   position: fixed;
+   bottom: 60px;
+   font-size: 1.8em;
+   left: 50%;
+   margin-left: -50px;
+   text-align: center;
+   background-color: #ed143d94;
+   border-radius: 0.5em;
+}
+
+#UI_wrapper #casualtiesContainer::before, 
+span.maxCasualties {
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background: url(UI-PARTS/UIIngameSpritesheet.png) 160px 0px;
+    position: relative;
+    left: 0px;
+    top: 2px;
+}
+
+span.maxCasualties {
+    /* margin-top: 80px; */
+    width: 20px;
+    /* margin-top: 16px; */
+}
+
+span.maxCasualtiesNumber{
+     position: relative;
+     margin-left: 20px;
+     width: 80px;
+     overflow: visible;
+     display: block;
+}
+
+span.maxCasualtiesNumber::after {   
+    content: ' max';    
+}
+
+/* INGAME INTRODUCTION */
+#modal span.maxCasualties {
+    margin-top: 0px;
+    width: 20px;
+    margin-left: -2em
+}
+
+#modal span.maxCasualtiesNumber{
+     font-size: 0.75em;
+     margin-left: 30px;
+     
+}
+
+
+
+
+div#casualtiesContainer.critical::after{
+    content: "critical!";
+    display: block;
+}
+
+
+div#casualtiesContainer.critical span{
+    display: none;
+}
+
+span#casualtiesMax {
+    font-size: 0.6em;
+    color: white;
+    vertical-align: top;
+    text-shadow: none;
+}
+
+span#casualtiesMax::before {
+    content: '/ ';
+    font-weight: bold;
+    font-size: 1em;
+    vertical-align: top;
+}
+
+#UI_wrapper #livesStock{
+   margin-top: -20px;
+   float: none;
+   max-width: 100px;
+   position: fixed;
+   bottom: 60px;
+   font-size: 1.8em;
+}
+
+#UI_wrapper .gold{
+   margin-top: -23px;
+   float: none;
+   position: fixed;
+   bottom: 60px;
+   margin-left: 280px;
+   width: 80px;
+   text-align: right;
+   font-size: 1.8em;
+}
+
+/*
+#score:after, 
+#bricks:after,
+#combos:after,
+#targets:after{
+    width: 20px;
+    height: 20px;
+    display: block;
+    float: left
+}*/
+
+body > a.pauseBtn:before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: inline-block;   
+    background: url(UI-PARTS/UIIngameSpritesheet.png) -40px;    
+    position: relative;
+    left: 0px;
+}
+
+#UI_wrapper #bricks:before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background: url(UI-PARTS/UIIngameSpritesheet.png) -60px;
+    position: relative;
+    left: 0px;
+}
+
+#UI_wrapper #combos:before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: inline-block;   
+    background: url(UI-PARTS/UIIngameSpritesheet.png) 0px;  
+    position: relative;
+    left: 0px;
+}
+
+#UI_wrapper #livesStock:before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background: url(UI-PARTS/UIIngameSpritesheet.png) -18px;
+    position: relative;
+    left: 0px;
+}
+
+#UI_wrapper .gold:after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background: url(UI-PARTS/UIIngameSpritesheet.png) -100px;
+    position: relative;
+    /* left: -20px; */
+}
+
+ #UI_wrapper #timer:before {
+    content: "";
+    width: 20px;
+    height: 19px;
+    display: inline-block;   
+    background:url(UI-PARTS/UIIngameSpritesheet.png) 60px;
+    position: relative;
+    left: 0px;
+}
+
+
+
+/*
+    MISSION SELECT BEGIN
+*/
+#stageSelectionHeader > *{
+  float: left;
+  line-height: 1em;
+}
+
+div#totalScore{
+  margin-top: 0.25em;
+  font-size: 18px;
+  color: #000;
+  width: 100px;
+  /* margin-left: 1em; */
+}
+
+#stageSelectionHeader .scoreLbl {
+  font-size: 24px;
+  font-variant: all-small-caps;
+  color: #3399ff;
+  text-align: left;
+  text-indent: 1.5em;
+  color: #000;
+}
+
+.score-gold .score{     
+  left: 87px;
+  margin-top: -1px;
+  font-size: 18px;
+  color: #000; 
+  width: 100px;  
+}
+/*
+    MISSION SELECT END
+*/
+
+
+/*
+    MISSION MODAL -- begin
+*/
+#modal,
+#miniModal,
+#miniModalCasualties{
+  position: fixed;
+  width: 360px;
+  top: 50px;
+  left: 50%;
+  margin-left: -180px;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 2000;
+}
+
+#miniModalCasualties{
+	top: 360px;
+}
+
+#modal .message,
+#miniModal .message,
+#miniModalCasualties .message{
+    position: absolute;
+    background-color: rgba(0,0,0,0.25);
+    top: 120px;
+    left: calc(50% + 1em);
+    width: 260px;
+    margin: 0 calc(-150px - 1.5em);
+    padding-top: 0px;
+    text-align: center;
+    font-size: 2em;
+    border: 0.25em solid #fff;
+    border-radius: 100px;
+    color: #fff;
+    text-shadow: 0 0 1px #000, 0 0 1px #000, 0 0 1px #000, 0 0 1px #000 !important;
+    /* line-height: 2em; */
+    padding: 1em;
+}
+
+.message *{
+  text-shadow: 0 0 1px #000, 0 0 1px #000, 0 0 1px #000, 0 0 1px #000 !important;
+}
+
+#miniModal{
+  top: 0px;
+}
+
+#miniModal .message,
+#miniModalCasualties .message{
+   text-indent: 4em;
+   top: 100px;
+   background-color: #0c0;
+   font-size: 1em;
+   vertical-align: middle;
+}
+
+#miniModal .message.warning,
+#miniModalCasualties .message.warning{  
+   text-indent: 0;
+   background-color: crimson !important; 
+   font-size: 1.3em !important;    
+   text-align: left !important;
+}
+
+.csl{    
+    margin-left: 4em;
+    text-shadow: inherit; 
+}
+
+.objCsl{
+    font-size: 0.75em;
+    background-color: red;
+    padding: 0.5em;
+    border-radius: 0.5em;
+}
+
+#miniModal .message::before,
+#miniModalCasualties .message::before{
+  position: absolute;
+  left: 0.5em;
+  top: 50%;
+  margin-top: -0.75em;
+  vertical-align: middle;
+  text-indent: 0em;
+  font-size: 2em;
+  display: block;    
+  line-height: 1;
+  height: 1em;
+  width: 1em;
+  content: '\2713';
+  background-color: #090;
+  padding: 0.25em;
+  border-radius: 1em;
+  
+}
+
+#miniModalCasualties .message.warning::before, 
+#miniModal .message.warning::before{ 
+  content: '!';
+  text-indent: 0.4em;
+  background-color: tomato;  
+}
+
+
+
+#miniModal .message.starReason{   
+   background-color: gold;  
+   color:  #000;
+   text-shadow: 0 0 1px #fff, 0 0 1px #fff, 0 0 1px #fff, 0 0 1px #fff !important;
+   font-size: 1.5em;
+   line-height: 1em;
+}
+
+#miniModal .message.starReason:before{   
+   background-color: gold;
+   color: #000;
+   text-shadow: 0 0 1px #fff, 0 0 1px #fff, 0 0 1px #fff, 0 0 1px #fff !important;
+}
+
+
+
+/*
+  MISSION BRIEFING -- begin
+*/
+
+div#modal.missionBriefing{
+    /* background-color: rgba(254,254,254,0.5); */
+    border-radius: 0.8em;
+    border: outset 2px #fff;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,ffffff+62,ffffff+100&0.25+1,0.1+62,0+100 */
+    background: -moz-linear-gradient(top,  rgba(255,255,255,0.25) 0%, rgba(255,255,255,0.25) 1%, rgba(255,255,255,0.1) 62%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,0.25) 0%,rgba(255,255,255,0.25) 1%,rgba(255,255,255,0.1) 62%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(255,255,255,0.25) 0%,rgba(255,255,255,0.25) 1%,rgba(255,255,255,0.1) 62%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#40ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+    text-align: left;
+}
+
+
+div#modal.missionBriefing .message{
+    background-color: #09f;    
+    border-radius: 0.8em; 
+	text-align: left;
+	pointer-events: all;
+}
+
+div#modal.missionBriefing *{    
+    text-transform: none!important;
+    
+}
+
+div#modal.missionBriefing::before{
+    content: 'Briefing';
+    width: 360px;
+    display: block;
+    font-size: 5em;
+    line-height: 1.5em;
+    background-color: rgba(255,255,255,0.3);    
+    border-radius: 0.8em; 
+	text-align: center;
+	pointer-events: all;
+    color: crimson
+}
+
+
+div#modal.missionBriefing .sprite.ui-stage-wings-halo-360x75{
+    display: none!important
+}
+
+/*
+  MISSION BRIEFING -- end
+*/
+
+
+
+/*
+    MISSION MODAL -- end
+*/
+
+ /*
+.charModalMsg{
+  display: block;
+  width: calc(300px - 1em) !important;
+  margin: 0 auto;
+  border-radius: 4em;
+   background-color: rgba(0,0,0,0.6);
+  padding: 0.5em;
+   width: 280px !important; 
+}
+*/
+/*
+	CHARACTER SELECTION PAGING SCROLL -- begin
+*/
+
+div#charSelectPaging {
+    position: absolute;
+    z-index: 2;
+    width: 360px;
+    top: 0;
+    /* pointer-events: none; */
+}
+
+div#charSelectPaging a{
+  /*float: left;  */
+  position: absolute;
+  top: 543px;
+  left: 0.125em;
+  text-align: center;
+  width: 1.2em;
+  font-size: 4em;
+  line-height: 1.2em;
+  color: #09f;
+  background-color: #fff;
+  z-index: 1;
+  border-radius: 0.5em;
+  border: 1px solid #000;
+}
+
+div#charSelectPaging a + a{
+  left: unset;
+   right: 0.125em
+}
+/*
+	CHARACTER SELECTION PAGING SCROLL -- end
+*/
+
+
+/*
+
+    MISSION START MODAL - begin
+
+*/
+
+.stageDescription{
+  width: 270px;
+  margin: 1em auto;
+  display: block;
+  border-radius: 1.5em;
+  background-color: rgba(254,254,254,0.5);
+  text-shadow: inherit;
+}
+
+
+.message li.timer,
+.message li.minCombos,
+.message li.destroyBW,
+.message li.targets,
+.message li.escortees
+ {
+    vertical-align: middle !important;
+    /*margin-top: 0.2em;*/
+}
+/*
+.message li * {
+    vertical-align: middle !important;
+    margin: auto;
+    text-align: left;
+    float: left;
+    text-shadow: inherit;
+}*/
+
+.message li .sprite.ui-stage-minCombos{
+    /* margin-left: -0.5em !important */
+}
+    
+.message li.targets ul li,
+.message li.escortees ul li{
+    margin-left: auto !important;
+    text-align: center;
+    margin: 0 !important;
+}
+
+.message li.targets ul li span.valueHolder::before,
+.message li.escortees ul li span.valueHolder::before{
+   content: '\274c';
+   font-size: 0.5em;   
+   display : inline-block;  
+   vertical-align: middle
+   
+}
+.message li.targets ul li span.valueHolder,
+.message li.escortees ul li span.valueHolder,
+.message li.minCombos span.valueHolder{
+    position: relative;
+    right: unset;
+    margin-left: 0.25em;
+    font-size: 1.2em;
+    vertical-align: top !important;
+   /* font-size: 0.7em;
+    background-color: #888 !important;
+    text-indent: 0.25em;*/
+}
+
+.message li.minCombos img{
+    vertical-align: middle !important;
+}
+
+
+
+.message li.timer .description {
+
+}
+
+.message li.destroyBW .description,
+.message li.minCombos .description,
+.message li.targets .description,
+.message li.escortees .description
+ {
+    display: none;
+   /* display: inline-block;
+    float: left;
+    font-size: 0.5em;
+    width: auto;*/
+}
+
+.message li.targets span.valueHolder,
+.message li.escortees span.valueHolder,
+.message li.minCombos span.valueHolder {
+   background-color: transparent !important;
+   border: none
+}
+
+/*
+
+    MISSION START MODAL - end
+
+*/
+
+
+div#weaponsSelector.toFront {    
+    z-index: 100;
+    background: linear-gradient(2700Deg, #09f, #0ff);
+    width: 320px;
+    margin: 0 -160px ;
+    left: 50%;
+    height: 40px;  
+}
+
+div#weaponsSelector.toFront a{
+    width: 40px !important;
+    height: 40px !important;
+}
+
+
+.container {
+ /* position: relative;
+ background: #09f; */
+ overflow: hidden;
+}
+
+.sliding-background {
+   position: absolute;
+   top: 0px;
+   /*left: 50%;
+   margin-left: -1050px;*/
+   background: url(../game_assets/images/CLOUDS-BG-1-360x700.png) repeat-x;
+   height: 700px;
+   width: 2100px;
+   animation: slide 15s linear infinite;
+   left: 0px;
+}
+
+@keyframes slide {
+  0%{
+    transform: translate3d( 0px, 0, 0);
+  }
+  50%{
+    transform: translate3d( -360px, 0, 0); /* The image width */
+  }
+  100%{
+    transform: translate3d( 0px, 0, 0); /* The image width */
+  }
+}
+
+/*
+    CAMPAIGN SELECT - begin
+*/
+
+a.campaign_select {
+    display: block;
+    background-color: gold;
+    border: outset #fff 2px;
+    margin: 0 0 0.5em 0
+}
+
+a.campaign_select span{
+    display: block;
+    clear: both;
+    color: #000;
+    pointer-events: none;
+}
+
+
+#electricArc{
+	z-index: 21;
+	pointer-events: none;
+}
+
+a.campaign_select .cmpTitle{
+    margin-bottom: 0.25em;
+    font-weight: bold;
+    font-size: 1.5em;
+    border-bottom: 2px inset #000;
+    background-color: rgba(255,255,0,0.5);   
+    text-align: center;
+	color: #fff;
+    text-shadow: 0 0 2px #000, 0 0 2px #000, 0 0 2px #000, 0 0 2px #000;
+}
+
+a.campaign_select .cmpDescription{
+    font-size: 1em;
+    text-transform: initial;
+    
+}
+
+/*
+    CAMPAIGN SELECT - end
+*/
+
+
+div#weaponsSelector.inmenu{
+  z-index: 1000 !important;
+  pointer-events: none
+}
+
+
+
+body > canvas,
+canvas{
+  cursor: none !important;
+  pointer-events: none;
+}
+
+
+body > canvas#combo,
+canvas#combo{  
+  pointer-events: all !important;
+}
+
+
+a.ui-stage-close-btn-47x47.btnCloseBriefing {
+    z-index: 100000000000000000000 !important;
+    position: fixed;
+    top: 520px;
+    left: calc( 50% - 180px);
+    background-image: url(./UI-PARTS/ui-spritesheet.png);
+    top: 148px;
+}
+
+
+
+/*
+.goldenBtn, a.btnShowBriefing {
+    font-size: 22px;
+    color: #000;
+   
+    line-height: 30px;
+    text-align: center;
+    background-color: gold;
+    border-radius: 0.5em;
+    border: 2px solid #09f;
+    width: 80px;
+    display: inline-block;
+}*/
+
+
+
+
+a.mission .goldenBtn, a.btnShowBriefing {
+    background-color: #00ff00;
+    background-color: #09f;
+    color: #090;
+    color: #fff;
+    text-shadow: 0 0 1px #000, 0 0 1px #000, 0 0 1px #000, 0 0 1px #000;
+    border: 1px solid #fff;
+}
+
+#stageDetails .shop, #stageDetails .character, a.btnShowBriefing {
+    top: 440px;
+}
+
+a.btnShowBriefing {
+    position: absolute;
+    z-index: auto;
+    left: 50%;
+    margin-left: -45px;
+	
+	left: 74%;
+	top: 235px;
+	width: 40px;
+}

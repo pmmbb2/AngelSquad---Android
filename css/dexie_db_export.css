@@ -1,0 +1,64 @@
+	.btnStyle{
+			padding: 0.5em;
+			background: #dde;
+			color: #000;
+			font-weight: bold;
+			display: inline-block;
+			float: left;
+			text-decoration: none;
+			border-radius: 1em;
+			border: 0.25em outset #aaa
+		}
+		
+		.hovermenu{
+			position: relative;
+			display: inline-block;
+			padding: 1em;
+			vertical-align: top;
+			width: auto;
+			background-color: #eee;
+			border-radius: 1em;
+		}
+    
+    div#selectCmpExp {
+     /* top: 50%*/
+		}
+
+    div#selectCmpExp::before {
+      content: 'campaign export files (.exp)'
+		}
+
+		div#selectCmp::before {
+      content: 'campaign import files (.cmp)'
+		}
+
+		.hovermenu ul{
+			display: none
+		}
+
+    .hovermenu:hover ul{
+			display: block
+		}
+
+    .hovermenu ul li a{			
+			display: block;
+			text-decoration: none;
+			color: #09f
+	}
+
+	#importLog{
+        position:fixed;
+        background-color: #000;
+        color: lime;
+        right: 0;
+        top: 0;
+        width: 50%;
+		height: calc( 100% - 2em);
+		overflow-y: auto
+	}
+	
+	#importLog::before {
+		content: 'Campaign Import Log';
+		display: block;
+		margin-bottom: 1em;
+	}

@@ -1,0 +1,49 @@
+GAME DIRECTORY STRUCTURE
+
+all assets MUST ALWAYS be copied in the relevant folders
+(makes it easier to add campaigns, levels, and stages)
+
+campaign: list of levels
+	  formats: .json
+level: list of stages
+	  formats: .json
+stage: all ingame data
+	  formats: .json
+entity: one object with attributes and behaviour
+	  formats: .json
+sprite: indexed animation sequences
+	  formats: .json
+images: spritesheets, backgrounds
+	  formats: .png
+sounds: sound FX, music loops
+	  formats: .mp3
+
+FILEs ARBORESCENCE:
+
+campaign: list of levels
+	level: list of stages
+		stage: all ingame data
+			objectives
+			background
+			music loop
+			canvas
+			brickwall/boss			
+			entities on timeline
+			balls
+			paddle
+
+			entity: one object with attributes and behaviour
+				sprite(s)
+				path				
+				+... attributes
+				
+
+				sprite: indexed animation sequences
+					imageFilePath
+					positions
+					+... attributes
+
+					imageFilePath: path to a spritesheet
+
+
+
